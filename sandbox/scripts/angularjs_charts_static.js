@@ -1,6 +1,6 @@
 google.load('visualization', '1', {packages:['corechart']});
 
-var app = angular.module('app', ['app.directive.ngRepeatFinished']);
+var app = angular.module('app', []);
 
 app.controller('appController', function($scope) {
 
@@ -48,14 +48,14 @@ app.controller('appController', function($scope) {
 
 		};
 
-		$scope.$on('drawServiceCharts', function(ngRepeatFinishedEvent) {
+		$scope.drawServicesChart = function(){
 
 			for (i=0; i <chartsData.length; i++){
 				var chart = new google.visualization.PieChart(document.getElementById(chartsData[i].id));
 				chart.draw(chartData, options);
 			}
 
-		});
+		}
 
 
 		$scope.drawCustomerCharts = function(customerId){
@@ -66,18 +66,3 @@ app.controller('appController', function($scope) {
 
 	});
 
-
-
-var module = angular.module('app.directive.ngRepeatFinished', [])
-.directive('onFinishRender', function ($timeout) {
-	return {
-		restrict: 'A',
-		link: function (scope, element, attr) {
-			if (scope.$last === true) {
-				$timeout(function () {
-					scope.$emit(attr.onFinishRender);
-				});
-			}
-		}
-	}
-});
