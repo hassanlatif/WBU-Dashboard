@@ -3,7 +3,7 @@ google.load('visualization', '1', {packages:['corechart']});
 var app = angular.module('app', ['ngRoute','app.directive.ngRepeatFinished']);
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-		$routeProvider
+	$routeProvider
 
 			// route for the home page
 			.when('/', {
@@ -12,12 +12,12 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 			}) //remove semi-colon when extending routes
 
 			// route for the about page
-			.when('/customers', {
+			.when('/customers/:customerId', {
 				templateUrl : 'pages/customers.html',
 				controller  : 'customerController'
 			});
 
-	}]);
+		}]);
 
 app.controller('appController', ['$scope', '$location', function($scope, $location) {
 
@@ -54,7 +54,7 @@ app.controller('appController', ['$scope', '$location', function($scope, $locati
 
 		// Set chart options
 		var options = {
-			'title':'ServiceName',
+			'title':'Service Name',
 			'width':320,
 			'height':260,
 			colors: ['red', 'orange', '#59b20a'],
@@ -75,8 +75,8 @@ app.controller('appController', ['$scope', '$location', function($scope, $locati
 
 		$scope.drawCustomerCharts = function(customerId){
 
-		 	alert(customerId);
-		 	$location.path('/customers');
+			//alert(customerId);
+			$location.path('/customers/' + customerId);
 		}
 
 	}]);
@@ -84,7 +84,8 @@ app.controller('appController', ['$scope', '$location', function($scope, $locati
 
 
 
-app.controller('customerController', function($scope) {
+app.controller('customerController', [ '$scope', '$location', '$routeParams', 
+	function($scope, $location, $routeParams) {
 
 	var chartsData = [{
 		id: 'circuit_1',
@@ -116,7 +117,7 @@ app.controller('customerController', function($scope) {
 
 		// Set chart options
 		var options = {
-			'title':'ServiceName',
+			'title':'Customer Name',
 			'width':320,
 			'height':260,
 			colors: ['red', 'orange', '#59b20a'],
@@ -128,6 +129,7 @@ app.controller('customerController', function($scope) {
 		};
 
 		$scope.$on('drawCustomerCharts', function(ngRepeatFinishedEvent) {
+			alert("Showing circuits for customer: " + $routeParams.customerId);
 
 			for (i=0; i <chartsData.length; i++){
 				var chart = new google.visualization.PieChart(document.getElementById(chartsData[i].id));
@@ -140,7 +142,7 @@ app.controller('customerController', function($scope) {
 
 		}
 
-	});
+	}]);
 
 
 
