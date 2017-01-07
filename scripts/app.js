@@ -137,8 +137,8 @@ app.controller('customerController', [ '$scope', '$location', '$routeParams',
 			}
 		});
 
-		$scope.drawCircuitCharts = function(customerId){
-			alert(customerId);
+		$scope.drawCircuitCharts = function(circuitId){
+			alert(circuitId);
 
 		}
 
