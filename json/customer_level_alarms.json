@@ -1,0 +1,43 @@
+{
+  "customers": 
+  {
+    "serviceType_1": [
+
+    {
+        "customerName": "customerName_1", 
+        "alarmsSeverity1" : 0,
+        "alarmsSeverity2" : 2
+    },
+    {
+        "customerName": "customerName_2", 
+        "alarmsSeverity1" : 0,
+        "alarmsSeverity2" : 2
+    },
+    {
+        "customerName": "customerName_3", 
+        "alarmsSeverity1" : 0,
+        "alarmsSeverity2" : 2
+    }
+    ],
+
+    "serviceType_2": [
+
+    {
+        "customerName": "customerName_1", 
+        "alarmsSeverity1" : 0,
+        "alarmsSeverity2" : 2
+    },
+    {
+        "customerName": "customerName_2", 
+        "alarmsSeverity1" : 0,
+        "alarmsSeverity2" : 2
+    },
+    {
+        "customerName": "customerName_3", 
+        "alarmsSeverity1" : 0,
+        "alarmsSeverity2" : 2
+    }
+    ]
+
+  }
+}

@@ -1,0 +1,49 @@
+{
+	"services": 
+  {
+   	"Voice": [
+
+		{
+			"serviceCategory": "serviceCat_1",
+		  	"serviceType": "serviceType_1", 
+		   	"alarmsSeverity1" : 12,
+		   	"alarmsSeverity2" : 2
+		},
+		{
+			"serviceCategory": "serviceCat_1",
+		  	"serviceType": "serviceType_2", 
+	   		"alarmsSeverity1" : 11,
+		   	"alarmsSeverity2" : 2
+		},
+		{
+			"serviceCategory": "serviceCat_1",
+		  	"serviceType": "serviceType_3", 
+		   	"alarmsSeverity1" : 8,
+		   	"alarmsSeverity2" : 2
+		}
+   	],
+
+   	"Data": [
+
+		{
+			"serviceCategory": "serviceCat_2",
+		  	"serviceType": "serviceType_4", 
+		   	"alarmsSeverity1" : 1,
+		   	"alarmsSeverity2" : 2
+		},
+		{
+			"serviceCategory": "serviceCat_2",
+		  	"serviceType": "serviceType_5", 
+		   	"alarmsSeverity1" : 3,
+		   	"alarmsSeverity2" : 2
+		},
+		{
+			"serviceCategory": "serviceCat_2",
+		  	"serviceType": "serviceType_6", 
+		   	"alarmsSeverity1" : 4,
+		   	"alarmsSeverity2" : 2
+		}
+   	]
+
+  }
+}
