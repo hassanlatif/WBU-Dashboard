@@ -1,15 +1,6 @@
-      <div>
-         <select name="type" ng-model="selectedServiceCategory" ng-dropdown required ng-change="selectServiceType(selectedServiceCategory)" >
-            <option ng-option value="All">All</option>
-            <option ng-option value="Voice">Voice</option>
-            <option ng-option value="Capacity">Capacity</option>
-            <option ng-option value="Data">Data</option>
-         </select>
-      </div>
-      <br>
 
 	<div>
 		<div ng-repeat="item in data"  on-finish-render="drawServiceCharts">
-			<div id="{{item.serviceType}}" value={{item.serviceCategory}}" class="col-xs-6 col-sm-3" ng-click="drawCustomerCharts(item.serviceType)"></div>
+			<div id="{{item.serviceType}}" name="{{item.serviceCategory}}" class="col-xs-6 col-sm-3" ng-click="drawCustomerCharts(item.serviceType)"></div>
 		</div>
 	</div>	

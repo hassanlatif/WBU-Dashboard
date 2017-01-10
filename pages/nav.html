@@ -4,14 +4,15 @@
 	<option ng-repeat="item in serviceCategories" value="{{item}}">{{item}}</option>
 </select-->
 
-      <!--div>
-         <select name="type" ng-model="selectedServiceCategory" ng-dropdown required ng-change="selectServiceType(selectedServiceCategory)" >
+       <div>
+         <select id="serviceCat" ng-model="selectedServiceCategory" ng-dropdown required ng-change="selectServiceType(selectedServiceCategory)" >
             <option ng-option value="All" ng-selected="true">All</option>
             <option ng-option value="Voice">Voice</option>
             <option ng-option value="Capacity">Capacity</option>
             <option ng-option value="Data">Data</option>
          </select>
-      </div-->
+      </div>
+      <br>
 
 
 <!--ul class="nav nav-pills">

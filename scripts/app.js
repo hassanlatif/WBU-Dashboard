@@ -5,9 +5,9 @@ var app = angular.module('app', ['ngRoute','app.directive.ngRepeatFinished']);
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	$routeProvider
 			// route for the home page
-			.when('/:serviceCat', {
+			.when('/', {
 				templateUrl : 'pages/services.html',
-				controller  : 'appController' //to avoid calling twice
+				//controller  : 'appController' //to avoid calling twice
 			}) //remove semi-colon when extending routes
 
 			// route for the about page
@@ -22,13 +22,11 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 		}]);
 
 app.controller('appController', ['$scope', '$location', '$http','$routeParams', '$route', '$window', 
-		function($scope, $location, $http, $routeParams, $route, $window) {
+	function($scope, $location, $http, $routeParams, $route, $window) {
 
 	//var serviceCategories;
 	//var servicesAlarms;
-	var serviceCat = $routeParams.serviceCat;
 
-	if (serviceCat==null || serviceCat=='All')
 		serviceCat = '*';
 
 	//console.log(serviceCat);
@@ -49,15 +47,42 @@ app.controller('appController', ['$scope', '$location', '$http','$routeParams', 
 	});
 
 
-	 $scope.selectServiceType = function(serviceCat) {
-
-	 	//console.log(serviceCat);
-	 	$location.path('/' + serviceCat);
-	 	//$window.location.reload();
-		$route.reload();
+	$scope.selectServiceType = function(serviceCat) {
 
 
-	 };
+	 	if (serviceCat == 'Voice')
+	 	{
+	 		console.log('Voice');
+	 		$('div[name=Voice]').show(); 
+	 		$('div[name=Capacity]').hide(); 
+	 		$('div[name=Data]').hide();
+
+	 	}
+	 	else if (serviceCat == 'Data')
+	 	{
+	 		console.log('Data');
+	 		$('div[name=Voice]').hide(); 
+	 		$('div[name=Capacity]').hide(); 
+	 		$('div[name=Data]').show(); 	
+
+	 	}
+	 	else if (serviceCat == 'Capacity')
+	 	{
+	 		console.log('Capacity');
+	 		$('div[name=Voice]').hide(); 
+	 		$('div[name=Capacity]').show(); 
+	 		$('div[name=Data]').hide();
+
+	 	}
+	 	else
+	 	{
+	 		console.log('All');
+	 		$('div[name=Voice]').show(); 
+	 		$('div[name=Capacity]').show(); 
+	 		$('div[name=Data]').show();	 		
+	 	}
+
+	};
 
 
 
@@ -73,7 +98,6 @@ app.controller('appController', ['$scope', '$location', '$http','$routeParams', 
 
 			// Set chart options
 			var options = {
-				'title':'Service Name',
 				'width':320,
 				'height':260,
 				colors: ['red', 'orange', '#59b20a'],
@@ -86,13 +110,14 @@ app.controller('appController', ['$scope', '$location', '$http','$routeParams', 
 
 			//alert(customerData);   <----
 			for (i=0; i <chartsData.length; i++){
+				options.title = chartsData[i].serviceType;
 				var chart = new google.visualization.PieChart(document.getElementById(chartsData[i].serviceType));
 
-		        var chartData = google.visualization.arrayToDataTable([
-		          ['Type', 'Count'],
-		          ['Outage', chartsData[i].alarmsSeverity1],
-		          ['Degradation', chartsData[i].alarmsSeverity2]
-		        ]);
+				var chartData = google.visualization.arrayToDataTable([
+					['Type', 'Count'],
+					['Outage', chartsData[i].alarmsSeverity1],
+					['Degradation', chartsData[i].alarmsSeverity2]
+					]);
 
 				chart.draw(chartData, options);
 			};
@@ -102,13 +127,13 @@ app.controller('appController', ['$scope', '$location', '$http','$routeParams', 
 		.error(function() {
 			console.log("Failed to fetch data.");
 		//defer.reject('could not find someFile.json');
-		});
+	});
 
 	});
 
 
 
-	$scope.drawCustomerCharts = function(customerId){
+$scope.drawCustomerCharts = function(customerId){
 			//alert(customerId);
 			$location.path('/customers/' + customerId);
 		}

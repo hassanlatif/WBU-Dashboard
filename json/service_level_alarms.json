@@ -4,21 +4,9 @@
    	"Voice": [
 
 		{
-			"serviceCategory": "serviceCat_1",
-		  	"serviceType": "serviceType_1", 
+			"serviceCategory": "Voice",
+		  	"serviceType": "I/N-INTERCONNECT_LINK", 
 		   	"alarmsSeverity1" : 12,
-		   	"alarmsSeverity2" : 2
-		},
-		{
-			"serviceCategory": "serviceCat_1",
-		  	"serviceType": "serviceType_2", 
-	   		"alarmsSeverity1" : 11,
-		   	"alarmsSeverity2" : 2
-		},
-		{
-			"serviceCategory": "serviceCat_1",
-		  	"serviceType": "serviceType_3", 
-		   	"alarmsSeverity1" : 8,
 		   	"alarmsSeverity2" : 2
 		}
    	],
@@ -26,24 +14,48 @@
    	"Data": [
 
 		{
-			"serviceCategory": "serviceCat_2",
-		  	"serviceType": "serviceType_4", 
+			"serviceCategory": "Data",
+		  	"serviceType": "I-IGNET", 
 		   	"alarmsSeverity1" : 1,
 		   	"alarmsSeverity2" : 2
 		},
 		{
-			"serviceCategory": "serviceCat_2",
-		  	"serviceType": "serviceType_5", 
+			"serviceCategory": "Data",
+		  	"serviceType": "I/N-INTERNET_CONNECTIVITY", 
 		   	"alarmsSeverity1" : 3,
 		   	"alarmsSeverity2" : 2
 		},
 		{
-			"serviceCategory": "serviceCat_2",
-		  	"serviceType": "serviceType_6", 
+			"serviceCategory": "Data",
+		  	"serviceType": "I-IP_NODE", 
+		   	"alarmsSeverity1" : 4,
+		   	"alarmsSeverity2" : 2
+		}
+   	],
+
+   	"Capacity": [
+
+		{
+			"serviceCategory": "Capacity",
+		  	"serviceType": "I-HARD_PATCH_TRANSIT", 
+		   	"alarmsSeverity1" : 1,
+		   	"alarmsSeverity2" : 2
+		},
+		{
+			"serviceCategory": "Capacity",
+		  	"serviceType": "I-SUBMARINE_CAPACITY", 
+		   	"alarmsSeverity1" : 3,
+		   	"alarmsSeverity2" : 2
+		},
+		{
+			"serviceCategory": "Capacity",
+		  	"serviceType": "I-OSS-SS", 
 		   	"alarmsSeverity1" : 4,
 		   	"alarmsSeverity2" : 2
 		}
    	]
+
+
 
   }
 }
