@@ -5,7 +5,7 @@
 
 		{
 			"serviceCategory": "Voice",
-		  	"serviceType": "I/N-INTERCONNECT_LINK", 
+		  	"serviceType": "I_N-INTERCONNECT_LINK", 
 		   	"alarmsSeverity1" : 12,
 		   	"alarmsSeverity2" : 2
 		}

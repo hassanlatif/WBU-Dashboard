@@ -1,0 +1,5 @@
+	<div>
+		<div ng-repeat="item in data"  on-finish-render="drawCircuitMetrics">
+			<div id="{{item.circuitId}}" class="col-xs-6 col-sm-3" ng-click="drawCircuitMetrics(item.circuitId)"></div>
+		</div>
+	</div>

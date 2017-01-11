@@ -1,45 +1,49 @@
 {
   "circuits": 
   {
-    "customer_1": [
+    "customerName_1": [
 
     {
+        "serviceType": "I-IGNET", 
         "circuitId": "circuitId_1", 
         "alarmsSeverity1" : 1,
         "alarmsSeverity2" : 2,
         "alarmsSeverity3" : 3
     },
     {
+        "serviceType": "I-IGNET", 
         "circuitId": "circuitId_2", 
-        "alarmsSeverity1" : 0,
+        "alarmsSeverity1" : 2,
         "alarmsSeverity2" : 2,
         "alarmsSeverity3" : 4
     },
     {
+        "serviceType": "I/N-INTERCONNECT_LINK", 
         "circuitId": "circuitId_3", 
-        "alarmsSeverity1" : 0,
+        "alarmsSeverity1" : 2,
         "alarmsSeverity2" : 2,
         "alarmsSeverity3" : 3
     }
     ],
 
-    "customer_2": [
+    "customerName_2": [
 
-    {
+    {   "serviceType": "I-IGNET", 
         "circuitId": "circuitId_2", 
-        "alarmsSeverity1" : 0,
+        "alarmsSeverity1" : 2,
         "alarmsSeverity2" : 2,
         "alarmsSeverity3" : 2
     },
-    {
+    {   "serviceType": "I-IGNET", 
         "circuitId": "circuitId_1", 
-        "alarmsSeverity1" : 0,
+        "alarmsSeverity1" : 2,
         "alarmsSeverity2" : 2,
         "alarmsSeverity3" : 2
     },
     {
+        "serviceType": "I-IGNET", 
         "circuitId": "circuitId_3", 
-        "alarmsSeverity1" : 0,
+        "alarmsSeverity1" : 1,
         "alarmsSeverity2" : 2,
         "alarmsSeverity3" : 5
     }

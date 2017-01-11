@@ -1,0 +1,5 @@
+	<div>
+		<div ng-repeat="item in data"  on-finish-render="drawCustomerCharts">
+			<div id="{{item.customerName}}" class="col-xs-6 col-sm-3" ng-click="drawCircuitCharts(item.customerName, item.serviceType)"></div>
+		</div>
+	</div>
