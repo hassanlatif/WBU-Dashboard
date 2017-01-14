@@ -7,18 +7,30 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
 	$stateProvider
 	.state('services', {
 		url: '/',
+		params: {
+			serviceCatId: 'All'
+		},
 		templateUrl: 'views/services.html',
 		controller: 'servicesController'
 	})
 	.state('customers', {
 		url: '/customers',
+		params: {
+			serviceCatId: null,
+			serviceTypeId: null
+		},
 		templateUrl: 'views/customers.html',
 		controller: 'customersController'
 	})
 	.state('circuits', {
 		url: '/circuits',
+		params: {
+			serviceCatId: null,
+			serviceTypeId: null,
+			customerNameId: null
+		},
 		templateUrl : 'views/circuits.html',
-		controller  : 'circuitController'      
+		controller  : 'circuitsController'      
 	})
 }]);
 
@@ -27,8 +39,35 @@ app.controller('servicesController', ['$scope', '$location', '$http','$statePara
 
 	//var serviceCategories;
 	//var servicesAlarms;
+	var serviceCatOptions = {
+		"All" : 0,
+		"Voice" : 0,
+		"Data" : 0,
+		"Capacity" : 0
+	};
+
 	$("#serviceCatSelector").prop( "disabled", false );
-	var serviceCat = '*';
+	var serviceCat = $stateParams.serviceCatId;
+
+	if (serviceCat == 'Voice')
+		serviceCatOptions.Voice = 1;
+	else if (serviceCat == 'Data')
+		serviceCatOptions.Data = 1;
+	else if (serviceCat == 'Capacity')
+		serviceCatOptions.Capacity = 1;
+	else {
+		serviceCatOptions.All = 1;
+		serviceCat = '*';
+	}
+
+	$scope.serviceCatOptions = serviceCatOptions;
+	//if (serviceCat == 'All')  //Check with Hussain for All case
+
+
+	$scope.selectServiceCat = function(serviceCatParam) {
+
+		$state.go('services', {serviceCatId: serviceCatParam})
+	};
 
 	//console.log(serviceCat);
 	$http.get('/json/service_level_alarms.json')
@@ -45,43 +84,6 @@ app.controller('servicesController', ['$scope', '$location', '$http','$statePara
 		//defer.reject('could not find someFile.json');
 	});
 
-
-	$scope.selectServiceType = function(serviceCat) {
-
-/*
-		if (serviceCat == 'Voice')
-		{
-			console.log('Voice');
-			$('div[name=Voice]').show(); 
-			$('div[name=Capacity]').hide(); 
-			$('div[name=Data]').hide();
-
-		}
-		else if (serviceCat == 'Data')
-		{
-			console.log('Data');
-			$('div[name=Voice]').hide(); 
-			$('div[name=Capacity]').hide(); 
-			$('div[name=Data]').show(); 	
-
-		}
-		else if (serviceCat == 'Capacity')
-		{
-			console.log('Capacity');
-			$('div[name=Voice]').hide(); 
-			$('div[name=Capacity]').show(); 
-			$('div[name=Data]').hide();
-
-		}
-		else
-		{
-			console.log('All');
-			$('div[name=Voice]').show(); 
-			$('div[name=Capacity]').show(); 
-			$('div[name=Data]').show();	 		
-		}
-*/
-	};
 
 	$scope.$on('drawServiceCharts', function(ngRepeatFinishedEvent) {
 
@@ -128,26 +130,32 @@ app.controller('servicesController', ['$scope', '$location', '$http','$statePara
 
 	});
 
-$scope.drawCustomerCharts = function(serviceTypeId){
+	$scope.drawCustomerCharts = function(serviceTypeId){
 			//alert(customerId);
-			$location.path('/customers/' + serviceTypeId);
-		}
+		if (serviceCat == '*')  //Check with Hussain for All case
+			serviceCat = 'All';
 
-	}]);
+		$state.go('customers', {serviceTypeId: serviceTypeId, serviceCatId: serviceCat});
+	}
 
-/*
-app.controller('customerController', [ '$scope', '$location', '$routeParams', '$http',
-	function($scope, $location, $routeParams, $http) {
+}]);
+
+
+app.controller('customersController', [ '$scope', '$location', '$http', '$stateParams', '$state',
+	function($scope, $location, $http, $stateParams, $state) {
 
 		$("#serviceCatSelector").prop( "disabled", true );
-		var serviceTypeId = $routeParams.serviceTypeId;
-		console.log(serviceTypeId);
+
+		var serviceTypeId = $stateParams.serviceTypeId;
+		var serviceCatId = $stateParams.serviceCatId;
+		$scope.serviceTypeId = serviceTypeId;
+		$scope.serviceCatId = serviceCatId;
+		//console.log(serviceTypeId);
 
 		$http.get('/json/customer_level_alarms.json')
 		.success(function(data) {
 			//angular.extend(_this, data);
 			//========Need this to fetch data to call ng-repeat -- Need to replace multiple calls with factory =======//
-			console.log(serviceTypeId);
 			$scope.data = jsonPath(data, "$.customers." + serviceTypeId + ".*");
 			console.log($scope.data);
 			//defer.resolve(); // Find out the reason for using
@@ -199,23 +207,28 @@ app.controller('customerController', [ '$scope', '$location', '$routeParams', '$
 		});
 			});
 
-$scope.drawCircuitCharts = function(customerNameId, serviceTypeId){
+		$scope.drawCircuitCharts = function(customerNameParam, serviceTypeParam){
 			//alert(circuitId);
 			//console.log(customerNameId);
 			//console.log(serviceTypeId);
-			$location.path('/circuits/' + customerNameId + '/' + serviceTypeId);
+			$state.go('circuits', {customerNameId: customerNameParam, serviceTypeId: serviceTypeParam, serviceCatId: serviceCatId});
 		}
 
 	}]);
 
 
 
-app.controller('circuitController', [ '$scope', '$location', '$routeParams', '$http',
-	function($scope, $location, $routeParams, $http) {
+app.controller('circuitsController', [ '$scope', '$location','$http', '$stateParams', '$state',
+	function($scope, $location, $http, $stateParams, $state) {
 
 		$("#serviceCatSelector").prop( "disabled", true );
-		var customerNameId = $routeParams.customerNameId;
-		var serviceTypeId = $routeParams.serviceTypeId;
+		var customerNameId = $stateParams.customerNameId;
+		var serviceTypeId = $stateParams.serviceTypeId;
+		var serviceCatId = $stateParams.serviceCatId;
+
+		$scope.serviceCatId = serviceCatId;
+		$scope.serviceTypeId = serviceTypeId;
+		$scope.customerNameId = customerNameId;
 
 		$http.get('/json/circuit_level_alarms.json')
 		.success(function(data) {
@@ -272,13 +285,13 @@ app.controller('circuitController', [ '$scope', '$location', '$routeParams', '$h
 
 				//defer.resolve(); // Find out the reason for using
 			})
-.error(function() {
-	console.log("Failed to fetch data.");
+				.error(function() {
+					console.log("Failed to fetch data.");
 			//defer.reject('could not find someFile.json');
 		});
-});
+			});
 
-$scope.drawCircuitMetrics = function(customerNameId){
+		$scope.drawCircuitMetrics = function(customerNameId){
 			//alert(circuitId);
 			console.log(customerNameId);
 			//$location.path('/circuits/' + customerNameId + '/' + serviceTypeId);
@@ -286,8 +299,6 @@ $scope.drawCircuitMetrics = function(customerNameId){
 
 	}]);
 
-
-*/
 
 
 
