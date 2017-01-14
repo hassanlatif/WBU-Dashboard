@@ -280,9 +280,9 @@ app.controller('circuitController', [ '$scope', '$location', '$routeParams', '$h
 			});
 		});
 
-		$scope.drawCircuitMetrics = function(customerNameId){
+		$scope.drawCircuitMetrics = function(circuitId){
 			//alert(circuitId);
-			console.log(customerNameId);
+			console.log(circuitId);
 			//$location.path('/circuits/' + customerNameId + '/' + serviceTypeId);
 		}
 
