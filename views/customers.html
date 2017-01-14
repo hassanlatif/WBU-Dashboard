@@ -1,5 +1,11 @@
-	<div>
-		<div ng-repeat="item in data"  on-finish-render="drawCustomerCharts">
-			<div id="{{item.customerName}}" class="col-xs-6 col-sm-3" ng-click="drawCircuitCharts(item.customerName, item.serviceType)"></div>
-		</div>
+
+<ol class="breadcrumb">
+<li><a ui-sref="services({serviceCatId: serviceCatId})">{{ serviceCatId }}</a></li>
+<li><a ui-sref="services({serviceCatId: serviceCatId, serviceTypeId: serviceTypeId})">{{ serviceTypeId }}</a> </li> 
+<li>Customers</li>
+</ol>
+
+<div>
+	<div ng-repeat="item in data"  on-finish-render="drawCustomerCharts" id="{{item.customerName}}" class="col-xs-6 col-sm-3" ng-click="drawCircuitCharts(item.customerName, item.serviceType)">
 	</div>
+</div>
