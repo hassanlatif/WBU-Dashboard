@@ -1,36 +1,34 @@
 google.load('visualization', '1', {packages:['corechart']});
 
-var app = angular.module('app', ['ngRoute','app.directive.ngRepeatFinished']);
+var app = angular.module('app', ['ui.router','app.directive.ngRepeatFinished']);
 
-app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-	$routeProvider
-			// route for the home page
-			.when('/', {
-				templateUrl : 'views/services.html',
-				//controller  : 'appController' //to avoid calling twice
-			}) //remove semi-colon when extending routes
-			.when('/customers/:serviceTypeId', {
-				templateUrl : 'views/customers.html',
-				controller  : 'customerController'
-			})
+app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
+	$urlRouterProvider.otherwise('/');
+	$stateProvider
+	.state('services', {
+		url: '/',
+		templateUrl: 'views/services.html',
+		controller: 'servicesController'
+	})
+	.state('customers', {
+		url: '/customers',
+		templateUrl: 'views/customers.html',
+		controller: 'customersController'
+	})
+	.state('circuits', {
+		url: '/circuits',
+		templateUrl : 'views/circuits.html',
+		controller  : 'circuitController'      
+	})
+}]);
 
-			.when('/circuits/:customerNameId/:serviceTypeId', {
-				templateUrl : 'views/circuits.html',
-				controller  : 'circuitController'
-			});
-
-		//locationProvider.html5Mode(true); //for pretty URLS
-
-
-		}]);
-
-app.controller('appController', ['$scope', '$location', '$http','$routeParams', '$route',  
-	function($scope, $location, $http, $routeParams, $route) {
+app.controller('servicesController', ['$scope', '$location', '$http','$stateParams', '$state',  
+	function($scope, $location, $http, $stateParams, $state) {
 
 	//var serviceCategories;
 	//var servicesAlarms;
 	$("#serviceCatSelector").prop( "disabled", false );
-    var serviceCat = '*';
+	var serviceCat = '*';
 
 	//console.log(serviceCat);
 	$http.get('/json/service_level_alarms.json')
@@ -50,39 +48,39 @@ app.controller('appController', ['$scope', '$location', '$http','$routeParams', 
 
 	$scope.selectServiceType = function(serviceCat) {
 
+/*
+		if (serviceCat == 'Voice')
+		{
+			console.log('Voice');
+			$('div[name=Voice]').show(); 
+			$('div[name=Capacity]').hide(); 
+			$('div[name=Data]').hide();
 
-	 	if (serviceCat == 'Voice')
-	 	{
-	 		console.log('Voice');
-	 		$('div[name=Voice]').show(); 
-	 		$('div[name=Capacity]').hide(); 
-	 		$('div[name=Data]').hide();
+		}
+		else if (serviceCat == 'Data')
+		{
+			console.log('Data');
+			$('div[name=Voice]').hide(); 
+			$('div[name=Capacity]').hide(); 
+			$('div[name=Data]').show(); 	
 
-	 	}
-	 	else if (serviceCat == 'Data')
-	 	{
-	 		console.log('Data');
-	 		$('div[name=Voice]').hide(); 
-	 		$('div[name=Capacity]').hide(); 
-	 		$('div[name=Data]').show(); 	
+		}
+		else if (serviceCat == 'Capacity')
+		{
+			console.log('Capacity');
+			$('div[name=Voice]').hide(); 
+			$('div[name=Capacity]').show(); 
+			$('div[name=Data]').hide();
 
-	 	}
-	 	else if (serviceCat == 'Capacity')
-	 	{
-	 		console.log('Capacity');
-	 		$('div[name=Voice]').hide(); 
-	 		$('div[name=Capacity]').show(); 
-	 		$('div[name=Data]').hide();
-
-	 	}
-	 	else
-	 	{
-	 		console.log('All');
-	 		$('div[name=Voice]').show(); 
-	 		$('div[name=Capacity]').show(); 
-	 		$('div[name=Data]').show();	 		
-	 	}
-
+		}
+		else
+		{
+			console.log('All');
+			$('div[name=Voice]').show(); 
+			$('div[name=Capacity]').show(); 
+			$('div[name=Data]').show();	 		
+		}
+*/
 	};
 
 	$scope.$on('drawServiceCharts', function(ngRepeatFinishedEvent) {
@@ -126,18 +124,18 @@ app.controller('appController', ['$scope', '$location', '$http','$routeParams', 
 		.error(function() {
 			console.log("Failed to fetch data.");
 		//defer.reject('could not find someFile.json');
-		});
+	});
 
 	});
 
-	$scope.drawCustomerCharts = function(serviceTypeId){
+$scope.drawCustomerCharts = function(serviceTypeId){
 			//alert(customerId);
-		$location.path('/customers/' + serviceTypeId);
-	}
+			$location.path('/customers/' + serviceTypeId);
+		}
 
 	}]);
 
-
+/*
 app.controller('customerController', [ '$scope', '$location', '$routeParams', '$http',
 	function($scope, $location, $routeParams, $http) {
 
@@ -163,7 +161,7 @@ app.controller('customerController', [ '$scope', '$location', '$routeParams', '$
 				//alert("Showing circuits for customer: " + $routeParams.customerId);
 
 				$http.get('/json/customer_level_alarms.json')
-					.success(function(data) {
+				.success(function(data) {
 				//angular.extend(_this, data);  <----
 				var chartsData = jsonPath(data, "$.customers." + serviceTypeId + ".*");
 				//console.log(chartsData);
@@ -195,13 +193,13 @@ app.controller('customerController', [ '$scope', '$location', '$routeParams', '$
 
 				//defer.resolve(); // Find out the reason for using
 			})
-			.error(function() {
-				console.log("Failed to fetch data.");
+				.error(function() {
+					console.log("Failed to fetch data.");
 			//defer.reject('could not find someFile.json');
-			});
 		});
+			});
 
-		$scope.drawCircuitCharts = function(customerNameId, serviceTypeId){
+$scope.drawCircuitCharts = function(customerNameId, serviceTypeId){
 			//alert(circuitId);
 			//console.log(customerNameId);
 			//console.log(serviceTypeId);
@@ -241,7 +239,7 @@ app.controller('circuitController', [ '$scope', '$location', '$routeParams', '$h
 				//alert("Showing circuits for customer: " + $routeParams.customerId);
 
 				$http.get('/json/circuit_level_alarms.json')
-					.success(function(data) {
+				.success(function(data) {
 				//angular.extend(_this, data);  <----
 				var chartsData = jsonPath(data, "$.circuits." + customerNameId + "[?(@.serviceType == " + "'" + serviceTypeId + "')]");
 				console.log(chartsData);
@@ -274,13 +272,13 @@ app.controller('circuitController', [ '$scope', '$location', '$routeParams', '$h
 
 				//defer.resolve(); // Find out the reason for using
 			})
-			.error(function() {
-				console.log("Failed to fetch data.");
+.error(function() {
+	console.log("Failed to fetch data.");
 			//defer.reject('could not find someFile.json');
-			});
 		});
+});
 
-		$scope.drawCircuitMetrics = function(customerNameId){
+$scope.drawCircuitMetrics = function(customerNameId){
 			//alert(circuitId);
 			console.log(customerNameId);
 			//$location.path('/circuits/' + customerNameId + '/' + serviceTypeId);
@@ -289,7 +287,7 @@ app.controller('circuitController', [ '$scope', '$location', '$routeParams', '$h
 	}]);
 
 
-
+*/
 
 
 

@@ -6,29 +6,33 @@
 	<!--base href="/" -->
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="lib/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="lib/angular.min.js"></script>
+	<script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
+
+	<script type="text/javascript" src="lib/bootstrap.min.js"></script>
 	<script type="text/javascript" src="lib/jsonpath.js"></script>
 	<script type="text/javascript" src="app.js"></script>
+
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" crossorigin="anonymous">
+
 </head>
 
 <!-- define angular controller -->
-<body ng-controller="appController">
+<body>
 
-<div id="main">
+	<div id="main">
 
-	<header ng-include="'views/nav.html'"></header>
+		<header ng-include="'views/nav.html'"></header>
 
-	<!-- angular templating -->
-	<!-- this is where content will be injected -->
-	<div ng-view></div>
-	
-</div>
+		<!-- angular templating -->
+		<!-- this is where content will be injected -->
+		<div ui-view></div>
+		
+	</div>
 
 
 </body>
