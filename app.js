@@ -1,6 +1,6 @@
 google.load('visualization', '1', {packages:['corechart']});
 
-var app = angular.module('app', ['ui.router','app.directive.ngRepeatFinished']);
+var app = angular.module('app', ['ui.router', 'ui.bootstrap', 'app.directive.ngRepeatFinished']);
 
 app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
 	$urlRouterProvider.otherwise('/');
@@ -11,7 +11,14 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
 			serviceCatId: 'All'
 		},
 		templateUrl: 'views/services.html',
-		controller: 'servicesController'
+		controller: 'servicesController',
+		resolve: {
+			servicesAlarmData: ['AlarmsDataService', function (AlarmsDataService) {
+				//console.log(AlarmsDataService.getServiceLevelAlarms());
+				return AlarmsDataService.getServiceLevelAlarms();
+			}]
+		}   
+
 	})
 	.state('customers', {
 		url: '/customers',
@@ -20,7 +27,13 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
 			serviceTypeId: null
 		},
 		templateUrl: 'views/customers.html',
-		controller: 'customersController'
+		controller: 'customersController',
+		resolve: {
+			customersAlarmData: ['AlarmsDataService', function (AlarmsDataService) {
+				console.log(AlarmsDataService.getCustomerLevelAlarms());
+				return AlarmsDataService.getCustomerLevelAlarms();
+			}]
+		}   
 	})
 	.state('circuits', {
 		url: '/circuits',
@@ -30,104 +43,99 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
 			customerNameId: null
 		},
 		templateUrl : 'views/circuits.html',
-		controller  : 'circuitsController'      
+		controller  : 'circuitsController',
+		resolve: {
+			circuitsAlarmData: ['AlarmsDataService', function (AlarmsDataService) {
+				return AlarmsDataService.getCircuitLevelAlarms();
+			}]
+		}    
 	})
 }]);
 
-app.controller('servicesController', ['$scope', '$location', '$http','$stateParams', '$state',  
-	function($scope, $location, $http, $stateParams, $state) {
 
-	//var serviceCategories;
-	//var servicesAlarms;
-	var serviceCatOptions = {
-		"All" : 0,
-		"Voice" : 0,
-		"Data" : 0,
-		"Capacity" : 0
+app.factory('AlarmsDataService', ['$http', function($http) {
+	return {
+		getServiceLevelAlarms: function() {
+			return $http.get('/json/service_level_alarms.json').then(function(response) {
+				return response.data;
+			}, function(){console.log("Failed to fetch service level alarms;")});
+		},
+
+		getCustomerLevelAlarms: function() {
+			return $http.get('/json/customer_level_alarms.json').then(function(response) {
+				return response.data;
+			}, function(){console.log("Failed to fetch service level alarms;")});
+		},
+
+		getCircuitLevelAlarms: function() {
+			return $http.get('/json/circuit_level_alarms.json').then(function(response) {
+				return response.data;
+			}, function(){console.log("Failed to fetch circuit level alarms;")});
+		}
+
 	};
+}])
 
-	$("#serviceCatSelector").prop( "disabled", false );
-	var serviceCat = $stateParams.serviceCatId;
 
-	if (serviceCat == 'Voice')
-		serviceCatOptions.Voice = 1;
-	else if (serviceCat == 'Data')
-		serviceCatOptions.Data = 1;
-	else if (serviceCat == 'Capacity')
-		serviceCatOptions.Capacity = 1;
-	else {
-		serviceCatOptions.All = 1;
-		serviceCat = '*';
-	}
+app.controller('servicesController', ['$scope', '$location', '$http','$stateParams', '$state',  'servicesAlarmData',
+	function($scope, $location, $http, $stateParams, $state, servicesAlarmData) {
 
-	$scope.serviceCatOptions = serviceCatOptions;
+		var serviceCatOptions = {
+			"All" : 0,
+			"Voice" : 0,
+			"Data" : 0,
+			"Capacity" : 0
+		};
+
+		var serviceCat = $stateParams.serviceCatId;
+
+		if (serviceCat == 'Voice')
+			serviceCatOptions.Voice = 1;
+		else if (serviceCat == 'Data')
+			serviceCatOptions.Data = 1;
+		else if (serviceCat == 'Capacity')
+			serviceCatOptions.Capacity = 1;
+		else {
+			serviceCatOptions.All = 1;
+			serviceCat = '*';
+		}
+
+		$scope.serviceCatOptions = serviceCatOptions;
 	//if (serviceCat == 'All')  //Check with Hussain for All case
 
-
 	$scope.selectServiceCat = function(serviceCatParam) {
-
 		$state.go('services', {serviceCatId: serviceCatParam})
 	};
 
-	//console.log(serviceCat);
-	$http.get('/json/service_level_alarms.json')
-	.success(function(data) {
-		//angular.extend(_this, data);
-		//========Need this to fetch data to call ng-repeat -- Need to replace multiple calls with factory =======//
-		//console.log(serviceCat);
-		$scope.data = jsonPath(data, "$.services." + serviceCat + ".*");
-		//console.log($scope.data);
-		//defer.resolve(); // Find out the reason for using
-	})
-	.error(function() {
-		console.log("Failed to fetch service alarms data.");
-		//defer.reject('could not find someFile.json');
-	});
+	var chartsData = jsonPath(servicesAlarmData, "$.services." + serviceCat + ".*");
 
+	$scope.data = chartsData;
 
 	$scope.$on('drawServiceCharts', function(ngRepeatFinishedEvent) {
 
-		//console.log(ngRepeatFinishedEvent);
+		var options = {
+			'width':320,
+			'height':260,
+			colors: ['red', 'orange', '#59b20a'],
+			pieHole: 0.4,
+			pieSliceTextStyle: {color: 'white', fontSize: '11'},
+			titleTextStyle: { color: '#007DB0', fontSize: '13'},
+			legend: {'position': 'none'},
 
-		$http.get('/json/service_level_alarms.json')
-		.success(function(data) {
-			//angular.extend(_this, data);  <----
-			var chartsData = jsonPath(data, "$.services."+serviceCat+".*");
-			//console.log($scope.data);
+		};
 
-			// Set chart options
-			var options = {
-				'width':320,
-				'height':260,
-				colors: ['red', 'orange', '#59b20a'],
-				pieHole: 0.4,
-				pieSliceTextStyle: {color: 'white', fontSize: '11'},
-				titleTextStyle: { color: '#007DB0', fontSize: '13'},
-				legend: {'position': 'none'},
+		for (i=0; i <chartsData.length; i++){
+			options.title = chartsData[i].serviceType;
+			var chart = new google.visualization.PieChart(document.getElementById(chartsData[i].serviceType));
 
-			};
+			var chartData = google.visualization.arrayToDataTable([
+				['Type', 'Count'],
+				['Outage', chartsData[i].alarmsSeverity1],
+				['Degradation', chartsData[i].alarmsSeverity2]
+				]);
 
-			//alert(customerData);   <----
-			for (i=0; i <chartsData.length; i++){
-				options.title = chartsData[i].serviceType;
-				var chart = new google.visualization.PieChart(document.getElementById(chartsData[i].serviceType));
-
-				var chartData = google.visualization.arrayToDataTable([
-					['Type', 'Count'],
-					['Outage', chartsData[i].alarmsSeverity1],
-					['Degradation', chartsData[i].alarmsSeverity2]
-					]);
-
-				chart.draw(chartData, options);
-			};
-
-			//defer.resolve(); // Find out the reason for using
-		})
-		.error(function() {
-			console.log("Failed to fetch data.");
-		//defer.reject('could not find someFile.json');
-	});
-
+			chart.draw(chartData, options);
+		};
 	});
 
 	$scope.drawCustomerCharts = function(serviceTypeId){
@@ -141,87 +149,70 @@ app.controller('servicesController', ['$scope', '$location', '$http','$statePara
 }]);
 
 
-app.controller('customersController', [ '$scope', '$location', '$http', '$stateParams', '$state',
-	function($scope, $location, $http, $stateParams, $state) {
-
-		$("#serviceCatSelector").prop( "disabled", true );
+app.controller('customersController', [ '$scope', '$location', '$http', '$stateParams', '$state', '$filter', 'customersAlarmData',
+	function($scope, $location, $http, $stateParams, $state, $filter, customersAlarmData) {
 
 		var serviceTypeId = $stateParams.serviceTypeId;
 		var serviceCatId = $stateParams.serviceCatId;
 		$scope.serviceTypeId = serviceTypeId;
 		$scope.serviceCatId = serviceCatId;
-		//console.log(serviceTypeId);
 
-		$http.get('/json/customer_level_alarms.json')
-		.success(function(data) {
-			//angular.extend(_this, data);
-			//========Need this to fetch data to call ng-repeat -- Need to replace multiple calls with factory =======//
-			$scope.data = jsonPath(data, "$.customers." + serviceTypeId + ".*");
-			console.log($scope.data);
-			//defer.resolve(); // Find out the reason for using
-		})
-		.error(function() {
-			console.log("Failed to fetch service alarms data.");
-			//defer.reject('could not find someFile.json');
-		});		
+		$scope.currentPage = 1;
+		$scope.itemsPerPage = 4;
+
+		var data = jsonPath(customersAlarmData, "$.customers." + serviceTypeId + ".*");
+		$scope.totalItems = data.length;
+
+		$scope.dataWindow = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));
+		//var chartsData = $scope.dataWindow;
+
+		$scope.pageChanged = function() {
+			console.log('Page changed to: ' + $scope.currentPage);
+			$scope.dataWindow = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));
+		};
+
 
 		$scope.$on('drawCustomerCharts', function(ngRepeatFinishedEvent) {
-				//alert("Showing circuits for customer: " + $routeParams.customerId);
 
-				$http.get('/json/customer_level_alarms.json')
-				.success(function(data) {
-				//angular.extend(_this, data);  <----
-				var chartsData = jsonPath(data, "$.customers." + serviceTypeId + ".*");
-				//console.log(chartsData);
+			var chartsData = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));
 
-				// Set chart options
-				var options = {
-					'width':320,
-					'height':260,
-					colors: ['red', 'orange', '#59b20a'],
-					pieHole: 0.4,
-					pieSliceTextStyle: {color: 'white', fontSize: '11'},
-					titleTextStyle: { color: '#007DB0', fontSize: '13'},
-					legend: {'position': 'none'},
+			var options = {
+				'width':320,
+				'height':260,
+				colors: ['red', 'orange', '#59b20a'],
+				pieHole: 0.4,
+				pieSliceTextStyle: {color: 'white', fontSize: '11'},
+				titleTextStyle: { color: '#007DB0', fontSize: '13'},
+				legend: {'position': 'none'},
 
-				};
+			};
 
-				for (i=0; i <chartsData.length; i++){
-					options.title = chartsData[i].customerName;
-					var chart = new google.visualization.PieChart(document.getElementById(chartsData[i].customerName));
+			for (i=0; i <chartsData.length; i++){
+				options.title = chartsData[i].customerName;
+				var chart = new google.visualization.PieChart(document.getElementById(chartsData[i].customerName));
 
-					var chartData = google.visualization.arrayToDataTable([
-						['Type', 'Count'],
-						['Outage', chartsData[i].alarmsSeverity1],
-						['Degradation', chartsData[i].alarmsSeverity2]
-						]);
+				var chartData = google.visualization.arrayToDataTable([
+					['Type', 'Count'],
+					['Outage', chartsData[i].alarmsSeverity1],
+					['Degradation', chartsData[i].alarmsSeverity2]
+					]);
 
-					chart.draw(chartData, options);
-				};
+				chart.draw(chartData, options);
+			};
 
-				//defer.resolve(); // Find out the reason for using
-			})
-				.error(function() {
-					console.log("Failed to fetch data.");
-			//defer.reject('could not find someFile.json');
 		});
-			});
 
 		$scope.drawCircuitCharts = function(customerNameParam, serviceTypeParam){
-			//alert(circuitId);
-			//console.log(customerNameId);
-			//console.log(serviceTypeId);
+
 			$state.go('circuits', {customerNameId: customerNameParam, serviceTypeId: serviceTypeParam, serviceCatId: serviceCatId});
 		}
 
 	}]);
 
 
+app.controller('circuitsController', [ '$scope', '$location','$http', '$stateParams', '$state', 'circuitsAlarmData',
+	function($scope, $location, $http, $stateParams, $state, circuitsAlarmData) {
 
-app.controller('circuitsController', [ '$scope', '$location','$http', '$stateParams', '$state',
-	function($scope, $location, $http, $stateParams, $state) {
-
-		$("#serviceCatSelector").prop( "disabled", true );
 		var customerNameId = $stateParams.customerNameId;
 		var serviceTypeId = $stateParams.serviceTypeId;
 		var serviceCatId = $stateParams.serviceCatId;
@@ -230,76 +221,44 @@ app.controller('circuitsController', [ '$scope', '$location','$http', '$statePar
 		$scope.serviceTypeId = serviceTypeId;
 		$scope.customerNameId = customerNameId;
 
-		$http.get('/json/circuit_level_alarms.json')
-		.success(function(data) {
-			//angular.extend(_this, data);
-			//========Need this to fetch data to call ng-repeat -- Need to replace multiple calls with factory =======//
-			//console.log(serviceTypeId);
-			$scope.data = jsonPath(data, "$.circuits." + customerNameId + "[?(@.serviceType == " + "'" + serviceTypeId + "')]");
-
-			//str = "$.circuits." + customerNameId + "[?(@.serviceType == " + "'" + serviceTypeId + "')]";
-
-			console.log($scope.data);
-			//console.log(str);
-			//defer.resolve(); // Find out the reason for using
-		})
-		.error(function() {
-			console.log("Failed to fetch service alarms data.");
-			//defer.reject('could not find someFile.json');
-		});		
+		var chartsData =  jsonPath(circuitsAlarmData, "$.circuits." + customerNameId + "[?(@.serviceType == " + "'" + serviceTypeId + "')]");
+		$scope.data = chartsData;
 
 		$scope.$on('drawCircuitMetrics', function(ngRepeatFinishedEvent) {
-				//alert("Showing circuits for customer: " + $routeParams.customerId);
 
-				$http.get('/json/circuit_level_alarms.json')
-				.success(function(data) {
-				//angular.extend(_this, data);  <----
-				var chartsData = jsonPath(data, "$.circuits." + customerNameId + "[?(@.serviceType == " + "'" + serviceTypeId + "')]");
-				console.log(chartsData);
+			var options = {
+				'width':320,
+				'height':260,
+				colors: ['red', 'orange', '#59b20a'],
+				pieHole: 0.4,
+				pieSliceTextStyle: {color: 'white', fontSize: '11'},
+				titleTextStyle: { color: '#007DB0', fontSize: '13'},
+				legend: {'position': 'none'},
 
-				// Set chart options
-				var options = {
-					'width':320,
-					'height':260,
-					colors: ['red', 'orange', '#59b20a'],
-					pieHole: 0.4,
-					pieSliceTextStyle: {color: 'white', fontSize: '11'},
-					titleTextStyle: { color: '#007DB0', fontSize: '13'},
-					legend: {'position': 'none'},
+			};
 
-				};
+			for (i=0; i <chartsData.length; i++){
+				options.title = chartsData[i].circuitId;
+				var chart = new google.visualization.PieChart(document.getElementById(chartsData[i].circuitId));
 
-				for (i=0; i <chartsData.length; i++){
-					options.title = chartsData[i].circuitId;
-					var chart = new google.visualization.PieChart(document.getElementById(chartsData[i].circuitId));
+				var chartData = google.visualization.arrayToDataTable([
+					['Type', 'Count'],
+					['Outage', chartsData[i].alarmsSeverity1],
+					['Degradation', chartsData[i].alarmsSeverity2],
+					['Non-Service Affecting', chartsData[i].alarmsSeverity3]
+					]);
 
-					var chartData = google.visualization.arrayToDataTable([
-						['Type', 'Count'],
-						['Outage', chartsData[i].alarmsSeverity1],
-						['Degradation', chartsData[i].alarmsSeverity2],
-						['Non-Service Affecting', chartsData[i].alarmsSeverity3]
-						]);
+				chart.draw(chartData, options);
+			};
 
-					chart.draw(chartData, options);
-				};
-
-				//defer.resolve(); // Find out the reason for using
-			})
-				.error(function() {
-					console.log("Failed to fetch data.");
-			//defer.reject('could not find someFile.json');
 		});
-			});
 
 		$scope.drawCircuitMetrics = function(customerNameId){
 			//alert(circuitId);
 			console.log(customerNameId);
-			//$location.path('/circuits/' + customerNameId + '/' + serviceTypeId);
 		}
 
 	}]);
-
-
 
 
 var module = angular.module('app.directive.ngRepeatFinished', [])
@@ -315,3 +274,5 @@ var module = angular.module('app.directive.ngRepeatFinished', [])
 		}
 	}
 });
+
+
