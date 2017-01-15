@@ -1,12 +1,10 @@
 
 <ol class="breadcrumb">
-<li><a ui-sref="services({serviceCatId: serviceCatId})">{{ serviceCatId }}</a> </li>
-<li><a ui-sref="services({serviceCatId: serviceCatId, serviceTypeId: serviceTypeId})">{{ serviceTypeId }}</a> </li>
-<li><a ui-sref="customers({serviceCatId: serviceCatId, serviceTypeId: serviceTypeId, customerNameId: customerNameId})">{{ customerNameId }} </a> </li>
-<li>Circuits</li>
+	<li><a ui-sref="services({serviceCatId: serviceCatId})">{{ serviceCatId }}</a> </li>
+	<li><a ui-sref="services({serviceCatId: serviceCatId, serviceTypeId: serviceTypeId})">{{ serviceTypeId }}</a> </li>
+	<li><a ui-sref="customers({serviceCatId: serviceCatId, serviceTypeId: serviceTypeId, customerNameId: customerNameId})">{{ customerNameId }} </a> </li>
+	<li>Circuits</li>
 </ol>
 
-<div>
-	<div ng-repeat="item in data"  on-finish-render="drawCircuitMetrics" id="{{item.circuitId}}" class="col-xs-6 col-sm-3" ng-click="drawCircuitMetrics(item.circuitId)">
-	</div>
+<div ng-repeat="item in data"  on-finish-render="drawCircuitMetrics" id="{{item.circuitId}}" class="col-xs-6 col-sm-3" ng-click="drawCircuitMetrics(item.circuitId)">
 </div>

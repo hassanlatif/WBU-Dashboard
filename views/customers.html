@@ -1,8 +1,8 @@
 
 <ol class="breadcrumb">
-<li><a ui-sref="services({serviceCatId: serviceCatId})">{{ serviceCatId }}</a></li>
-<li><a ui-sref="services({serviceCatId: serviceCatId, serviceTypeId: serviceTypeId})">{{ serviceTypeId }}</a> </li> 
-<li>Customers</li>
+	<li><a ui-sref="services({serviceCatId: serviceCatId})">{{ serviceCatId }}</a></li>
+	<li><a ui-sref="services({serviceCatId: serviceCatId, serviceTypeId: serviceTypeId})">{{ serviceTypeId }}</a> </li> 
+	<li>Customers</li>
 </ol>
 
 <div class="container">
@@ -12,6 +12,6 @@
 
 <!--pagination total-items="chartsData.length" ng-model="currentPage" items-per-page="pageSize"></pagination-->
 <br>
-<div>
-<ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" items-per-page="itemsPerPage"></ul>
+<div class="text-center">
+	<ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" items-per-page="itemsPerPage"></ul>
 </div>
