@@ -42,7 +42,50 @@
         "customerName": "customerName_3", 
         "alarmsSeverity1" : 2,
         "alarmsSeverity2" : 2
-    }
+    },
+    {
+        "serviceType" : "I-IGNET",        
+        "customerName": "customerName_4", 
+        "alarmsSeverity1" : 2,
+        "alarmsSeverity2" : 2
+    },
+    {
+        "serviceType" : "I-IGNET",        
+        "customerName": "customerName_5", 
+        "alarmsSeverity1" : 2,
+        "alarmsSeverity2" : 2
+    },
+    {
+        "serviceType" : "I-IGNET",        
+        "customerName": "customerName_6", 
+        "alarmsSeverity1" : 2,
+        "alarmsSeverity2" : 2
+    },
+    {
+        "serviceType" : "I-IGNET",        
+        "customerName": "customerName_7", 
+        "alarmsSeverity1" : 2,
+        "alarmsSeverity2" : 2
+    },
+    {
+        "serviceType" : "I-IGNET",        
+        "customerName": "customerName_8", 
+        "alarmsSeverity1" : 2,
+        "alarmsSeverity2" : 2
+    },
+    {
+        "serviceType" : "I-IGNET",        
+        "customerName": "customerName_9", 
+        "alarmsSeverity1" : 2,
+        "alarmsSeverity2" : 2
+    },
+    {
+        "serviceType" : "I-IGNET",        
+        "customerName": "customerName_10", 
+        "alarmsSeverity1" : 2,
+        "alarmsSeverity2" : 2
+    }    
+
     ]
 
   }
