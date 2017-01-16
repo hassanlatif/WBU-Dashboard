@@ -16,7 +16,6 @@
 	<script type="text/javascript" src="lib/jsonpath.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 
-	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" crossorigin="anonymous">
 
@@ -27,11 +26,13 @@
 
 	<div id="main">
 
-		<header ng-include="'views/nav.html'"></header>
+		<header ng-include="'views/header.html'"></header>
 
 		<!-- angular templating -->
 		<!-- this is where content will be injected -->
 		<div ui-view></div>
+
+		<!--footer ng-include="'views/footer.html'"></footer-->
 		
 	</div>
 
