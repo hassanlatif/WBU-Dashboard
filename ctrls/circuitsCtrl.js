@@ -14,7 +14,7 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 		$scope.itemsPerPage = 4;
 
 		var data =  jsonPath(circuitsAlarmData, "$.circuits." + customerNameId + "[?(@.serviceType == " + "'" + serviceTypeId + "')]");
-
+		console.log("$.circuits." + customerNameId + "[?(@.serviceType == " + "'" + serviceTypeId + "')]");
 		$scope.totalItems = data.length;
 		//console.log(data.length);
 		$scope.dataWindow = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));

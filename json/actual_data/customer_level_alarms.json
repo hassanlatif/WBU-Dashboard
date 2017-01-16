@@ -1,0 +1,87 @@
+{
+    "customers": {
+        "I-HARD_PATCH_TRANSIT": [
+            {
+                "alarmsSeverity1": 3,
+                "alarmsSeverity2": 9,
+                "customerName": "Bahrain VIVA",
+                "serviceType": "I-HARD_PATCH_TRANSIT"
+            }
+        ],
+        "I-IGNET": [
+            {
+                "alarmsSeverity1": 2,
+                "alarmsSeverity2": 8,
+                "customerName": "Bahrain VIVA",
+                "serviceType": "I-IGNET"
+            }
+        ],
+        "I-IP_NODE": [],
+        "I-IP_TRANSIT": [
+            {
+                "alarmsSeverity1": 2,
+                "alarmsSeverity2": 0,
+                "customerName": "Bahrain VIVA",
+                "serviceType": "I-IP_TRANSIT"
+            }
+        ],
+        "I-OSS-SS": [],
+        "I-PEERING-BB": [],
+        "I-SUBMARINE_CAPACITY": [],
+        "I/N-INTERCONNECT_LINK": [
+            {
+                "alarmsSeverity1": 5,
+                "alarmsSeverity2": 342,
+                "customerName": "Bahrain VIVA",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsSeverity1": 1,
+                "alarmsSeverity2": 7,
+                "customerName": "Gateway Telecom",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsSeverity1": 1,
+                "alarmsSeverity2": 62,
+                "customerName": "India Idea",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsSeverity1": 2,
+                "alarmsSeverity2": 4619,
+                "customerName": "Saudi Arabia - Mobily",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsSeverity1": 3,
+                "alarmsSeverity2": 280,
+                "customerName": "VIVA  - Kuwait",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "I/N-INTERNET_CONNECTIVITY": [],
+        "I2N-L2VPN": [
+            {
+                "alarmsSeverity1": 1,
+                "alarmsSeverity2": 2,
+                "customerName": "Bahrain VIVA",
+                "serviceType": "I2N-L2VPN"
+            }
+        ],
+        "N-WDIA": [
+            {
+                "alarmsSeverity1": 19,
+                "alarmsSeverity2": 205,
+                "customerName": "EATC",
+                "serviceType": "N-WDIA"
+            },
+            {
+                "alarmsSeverity1": 3,
+                "alarmsSeverity2": 93,
+                "customerName": "Integrated Telecom Company",
+                "serviceType": "N-WDIA"
+            }
+        ]
+    }
+}

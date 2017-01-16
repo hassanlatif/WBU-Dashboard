@@ -1,0 +1,98 @@
+{
+    "circuits": {
+        "KACST": [
+            {
+                "alarmsSeverity1": 5,
+                "alarmsSeverity2": 1,
+                "alarmsSeverity3": 7,
+                "alarmsSeverity4": 0,
+                "alarmsSeverity5": 10,
+                "alarmsSeverity6": 0,
+                "circuitId": "STC/KACST-MRM/AT&T_LONDON VC4S001_WBU",
+                "serviceCategory": "VOICE",
+                "serviceType": "I/N-INTERNET_CONNECTIVITY"
+            },
+            {
+                "alarmsSeverity1": 2,
+                "alarmsSeverity2": 1,
+                "alarmsSeverity3": 0,
+                "alarmsSeverity4": 2,
+                "alarmsSeverity5": 15,
+                "alarmsSeverity6": 0,
+                "circuitId": "JED/KACST-MAR/L3 VC4-4CS001",
+                "serviceCategory": "VOICE",
+                "serviceType": "I/N-INTERNET_CONNECTIVITY"
+            },
+            {
+                "alarmsSeverity1": 3,
+                "alarmsSeverity2": 1,
+                "alarmsSeverity3": 0,
+                "alarmsSeverity4": 0,
+                "alarmsSeverity5": 12,
+                "alarmsSeverity6": 0,
+                "circuitId": "RIYADH/KACST-MAR/FFT_COGNT VC4-4CS001",
+                "serviceCategory": "VOICE",
+                "serviceType": "I/N-INTERNET_CONNECTIVITY"
+            },
+            {
+                "alarmsSeverity1": 1,
+                "alarmsSeverity2": 1,
+                "alarmsSeverity3": 1,
+                "alarmsSeverity4": 0,
+                "alarmsSeverity5": 2,
+                "alarmsSeverity6": 0,
+                "circuitId": "STC/KACST-TUAS/SINGTEL VC4-4CS004",
+                "serviceCategory": "VOICE",
+                "serviceType": "I/N-INTERNET_CONNECTIVITY"
+            },
+            {
+                "alarmsSeverity1": 0,
+                "alarmsSeverity2": 1,
+                "alarmsSeverity3": 0,
+                "alarmsSeverity4": 0,
+                "alarmsSeverity5": 5,
+                "alarmsSeverity6": 0,
+                "circuitId": "JED/KACST-TUAS/SINGTL VC4S001_WBU",
+                "serviceCategory": "VOICE",
+                "serviceType": "I/N-INTERNET_CONNECTIVITY"
+            }
+        ],
+        "PTCL-Pakistan Telecom. Co. Ltd": [
+            {
+                "alarmsSeverity1": 0,
+                "alarmsSeverity2": 23,
+                "alarmsSeverity3": 4,
+                "alarmsSeverity4": 1,
+                "alarmsSeverity5": 7,
+                "alarmsSeverity6": 0,
+                "circuitId": "SALAMAH - ISLAMABAD VC12S015",
+                "serviceCategory": "VOICE",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsSeverity1": 8,
+                "alarmsSeverity2": 0,
+                "alarmsSeverity3": 0,
+                "alarmsSeverity4": 0,
+                "alarmsSeverity5": 0,
+                "alarmsSeverity6": 1,
+                "circuitId": "SALAMAH - KARACHI VC12S108",
+                "serviceCategory": "VOICE",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "ooredoo": [
+            {
+                "alarmsSeverity1": 1,
+                "alarmsSeverity2": 12,
+                "alarmsSeverity3": 3,
+                "alarmsSeverity4": 4,
+                "alarmsSeverity5": 5,
+                "alarmsSeverity6": 6,
+                "circuitId": "BAH-DOH VC3S03",
+                "serviceCategory": "CAPACITY",
+                "serviceType": "I-HARD_PATCH_TRANSIT"
+            }
+        ]
+    }
+}
