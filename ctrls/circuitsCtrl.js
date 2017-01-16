@@ -10,10 +10,24 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 		$scope.serviceTypeId = serviceTypeId;
 		$scope.customerNameId = customerNameId;
 
-		var chartsData =  jsonPath(circuitsAlarmData, "$.circuits." + customerNameId + "[?(@.serviceType == " + "'" + serviceTypeId + "')]");
-		$scope.data = chartsData;
+		$scope.currentPage = 1;
+		$scope.itemsPerPage = 4;
+
+		var data =  jsonPath(circuitsAlarmData, "$.circuits." + customerNameId + "[?(@.serviceType == " + "'" + serviceTypeId + "')]");
+
+		$scope.totalItems = data.length;
+		//console.log(data.length);
+		$scope.dataWindow = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));
+
+		$scope.pageChanged = function() {
+			console.log('Page changed to: ' + $scope.currentPage);
+			$scope.dataWindow = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));
+		};
+
 
 		$scope.$on('drawCircuitMetrics', function(ngRepeatFinishedEvent) {
+
+			var chartsData = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));			
 
 			var options = {
 				'width':320,

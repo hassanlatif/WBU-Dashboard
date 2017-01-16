@@ -51,7 +51,7 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 		///Total Packet Drop Gauge///
 		var totalPacketDropVal = google.visualization.arrayToDataTable([
 			['Label', 'Value'],
-			['Capacity', gaugesData.TotalPacketDrop],
+			['Packet Drop', gaugesData.TotalPacketDrop],
 			]);
 
 		var totalPacketDropOpts = {
@@ -68,7 +68,7 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 		///Total Error In Gauge///
 		var totalErrorInVal = google.visualization.arrayToDataTable([
 			['Label', 'Value'],
-			['Capacity', gaugesData.TotalErrorIN],
+			['Error In', gaugesData.TotalErrorIN],
 			]);
 
 		var totalErrorInOpts = {

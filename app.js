@@ -1,6 +1,8 @@
 google.load('visualization', '1', {packages:['corechart']});
 google.load('visualization', '1', {packages:['gauge']});
 
+'use strict';
+
 var app = angular.module('app', ['ui.router', 'ui.bootstrap', 'app.directive.ngRepeatFinished']);
 
 app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {

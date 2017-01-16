@@ -10,10 +10,9 @@ app.controller('customersController', [ '$scope', '$stateParams', '$state', '$in
 		$scope.itemsPerPage = 4;
 
 		var data = jsonPath(customersAlarmData, "$.customers." + serviceTypeId + ".*");
-		$scope.totalItems = data.length;
 
+		$scope.totalItems = data.length;
 		$scope.dataWindow = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));
-		//var chartsData = $scope.dataWindow;
 
 		$scope.pageChanged = function() {
 			console.log('Page changed to: ' + $scope.currentPage);
