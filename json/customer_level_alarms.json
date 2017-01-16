@@ -84,7 +84,13 @@
         "customerName": "customerName_10", 
         "alarmsSeverity1" : 2,
         "alarmsSeverity2" : 2
-    }    
+    },
+    {
+        "serviceType" : "I-IGNET",        
+        "customerName": "customerName_11", 
+        "alarmsSeverity1" : 2,
+        "alarmsSeverity2" : 2
+    }
 
     ]
 

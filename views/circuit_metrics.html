@@ -1,0 +1,22 @@
+
+<ol class="breadcrumb">
+	<li><a ui-sref="services({serviceCatId: serviceCatId})">{{ serviceCatId }}</a> </li>
+	<li><a ui-sref="services({serviceCatId: serviceCatId, serviceTypeId: serviceTypeId})">{{ serviceTypeId }}</a> </li>
+	<li><a ui-sref="customers({serviceCatId: serviceCatId, serviceTypeId: serviceTypeId, customerNameId: customerNameId})">{{ customerNameId }} </a> </li>
+	<li><a ui-sref="circuits({serviceCatId: serviceCatId, serviceTypeId: serviceTypeId, customerNameId: customerNameId, circuitId: circuitId})">{{ circuitId }} </a> </li>
+	<li>Circuit Metrics</li>
+</ol>
+
+<br>
+
+<div class="container">
+
+	<div id="availability_gauge" class="col-xs-6 col-sm-3"> </div>
+
+	<div id="capacity_gauge" class="col-xs-6 col-sm-3"> </div>
+
+	<div id="totalPacketDrop_gauge" class="col-xs-6 col-sm-3"> </div>
+
+	<div id="totalErrorIn_gauge" class="col-xs-6 col-sm-3"> </div>
+
+</div>
