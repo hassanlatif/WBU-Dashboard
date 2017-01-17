@@ -56,12 +56,15 @@ app.controller('customersController', [ '$scope', '$stateParams', '$state', '$in
 			$state.go('circuits', {customerNameId: customerNameParam, serviceTypeId: serviceTypeParam, serviceCatId: serviceCatId});
 		}
 
-		$interval(function () {
-			
-			//console.log(" Customers refresh called."); //Test below with live data
+		var periodicRefresh = $interval(function () {			
+			console.log(" Customers refresh called."); //Test below with live data
 			//$state.go('customers', {serviceTypeId: serviceTypeId, serviceCatId: serviceCatId});
 			$state.reload(); 
 
 		}, 300000);
+
+		$scope.$on('$destroy', function() {
+    		$interval.cancel(periodicRefresh);
+		});
 
 	}]);

@@ -67,11 +67,14 @@ app.controller('servicesController', ['$scope','$stateParams', '$state', '$inter
 		$state.go('customers', {serviceTypeId: serviceTypeId, serviceCatId: serviceCat});
 	}
 
-	$interval(function () {
-		
+	var periodicRefresh = $interval(function () {
 		$state.reload(); 
-
 	}, 300000);
+
+
+	$scope.$on('$destroy', function() {
+		$interval.cancel(periodicRefresh);
+	});
 
 
 }]);

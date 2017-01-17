@@ -82,11 +82,14 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 		var chart = new google.visualization.Gauge(document.getElementById('totalErrorIn_gauge'));
 		chart.draw(totalErrorInVal, totalErrorInOpts);		
 
-		$interval(function () {
-
+		var periodicRefresh = $interval(function () {
 			$state.reload(); 
-
 		}, 300000);
+
+
+		$scope.$on('$destroy', function() {
+    		$interval.cancel(periodicRefresh);
+		});
 
 
 	}]);
