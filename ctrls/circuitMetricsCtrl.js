@@ -14,10 +14,12 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 
 		$scope.infoMessage = "";
 
-		$scope.iFrameURL = "https://172.21.24.118:16311/ibm/console/webtop/cgi-bin/SLAFilteredAEL.cgi?DS=NCOMS&VIEW=SLA_Dashboard&FILTER=TNSQM_ResourceName%20like%20:sq:"+ circuitId +":sq:";
+		$scope.iFrameURL = "https://172.21.24.118:16311/ibm/console/webtop/cgi-bin/SLAFilteredAEL.cgi?DS=NCOMS&VIEW=SLA_Dashboard&FILTER=TNSQM_ResourceName%20like%20:sq:" + circuitId + ":sq:";
 
 		var gaugesData = jsonPath(circuitMetricsData, "$.metrics." + circuitId)[0];
 		//console.log(gaugesData);
+
+		$scope.gaugesDataStatus =  gaugesData;
 
 		if (gaugesData) {
 
@@ -33,32 +35,48 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			///Availability Gauge///
 			var availabilityVal = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				['Availability', gaugesData.availability],
+				['Availability', gaugesData.availability]
 				]);
 
 			var availabilityOpts = {
-				width: 200, height: 200,
-				redFrom: 95, redTo: 99.98,		
-				yellowFrom:99.98, yellowTo: 99.99,						
-				greenFrom: 99.99, greenTo: 100,
-				minorTicks: 5
+				width: 170, height: 170,				
+				redFrom: 99.95, redTo: 99.98,		
+				yellowFrom:99.98, yellowTo: 99.99,	
+        		greenFrom: 99.99, greenTo: 100,
+				minorTicks: 10, 
+				max: 100, min: 99.97,
+				animation:{
+       			 duration: 1000,
+     			   easing: 'out',
+      			}
 			};
 
 			var chart = new google.visualization.Gauge(document.getElementById('availability_gauge'));
 			chart.draw(availabilityVal, availabilityOpts);		
 
 			///Capacity Gauge///
+			var capacityPercent;
+
+			if (gaugesData.capacity && gaugesData.totalBpsAvail) {
+
+				capacityPercent = ((gaugesData.capacity/gaugesData.totalBpsAvail)*100);
+			}
+
+			console.log(capacityPercent);
+
+
 			var capacityVal = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				['Capacity', gaugesData.capacity],
+				['Capacity', capacityPercent]
 				]);
 
 			var capacityOpts = {
-				width: 200, height: 200,
-				greenFrom: 0, greenTo: 0.5,
-				yellowFrom: 0.5, yellowTo: 1,
-				redFrom: 1, redTo: 2,
-				minorTicks: 5,
+				width: 170, height: 170,				
+				redFrom:97, redTo: 98,		
+				yellowFrom:98, yellowTo: 99,	
+  		        greenFrom: 99, greenTo: 100,
+				minorTicks: 10,
+				max: 100, min: 97
 			};
 
 			var chart = new google.visualization.Gauge(document.getElementById('capacity_gauge'));
@@ -67,15 +85,16 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			///Total Packet Drop Gauge///
 			var totalPacketDropVal = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				['Packet Drop', gaugesData.totalPacketDrop],
+				['Packet Drop', gaugesData.totalPacketDrop]
 				]);
 
 			var totalPacketDropOpts = {
-				width: 200, height: 200,
-				greenFrom: 0, greenTo: 10,
-				yellowFrom:10, yellowTo: 20,
-				redFrom: 20, redTo: 30,
-				minorTicks: 5,
+				width: 170, height: 170,				
+				redFrom: 20, redTo: 30,		
+				yellowFrom:10, yellowTo: 20,	
+       		    greenFrom: 0, greenTo: 10,
+				minorTicks: 10,
+				max: 30, min: 0
 			};
 
 			var chart = new google.visualization.Gauge(document.getElementById('totalPacketDrop_gauge'));
@@ -84,15 +103,16 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			///Total Error In Gauge///
 			var totalErrorInVal = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				['Error In', gaugesData.totalErrorIn],
+				['Error In', gaugesData.totalErrorIn]
 				]);
 
 			var totalErrorInOpts = {
-				width: 200, height: 200,
-				greenFrom: 0, greenTo: 0.5,
-				yellowFrom: 0.5, yellowTo: 1,
-				redFrom: 1, redTo: 2,
-				minorTicks: 5,
+				width: 170, height: 170,				
+				redFrom: 1, redTo: 2,		
+				yellowFrom:0.5, yellowTo: 1,	
+	    	    greenFrom: 0, greenTo: 0.5,
+				minorTicks: 10,
+				max: 1.5, min: 0
 			};
 
 			var chart = new google.visualization.Gauge(document.getElementById('totalErrorIn_gauge'));

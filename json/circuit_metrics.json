@@ -1,9 +1,9 @@
 {
     "metrics": {
         "SALAMAH - ISLAMABAD VC12S015": {
-            "availability": 100,
-            "capacity": 100,
-            "totalBpsAvail": 10,
+            "availability": 98.5,
+            "capacity": 1000,
+            "totalBpsAvail": 2000,
             "totalErrorIn": 110,
             "totalPacketDrop": 10
         },
@@ -70,7 +70,7 @@
             "totalErrorIn": 0,
             "totalPacketDrop": 0
         },
-        "RIYADH/SD-BAHRAIN/VIVA VC4-16CS001": {
+        "SALAMAH - KARACHI VC12S108": {
             "availability": 10,
             "capacity": 1000000000,
             "totalBpsAvail": 2064384000,
