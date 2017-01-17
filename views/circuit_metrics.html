@@ -7,16 +7,21 @@
 	<li>Circuit Metrics</li>
 </ol>
 
-<br>
+<div class="container">
+	<div ng-show="infoMessage"> {{ infoMessage }} </div>
+</div>
+
 
 <div class="container">
 
 	<div id="availability_gauge" class="col-xs-6 col-sm-3"> </div>
-
 	<div id="capacity_gauge" class="col-xs-6 col-sm-3"> </div>
-
 	<div id="totalPacketDrop_gauge" class="col-xs-6 col-sm-3"> </div>
-
 	<div id="totalErrorIn_gauge" class="col-xs-6 col-sm-3"> </div>
 
+</div>
+
+
+<div style="text-align:center">
+<IFRAME NAME="Spotguide" width="100%" height="50%" SRC={{iFrameURL}} frameborder=0></IFRAME>
 </div>

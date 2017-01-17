@@ -12,84 +12,102 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 		$scope.customerNameId = customerNameId;
 		$scope.circuitId = circuitId;
 
-		var gaugesData =  jsonPath(circuitMetricsData, "$.metrics." + circuitId)[0];
+		$scope.infoMessage = "";
 
-		///Availability Gauge///
-		var availabilityVal = google.visualization.arrayToDataTable([
-			['Label', 'Value'],
-			['Availability', gaugesData.Availability],
-			]);
+		$scope.iFrameURL = "https://172.21.24.118:16311/ibm/console/webtop/cgi-bin/SLAFilteredAEL.cgi?DS=NCOMS&VIEW=SLA_Dashboard&FILTER=TNSQM_ResourceName%20like%20:sq:"+ circuitId +":sq:";
 
-		var availabilityOpts = {
-			width: 200, height: 200,
-			greenFrom: 95, greenTo: 100,
-			yellowFrom:90, yellowTo: 95,
-			redFrom: 0, redTo: 90,
-			minorTicks: 5,
-		};
+		var gaugesData = jsonPath(circuitMetricsData, "$.metrics." + circuitId)[0];
+		//console.log(gaugesData);
 
-		var chart = new google.visualization.Gauge(document.getElementById('availability_gauge'));
-		chart.draw(availabilityVal, availabilityOpts);		
+		if (gaugesData) {
 
-		///Capacity Gauge///
-		var capacityVal = google.visualization.arrayToDataTable([
-			['Label', 'Value'],
-			['Capacity', gaugesData.Capacity],
-			]);
+			drawCircuitMetrics();
+		}
+		else {
 
-		var capacityOpts = {
-			width: 200, height: 200,
-			greenFrom: 95, greenTo: 100,
-			yellowFrom:90, yellowTo: 95,
-			redFrom: 0, redTo: 90,
-			minorTicks: 5,
-		};
+			$scope.infoMessage = "Alarm cleared for " + circuitId ;						
+		}
 
-		var chart = new google.visualization.Gauge(document.getElementById('capacity_gauge'));
-		chart.draw(capacityVal, capacityOpts);		
+		function drawCircuitMetrics() {
 
-		///Total Packet Drop Gauge///
-		var totalPacketDropVal = google.visualization.arrayToDataTable([
-			['Label', 'Value'],
-			['Packet Drop', gaugesData.TotalPacketDrop],
-			]);
+			///Availability Gauge///
+			var availabilityVal = google.visualization.arrayToDataTable([
+				['Label', 'Value'],
+				['Availability', gaugesData.availability],
+				]);
 
-		var totalPacketDropOpts = {
-			width: 200, height: 200,
-			greenFrom: 95, greenTo: 100,
-			yellowFrom:90, yellowTo: 95,
-			redFrom: 0, redTo: 90,
-			minorTicks: 5,
-		};
+			var availabilityOpts = {
+				width: 200, height: 200,
+				redFrom: 95, redTo: 99.98,		
+				yellowFrom:99.98, yellowTo: 99.99,						
+				greenFrom: 99.99, greenTo: 100,
+				minorTicks: 5
+			};
 
-		var chart = new google.visualization.Gauge(document.getElementById('totalPacketDrop_gauge'));
-		chart.draw(totalPacketDropVal, totalPacketDropOpts);		
+			var chart = new google.visualization.Gauge(document.getElementById('availability_gauge'));
+			chart.draw(availabilityVal, availabilityOpts);		
 
-		///Total Error In Gauge///
-		var totalErrorInVal = google.visualization.arrayToDataTable([
-			['Label', 'Value'],
-			['Error In', gaugesData.TotalErrorIN],
-			]);
+			///Capacity Gauge///
+			var capacityVal = google.visualization.arrayToDataTable([
+				['Label', 'Value'],
+				['Capacity', gaugesData.capacity],
+				]);
 
-		var totalErrorInOpts = {
-			width: 200, height: 200,
-			greenFrom: 95, greenTo: 100,
-			yellowFrom:90, yellowTo: 95,
-			redFrom: 0, redTo: 90,
-			minorTicks: 5,
-		};
+			var capacityOpts = {
+				width: 200, height: 200,
+				greenFrom: 0, greenTo: 0.5,
+				yellowFrom: 0.5, yellowTo: 1,
+				redFrom: 1, redTo: 2,
+				minorTicks: 5,
+			};
 
-		var chart = new google.visualization.Gauge(document.getElementById('totalErrorIn_gauge'));
-		chart.draw(totalErrorInVal, totalErrorInOpts);		
+			var chart = new google.visualization.Gauge(document.getElementById('capacity_gauge'));
+			chart.draw(capacityVal, capacityOpts);		
+
+			///Total Packet Drop Gauge///
+			var totalPacketDropVal = google.visualization.arrayToDataTable([
+				['Label', 'Value'],
+				['Packet Drop', gaugesData.totalPacketDrop],
+				]);
+
+			var totalPacketDropOpts = {
+				width: 200, height: 200,
+				greenFrom: 0, greenTo: 10,
+				yellowFrom:10, yellowTo: 20,
+				redFrom: 20, redTo: 30,
+				minorTicks: 5,
+			};
+
+			var chart = new google.visualization.Gauge(document.getElementById('totalPacketDrop_gauge'));
+			chart.draw(totalPacketDropVal, totalPacketDropOpts);		
+
+			///Total Error In Gauge///
+			var totalErrorInVal = google.visualization.arrayToDataTable([
+				['Label', 'Value'],
+				['Error In', gaugesData.totalErrorIn],
+				]);
+
+			var totalErrorInOpts = {
+				width: 200, height: 200,
+				greenFrom: 0, greenTo: 0.5,
+				yellowFrom: 0.5, yellowTo: 1,
+				redFrom: 1, redTo: 2,
+				minorTicks: 5,
+			};
+
+			var chart = new google.visualization.Gauge(document.getElementById('totalErrorIn_gauge'));
+			chart.draw(totalErrorInVal, totalErrorInOpts);		
+
+		}
 
 		var periodicRefresh = $interval(function () {
 			$state.reload(); 
-		}, 300000);
+		}, 60000);
 
 
 		$scope.$on('$destroy', function() {
-    		$interval.cancel(periodicRefresh);
+			$interval.cancel(periodicRefresh);
 		});
 
 
-	}]);
+}]);

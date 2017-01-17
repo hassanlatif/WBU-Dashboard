@@ -2,79 +2,79 @@
     "services": {
         "All": [
             {
-                "alarmsSeverity1": 75,
-                "alarmsSeverity2": 16663,
+                "badCircuits": 75,
+                "goodCircuits": 16669,
                 "serviceType": "I/N-INTERCONNECT_LINK"
             },
             {
-                "alarmsSeverity1": 33,
-                "alarmsSeverity2": 0,
+                "badCircuits": 33,
+                "goodCircuits": 0,
                 "serviceType": "I-IGNET"
             },
             {
-                "alarmsSeverity1": 20,
-                "alarmsSeverity2": 38,
+                "badCircuits": 20,
+                "goodCircuits": 38,
                 "serviceType": "I-HARD_PATCH_TRANSIT"
             },
             {
-                "alarmsSeverity1": 5,
-                "alarmsSeverity2": 35,
+                "badCircuits": 5,
+                "goodCircuits": 35,
                 "serviceType": "I/N-INTERNET_CONNECTIVITY"
             },
             {
-                "alarmsSeverity1": 1,
-                "alarmsSeverity2": 8,
+                "badCircuits": 1,
+                "goodCircuits": 8,
                 "serviceType": "I2N-L2VPN"
             },
             {
-                "alarmsSeverity1": 1,
-                "alarmsSeverity2": 319,
+                "badCircuits": 1,
+                "goodCircuits": 319,
                 "serviceType": "N-WDIA"
             },
             {
-                "alarmsSeverity1": 1,
-                "alarmsSeverity2": 1,
+                "badCircuits": 1,
+                "goodCircuits": 1,
                 "serviceType": "I-IP_TRANSIT"
             }
         ],
         "Capacity": [
             {
-                "alarmsSeverity1": 20,
-                "alarmsSeverity2": 38,
+                "badCircuits": 20,
+                "goodCircuits": 38,
                 "serviceType": "I-HARD_PATCH_TRANSIT"
             }
         ],
         "Data": [
             {
-                "alarmsSeverity1": 33,
-                "alarmsSeverity2": 0,
+                "badCircuits": 33,
+                "goodCircuits": 0,
                 "serviceType": "I-IGNET"
             },
             {
-                "alarmsSeverity1": 5,
-                "alarmsSeverity2": 35,
+                "badCircuits": 5,
+                "goodCircuits": 35,
                 "serviceType": "I/N-INTERNET_CONNECTIVITY"
             },
             {
-                "alarmsSeverity1": 1,
-                "alarmsSeverity2": 8,
+                "badCircuits": 1,
+                "goodCircuits": 8,
                 "serviceType": "I2N-L2VPN"
             },
             {
-                "alarmsSeverity1": 1,
-                "alarmsSeverity2": 319,
+                "badCircuits": 1,
+                "goodCircuits": 319,
                 "serviceType": "N-WDIA"
             },
             {
-                "alarmsSeverity1": 1,
-                "alarmsSeverity2": 1,
+                "badCircuits": 1,
+                "goodCircuits": 1,
                 "serviceType": "I-IP_TRANSIT"
             }
         ],
         "Voice": [
             {
-                "alarmsSeverity1": 75,
-                "alarmsSeverity2": 16663,
+                "badCircuits": 75,
+                "goodCircuits": 16669,
                 "serviceType": "I/N-INTERCONNECT_LINK"
             }
         ]

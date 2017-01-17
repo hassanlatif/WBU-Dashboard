@@ -12,12 +12,22 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 
 		$scope.currentPage = 1;
 		$scope.itemsPerPage = 4;
+		$scope.infoMessage = "";
 
-		var data =  jsonPath(circuitsAlarmData, "$.circuits." + customerNameId + "[?(@.serviceType == " + "'" + serviceTypeId + "')]");
-		//console.log("$.circuits." + customerNameId + "[?(@.serviceType == " + "'" + serviceTypeId + "')]");
+		var data = [];
+
+		data =  jsonPath(circuitsAlarmData, "$.circuits." + customerNameId + "[?(@.serviceType == " + "'" + serviceTypeId + "')]");
+		
+		if (data.length > 0 ) {
+
+			$scope.dataWindow = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));
+		}
+		else {
+
+			$scope.infoMessage = "All " + serviceTypeId + " alarms cleared for " + customerNameId;			
+		}
+
 		$scope.totalItems = data.length;
-		//console.log(data.length);
-		$scope.dataWindow = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));
 
 		$scope.pageChanged = function() {
 			console.log('Page changed to: ' + $scope.currentPage);
@@ -27,12 +37,18 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 
 		$scope.$on('drawCircuitMetrics', function(ngRepeatFinishedEvent) {
 
-			var chartsData = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));			
+			var chartsData = []; 
+
+			if (data.length > 0 ){
+
+				chartsData = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));			
+			}
 
 			var options = {
 				'width':320,
 				'height':260,
-				colors: ['red', 'orange', '#59b20a'],
+				//colors: ['#59b20a', 'red', 'orange'],
+				colors: ['#59b20a', 'red', 'orange', 'yellow', 'blue', 'grey'],
 				pieHole: 0.4,
 				pieSliceTextStyle: {color: 'white', fontSize: '11'},
 				titleTextStyle: { color: '#007DB0', fontSize: '13'},
@@ -46,9 +62,12 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 
 				var chartData = google.visualization.arrayToDataTable([
 					['Type', 'Count'],
-					['Outage', chartsData[i].alarmsSeverity1],
-					['Degradation', chartsData[i].alarmsSeverity2],
-					['Non-Service Affecting', chartsData[i].alarmsSeverity3]
+					['Clear', chartsData[i].alarmsClear],
+					['Critical', chartsData[i].alarmsCritical],
+					['Major', chartsData[i].alarmsMajor],
+					['Minor', chartsData[i].alarmsMinor],
+					['Warning', chartsData[i].alarmsWarning],
+					['Indeterminate', chartsData[i].alarmsIndeterminate]
 					]);
 
 				chart.draw(chartData, options);
@@ -67,11 +86,11 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 
 		var periodicRefresh = $interval(function () {
 			$state.reload(); 
-		}, 300000);
+		}, 60000);
 
 
 		$scope.$on('$destroy', function() {
-    		$interval.cancel(periodicRefresh);
+			$interval.cancel(periodicRefresh);
 		});
 
 

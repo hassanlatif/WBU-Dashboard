@@ -77,19 +77,19 @@ app.factory('AlarmsDataService', ['$http', function($http) {
 	return {
 
 		getServiceLevelAlarms: function() {
-			return $http.get('/json/service_level_alarms.json').then(function(response) {
+			return $http.get('/json/services.json').then(function(response) {
 				return response.data;
 			}, function(){console.log("Failed to fetch service level alarms;")});
 		},
 
 		getCustomerLevelAlarms: function() {
-			return $http.get('/json/customer_level_alarms.json').then(function(response) {
+			return $http.get('/json/customers.json').then(function(response) {
 				return response.data;
 			}, function(){console.log("Failed to fetch service level alarms;")});
 		},
 
 		getCircuitLevelAlarms: function() {
-			return $http.get('/json/circuit_level_alarms.json').then(function(response) {
+			return $http.get('/json/circuits.json').then(function(response) {
 				return response.data;
 			}, function(){console.log("Failed to fetch circuit level alarms;")});
 		},

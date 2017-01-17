@@ -6,6 +6,10 @@
 </ol>
 
 <div class="container">
+	<div ng-hide="totalItems"> {{ infoMessage }} </div>
+</div>
+
+<div class="container">
 	<div ng-repeat="item in dataWindow" on-finish-render="drawCustomerCharts" id="{{item.customerName}}" class="col-xs-6 col-sm-3" ng-click="drawCircuitCharts(item.customerName, item.serviceType)">
 	</div>
 </div>

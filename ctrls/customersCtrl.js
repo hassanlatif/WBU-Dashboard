@@ -3,31 +3,47 @@ app.controller('customersController', [ '$scope', '$stateParams', '$state', '$in
 
 		var serviceTypeId = $stateParams.serviceTypeId;
 		var serviceCatId = $stateParams.serviceCatId;
+
 		$scope.serviceTypeId = serviceTypeId;
 		$scope.serviceCatId = serviceCatId;
 
 		$scope.currentPage = 1;
 		$scope.itemsPerPage = 4;
+		$scope.infoMessage = "";
 
-		var data = jsonPath(customersAlarmData, "$.customers." + serviceTypeId + ".*");
+		var data = [];		
+
+		data = jsonPath(customersAlarmData, "$.customers." + serviceTypeId + ".*");
+
+		if (data.length > 0 ) {
+
+			$scope.dataWindow = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));
+		}
+		else {
+			
+			$scope.infoMessage = "All " + serviceTypeId + " alarms cleared for " + serviceCatId + " service";			
+		}
 
 		$scope.totalItems = data.length;
-		$scope.dataWindow = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));
 
 		$scope.pageChanged = function() {
 			console.log('Page changed to: ' + $scope.currentPage);
 			$scope.dataWindow = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));
 		};
 
-
 		$scope.$on('drawCustomerCharts', function(ngRepeatFinishedEvent) {
 
-			var chartsData = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));
+			var chartsData = []; 
+
+			if (data.length > 0 ){
+
+				chartsData = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));			
+			}
 
 			var options = {
 				'width':320,
 				'height':260,
-				colors: ['red', 'orange', '#59b20a'],
+				colors: ['red', '#59b20a'],
 				pieHole: 0.4,
 				pieSliceTextStyle: {color: 'white', fontSize: '11'},
 				titleTextStyle: { color: '#007DB0', fontSize: '13'},
@@ -41,8 +57,8 @@ app.controller('customersController', [ '$scope', '$stateParams', '$state', '$in
 
 				var chartData = google.visualization.arrayToDataTable([
 					['Type', 'Count'],
-					['Outage', chartsData[i].alarmsSeverity1],
-					['Degradation', chartsData[i].alarmsSeverity2]
+					['Bad circuits', chartsData[i].badCircuits],
+					['Good circuits', chartsData[i].goodCircuits]
 					]);
 
 				chart.draw(chartData, options);
@@ -61,7 +77,7 @@ app.controller('customersController', [ '$scope', '$stateParams', '$state', '$in
 			//$state.go('customers', {serviceTypeId: serviceTypeId, serviceCatId: serviceCatId});
 			$state.reload(); 
 
-		}, 300000);
+		}, 60000);
 
 		$scope.$on('$destroy', function() {
     		$interval.cancel(periodicRefresh);
