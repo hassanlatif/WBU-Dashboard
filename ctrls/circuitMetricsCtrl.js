@@ -14,7 +14,9 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 
 		$scope.infoMessage = "";
 
-		$scope.iFrameURL = "https://172.21.24.118:16311/ibm/console/webtop/cgi-bin/SLAFilteredAEL.cgi?DS=NCOMS&VIEW=SLA_Dashboard&FILTER=TNSQM_ResourceName%20like%20:sq:" + circuitId + ":sq:";
+		$scope.iFrameURL = "/ibm/console/webtop/cgi-bin/WBUFilteredAEL.cgi?DS=NCOMS&VIEW=All&FILTER=TNSQM_ResourceName%20like%20:sq:" + circuitId + ":sq:";
+
+		console.log($scope.iFrameURL);
 
 		var gaugesData = jsonPath(circuitMetricsData, "$.metrics." + circuitId)[0];
 		//console.log(gaugesData);

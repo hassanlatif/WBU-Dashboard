@@ -67,8 +67,7 @@ app.controller('customersController', [ '$scope', '$stateParams', '$state', '$in
 		});
 
 		$scope.drawCircuitCharts = function(customerNameParam, serviceTypeParam){
-			console.log("customerNameParam", customerNameParam);
-			console.log("serviceTypeParam", serviceTypeParam);
+
 			$state.go('circuits', {customerNameId: customerNameParam, serviceTypeId: serviceTypeParam, serviceCatId: serviceCatId});
 		}
 

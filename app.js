@@ -72,30 +72,32 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
 
 }]);
 
+//app.constant('BasePath', "/ibm/console/webtop/WBU-Dashboard/stc_wbu_dash/json/");
+app.constant('BasePath', "/json/");
 
-app.factory('AlarmsDataService', ['$http', function($http) {
+app.factory('AlarmsDataService', ['$http', 'BasePath', function($http, BasePath) {
 	return {
 
 		getServiceLevelAlarms: function() {
-			return $http.get('/json/services.json').then(function(response) {
+			return $http.get(BasePath + 'services.json').then(function(response) {
 				return response.data;
 			}, function(){console.log("Failed to fetch service level alarms;")});
 		},
 
 		getCustomerLevelAlarms: function() {
-			return $http.get('/json/customers.json').then(function(response) {
+			return $http.get(BasePath + 'customers.json').then(function(response) {
 				return response.data;
 			}, function(){console.log("Failed to fetch service level alarms;")});
 		},
 
 		getCircuitLevelAlarms: function() {
-			return $http.get('/json/circuits.json').then(function(response) {
+			return $http.get(BasePath + 'circuits.json').then(function(response) {
 				return response.data;
 			}, function(){console.log("Failed to fetch circuit level alarms;")});
 		},
 
 		getCircuitMetrics: function() {
-			return $http.get('/json/circuit_metrics.json').then(function(response) {
+			return $http.get(BasePath + 'circuit_metrics.json').then(function(response) {
 				return response.data;
 			}, function(){console.log("Failed to fetch circuit metrics;")});
 		}
