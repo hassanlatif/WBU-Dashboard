@@ -1,0 +1,98 @@
+{
+    "circuits": {
+        "KACST": [
+            {
+                "alarmsClear": 10,
+                "alarmsCritical": 5,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 7,
+                "alarmsWarning": 0,
+                "circuitId": "STC/KACST-MRM/AT&T_LONDON VC4S001_WBU",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERNET_CONNECTIVITY"
+            },
+            {
+                "alarmsClear": 15,
+                "alarmsCritical": 2,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 2,
+                "circuitId": "JED/KACST-MAR/L3 VC4-4CS001",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERNET_CONNECTIVITY"
+            },
+            {
+                "alarmsClear": 12,
+                "alarmsCritical": 3,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "RIYADH/KACST-MAR/FFT_COGNT VC4-4CS001",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERNET_CONNECTIVITY"
+            },
+            {
+                "alarmsClear": 2,
+                "alarmsCritical": 1,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "STC/KACST-TUAS/SINGTEL VC4-4CS004",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERNET_CONNECTIVITY"
+            },
+            {
+                "alarmsClear": 5,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "JED/KACST-TUAS/SINGTL VC4S001_WBU",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERNET_CONNECTIVITY"
+            }
+        ],
+        "Bahrain VIVA": [
+            {
+                "alarmsClear": 7,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 23,
+                "alarmsMinor": 4,
+                "alarmsWarning": 1,
+                "circuitId": "SALAMAH - ISLAMABAD VC12S015",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 8,
+                "alarmsIndeterminate": 1,
+                "alarmsMajor": 0,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "SALAMAH - KARACHI VC12S108",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "ooredoo": [
+            {
+                "alarmsClear": 5,
+                "alarmsCritical": 1,
+                "alarmsIndeterminate": 6,
+                "alarmsMajor": 12,
+                "alarmsMinor": 3,
+                "alarmsWarning": 4,
+                "circuitId": "BAH-DOH VC3S03",
+                "serviceCategory": "Capacity",
+                "serviceType": "I-HARD_PATCH_TRANSIT"
+            }
+        ]
+    }
+}
