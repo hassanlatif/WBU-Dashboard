@@ -1,0 +1,14 @@
+<ol class="breadcrumb">
+	<li><a ui-sref="customers">{{ customerNameId }}</a></li>
+	<li>Services</li>
+</ol>
+
+
+<div class="container">
+	<div ng-show="infoMessage"> {{ infoMessage }} </div>
+</div>
+
+<div class="container">
+	<div ng-repeat="item in data"  id="{{item.serviceType}}" name="{{item.customerName}}" class="col-xs-6 col-sm-3" ng-click="drawCircuitsCharts(item.customerName, item.serviceType)" on-finish-render="drawServiceCharts">
+	</div>
+</div>	

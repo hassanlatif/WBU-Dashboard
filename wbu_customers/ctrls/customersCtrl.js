@@ -1,11 +1,6 @@
 app.controller('customersController', [ '$scope', '$stateParams', '$state', '$interval', 'customersAlarmData',
 	function($scope, $stateParams, $state, $interval, customersAlarmData) {
 
-		var serviceTypeId = $stateParams.serviceTypeId;
-		var serviceCatId = $stateParams.serviceCatId;
-
-		$scope.serviceTypeId = serviceTypeId;
-		$scope.serviceCatId = serviceCatId;
 
 		$scope.currentPage = 1;
 		$scope.itemsPerPage = 4;
@@ -13,7 +8,7 @@ app.controller('customersController', [ '$scope', '$stateParams', '$state', '$in
 
 		var data = [];		
 
-		data = jsonPath(customersAlarmData, "$.customers." + serviceTypeId + ".*");
+		data = jsonPath(customersAlarmData, "$.customers.*");
 
 		if (data.length > 0 ) {
 
@@ -21,7 +16,7 @@ app.controller('customersController', [ '$scope', '$stateParams', '$state', '$in
 		}
 		else {
 			
-			$scope.infoMessage = "All " + serviceTypeId + " alarms cleared for " + serviceCatId + " service";			
+			$scope.infoMessage = "All alarms cleared for customers";			
 		}
 
 		$scope.totalItems = data.length;
@@ -66,13 +61,14 @@ app.controller('customersController', [ '$scope', '$stateParams', '$state', '$in
 
 		});
 
-		$scope.drawCircuitCharts = function(customerNameParam, serviceTypeParam){
-
-			$state.go('circuits', {customerNameId: customerNameParam, serviceTypeId: serviceTypeParam, serviceCatId: serviceCatId});
+		$scope.drawCircuitCharts = function(customerNameParam){
+			console.log('customerNameParam', customerNameParam);
+			
+			$state.go('services', {customerNameId: customerNameParam});
 		}
 
 		var periodicRefresh = $interval(function () {			
-			console.log(" Customers refresh called."); //Test below with live data
+			//console.log(" Customers refresh called."); //Test below with live data
 			//$state.go('customers', {serviceTypeId: serviceTypeId, serviceCatId: serviceCatId});
 			$state.reload(); 
 

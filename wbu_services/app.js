@@ -86,9 +86,9 @@ app.factory('AlarmsDataService', ['$http', 'BasePath', function($http, BasePath)
 		},
 
 		getCustomerLevelAlarms: function() {
-			return $http.get(BasePath + 'json/customers.json').then(function(response) {
+			return $http.get(BasePath + 'json/customers_services.json').then(function(response) {
 				return response.data;
-			}, function(){console.log("Failed to fetch service level alarms;")});
+			}, function(){console.log("Failed to fetch customer level alarms;")});
 		},
 
 		getCircuitLevelAlarms: function() {

@@ -4,9 +4,7 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 
 		var customerNameId = $stateParams.customerNameId;
 		var serviceTypeId = $stateParams.serviceTypeId;
-		var serviceCatId = $stateParams.serviceCatId;
 
-		$scope.serviceCatId = serviceCatId;
 		$scope.serviceTypeId = serviceTypeId;
 		$scope.customerNameId = customerNameId;
 
@@ -16,7 +14,7 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 
 		var data = [];
 
-		data =  jsonPath(circuitsAlarmData, "$.circuits." + customerNameId + "[?(@.serviceType == " + "'" + serviceTypeId + "')]");
+		data =  jsonPath(circuitsAlarmData, "$.circuits."+ customerNameId + ".[?(@.serviceType == '"+ serviceTypeId + "')]");
 		
 		if (data.length > 0 ) {
 
@@ -78,9 +76,9 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 		$scope.drawCircuitMetrics = function(circuitIdParam){
 
 			//console.log(circuitIdParam);
-			$state.go('circuitMetrics', {serviceCatId: serviceCatId, 
-				serviceTypeId: serviceTypeId, 		
-				customerNameId: customerNameId, 							
+			$state.go('circuitMetrics', {
+				customerNameId: customerNameId,
+				serviceTypeId: serviceTypeId, 									
 				circuitId: circuitIdParam});
 		}
 

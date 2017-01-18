@@ -1,41 +1,20 @@
 app.controller('servicesController', ['$scope','$stateParams', '$state', '$interval', 'servicesAlarmData',
 	function($scope, $stateParams, $state, $interval, servicesAlarmData) {
 
-		var serviceCatOptions = {
-			"All" : 0,
-			"Voice" : 0,
-			"Data" : 0,
-			"Capacity" : 0
-		};
-
-		var serviceCat = $stateParams.serviceCatId;
-
-		if (serviceCat == 'Voice')
-			serviceCatOptions.Voice = 1;
-		else if (serviceCat == 'Data')
-			serviceCatOptions.Data = 1;
-		else if (serviceCat == 'Capacity')
-			serviceCatOptions.Capacity = 1;
-		else 
-			serviceCatOptions.All = 1;
-
-		$scope.serviceCatOptions = serviceCatOptions;
-
-		$scope.selectServiceCat = function(serviceCatParam) {
-			$state.go('services', {serviceCatId: serviceCatParam})
-		};
+		var customerNameId = $stateParams.customerNameId;
+		$scope.customerNameId = customerNameId;
 
 		$scope.infoMessage = "";
 		var chartsData = [];
 
-		chartsData = jsonPath(servicesAlarmData, "$.services." + serviceCat + ".*");
+		chartsData = jsonPath(servicesAlarmData, "$.customers.*.[?(@.customerName == '"+ customerNameId +"')]");
 
 		if (chartsData.length > 0) {
-			$scope.data = chartsData;
+			$scope.data = chartsData;	
 			$scope.infoMessage = ""
 		}
 		else {
-			$scope.infoMessage = "All alarms clear for " + serviceCat + " service.";
+			$scope.infoMessage = "All alarms clear for " + customerNameId;
 		}
 
 		$scope.$on('drawServiceCharts', function(ngRepeatFinishedEvent) {
@@ -65,9 +44,9 @@ app.controller('servicesController', ['$scope','$stateParams', '$state', '$inter
 			};
 		});
 
-		$scope.drawCustomerCharts = function(serviceTypeId){
+		$scope.drawCircuitsCharts = function(customerNameParam, serviceTypeParam){
 
-			$state.go('customers', {serviceTypeId: serviceTypeId, serviceCatId: serviceCat});
+			$state.go('circuits', {customerNameId:customerNameParam, serviceTypeId: serviceTypeParam});
 		}
 
 		var periodicRefresh = $interval(function () {

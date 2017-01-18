@@ -2,14 +2,12 @@
 app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state', '$interval', 'circuitMetricsData', 
 	function($scope, $stateParams, $state, $interval, circuitMetricsData) {
 
-		var serviceCatId = $stateParams.serviceCatId;
-		var serviceTypeId = $stateParams.serviceTypeId;		
-		var customerNameId = $stateParams.customerNameId;		
+		var customerNameId = $stateParams.customerNameId;
+		var serviceTypeId = $stateParams.serviceTypeId;				
 		var circuitId = $stateParams.circuitId;
 
-		$scope.serviceCatId = serviceCatId;
-		$scope.serviceTypeId = serviceTypeId;
 		$scope.customerNameId = customerNameId;
+		$scope.serviceTypeId = serviceTypeId;
 		$scope.circuitId = circuitId;
 
 		$scope.infoMessage = "";

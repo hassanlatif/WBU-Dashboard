@@ -1,8 +1,7 @@
 
 <ol class="breadcrumb">
-	<li><a ui-sref="services({serviceCatId: serviceCatId})">{{ serviceCatId }}</a> </li>
-	<li><a ui-sref="services({serviceCatId: serviceCatId, serviceTypeId: serviceTypeId})">{{ serviceTypeId }}</a> </li>
-	<li><a ui-sref="customers({serviceCatId: serviceCatId, serviceTypeId: serviceTypeId, customerNameId: customerNameId})">{{ customerNameId }} </a> </li>
+	<li><a ui-sref="customers">{{ customerNameId }}</a></li>
+	<li><a ui-sref="services({customerNameId: customerNameId, serviceTypeId: serviceTypeId})">{{ serviceTypeId }}</a> </li>
 	<li>Circuits</li>
 </ol>
 

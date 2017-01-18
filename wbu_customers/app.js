@@ -11,10 +11,21 @@ app.constant('BasePath', "/");
 app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
 	$urlRouterProvider.otherwise('/');
 	$stateProvider
-	.state('services', {
+	.state('customers', {
 		url: '/',
+		templateUrl: 'views/customers.html',
+		controller: 'customersController',
+		resolve: {
+			customersAlarmData: ['AlarmsDataService', function (AlarmsDataService) {
+				//console.log(AlarmsDataService.getCustomerLevelAlarms());
+				return AlarmsDataService.getCustomerLevelAlarms();
+			}]
+		}   
+	})
+	.state('services', {
+		//url: '/services',
 		params: {
-			serviceCatId: 'All'
+			customerNameId: null
 		},
 		templateUrl: 'views/services.html',
 		controller: 'servicesController',
@@ -26,27 +37,11 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
 		}   
 
 	})
-	.state('customers', {
-		//url: '/customers',
-		params: {
-			serviceCatId: null,
-			serviceTypeId: null
-		},
-		templateUrl: 'views/customers.html',
-		controller: 'customersController',
-		resolve: {
-			customersAlarmData: ['AlarmsDataService', function (AlarmsDataService) {
-				//console.log(AlarmsDataService.getCustomerLevelAlarms());
-				return AlarmsDataService.getCustomerLevelAlarms();
-			}]
-		}   
-	})
 	.state('circuits', {
 		//url: '/circuits',
 		params: {
-			serviceCatId: null,
-			serviceTypeId: null,
-			customerNameId: null
+			customerNameId: null,
+			serviceTypeId: null
 		},
 		templateUrl : 'views/circuits.html',
 		controller  : 'circuitsController',
@@ -59,9 +54,9 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
 	.state('circuitMetrics', {
 		//url: '/circuitMetrics',
 		params: {
-			serviceCatId: null,
-			serviceTypeId: null,
+
 			customerNameId: null,
+			serviceTypeId: null,
 			circuitId: null
 		},
 		templateUrl : 'views/circuit_metrics.html',
@@ -80,15 +75,15 @@ app.factory('AlarmsDataService', ['$http', 'BasePath', function($http, BasePath)
 	return {
 
 		getServiceLevelAlarms: function() {
-			return $http.get(BasePath + 'json/services.json').then(function(response) {
+			return $http.get(BasePath + 'json/customers_services.json').then(function(response) {
 				return response.data;
 			}, function(){console.log("Failed to fetch service level alarms;")});
 		},
 
 		getCustomerLevelAlarms: function() {
-			return $http.get(BasePath + 'json/customers.json').then(function(response) {
+			return $http.get(BasePath + 'json/customers_alarms.json').then(function(response) {
 				return response.data;
-			}, function(){console.log("Failed to fetch service level alarms;")});
+			}, function(){console.log("Failed to fetch customer level alarms;")});
 		},
 
 		getCircuitLevelAlarms: function() {
