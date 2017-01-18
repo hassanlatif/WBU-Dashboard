@@ -5,7 +5,7 @@ google.load('visualization', '1', {packages:['gauge']});
 
 var app = angular.module('app', ['ui.router', 'ui.bootstrap', 'app.directive.ngRepeatFinished']);
 
-//app.constant('BasePath', "/ibm/console/webtop/WBU-Dashboard/wbu_dash_service/");
+//app.constant('BasePath', "/ibm/console/webtop/WBU-Dashboard/wbu_customers/");
 app.constant('BasePath', "/");
 
 app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
