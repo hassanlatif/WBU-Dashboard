@@ -23,23 +23,25 @@
 
 	<link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.css" crossorigin="anonymous">
 
 </head>
 
 <body>
 
-	<div id="main">
+	<div id="main" class="wrapper">
 
 		<header ng-include="'views/header.html'"></header>
 
 		<!-- angular templating -->
 		<!-- this is where content will be injected -->
 		<div ui-view></div>
-
-		<!--footer ng-include="'views/footer.html'"></footer-->
+		
+		<div style="push"></div>
 		
 	</div>
-
+	
+	<footer style="footer" ng-include="'views/footer.html'"></footer>
 </body>
 
 </html>

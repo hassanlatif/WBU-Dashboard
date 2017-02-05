@@ -9,7 +9,7 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 		$scope.customerNameId = customerNameId;
 
 		$scope.currentPage = 1;
-		$scope.itemsPerPage = 4;
+		$scope.itemsPerPage = 12;
 		$scope.infoMessage = "";
 
 		var data = [];
@@ -43,14 +43,21 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 			}
 
 			var options = {
-				'width':320,
-				'height':260,
+				'width':290,
+				'height':209,
 				//colors: ['#59b20a', 'red', 'orange'],
 				colors: ['#59b20a', 'red', 'orange', 'yellow', 'blue', 'grey'],
 				pieHole: 0.4,
-				pieSliceTextStyle: {color: 'white', fontSize: '11'},
+				pieSliceText: 'value-and-percentage',
+        		sliceVisibilityThreshold: 0.0001,
+				pieSliceTextStyle: {color: 'Black', fontSize: '12', bold: true},
 				titleTextStyle: { color: '#007DB0', fontSize: '13'},
-				legend: {'position': 'none'},
+				legend: {'position': 'right'},
+				slices: { 1: {offset: 0.05}},
+				tooltip: {
+		          showColorCode: true,
+		          text: 'value-and-percentage'
+		       	},
 
 			};
 
@@ -79,7 +86,8 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 			$state.go('circuitMetrics', {
 				customerNameId: customerNameId,
 				serviceTypeId: serviceTypeId, 									
-				circuitId: circuitIdParam});
+				circuitId: circuitIdParam,
+				affectedCkts: data});
 		}
 
 		var periodicRefresh = $interval(function () {

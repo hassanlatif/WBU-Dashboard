@@ -5,126 +5,180 @@
             "capacity": 1000,
             "totalBpsAvail": 2000,
             "totalErrorIn": 110,
-            "totalPacketDrop": 10
+            "totalPacketDrop": 10,
+			"totalS1Tickets": 2,
+			"totalS2Tickets": 3,
+			"totalS3Tickets": 4
         },
         "JED/IGW-BAH/VIVA VC4-64CS001": {
             "availability": 100,
             "capacity": null,
             "totalBpsAvail": 0,
             "totalErrorIn": 1.2185608045536414e-05,
-            "totalPacketDrop": 0
+            "totalPacketDrop": 0,
+			"totalS1Tickets": 1,
+			"totalS2Tickets": 1,
+			"totalS3Tickets": 1
         },
         "JED/IGW-KWT/VIVA-10GE001": {
             "availability": 100,
             "capacity": null,
             "totalBpsAvail": 0,
             "totalErrorIn": 0,
-            "totalPacketDrop": 0
+            "totalPacketDrop": 0,
+			"totalS1Tickets": 0,
+			"totalS2Tickets": 0,
+			"totalS3Tickets": 0
         },
         "JED/IGW-KWT/VIVA-10GE002": {
             "availability": 100,
             "capacity": null,
             "totalBpsAvail": 0,
             "totalErrorIn": 0,
-            "totalPacketDrop": 0
+            "totalPacketDrop": 0,
+			"totalS1Tickets": 0,
+			"totalS2Tickets": 0,
+			"totalS3Tickets": 0
         },
         "JEDDAH-MARSEILLES/C&W_10G012": {
             "availability": 100,
             "capacity": null,
             "totalBpsAvail": 0,
             "totalErrorIn": 0,
-            "totalPacketDrop": 0
+            "totalPacketDrop": 0,
+			"totalS1Tickets": 2,
+			"totalS2Tickets": 4,
+			"totalS3Tickets": 4
         },
         "JEDDAH/IGW-JT/ORANGE VC4S001": {
             "availability": 100,
             "capacity": null,
             "totalBpsAvail": 129024000,
             "totalErrorIn": 0,
-            "totalPacketDrop": 0
+            "totalPacketDrop": 0,
+			"totalS1Tickets": 2,
+			"totalS2Tickets": 3,
+			"totalS3Tickets": 4
         },
         "JEDDAH/IGW-SAS1 /SUDATEL VC4-64CS001": {
             "availability": 100,
             "capacity": null,
             "totalBpsAvail": 0,
             "totalErrorIn": 0,
-            "totalPacketDrop": 0
+            "totalPacketDrop": 0,
+			"totalS1Tickets": 7,
+			"totalS2Tickets": 3,
+			"totalS3Tickets": 1
         },
         "JEDDAH/STC-PALERMO/TIS 100GBE 001": {
             "availability": 100,
             "capacity": null,
             "totalBpsAvail": 107374182400,
             "totalErrorIn": 0,
-            "totalPacketDrop": 0
+            "totalPacketDrop": 0,
+			"totalS1Tickets": 5,
+			"totalS2Tickets": 2,
+			"totalS3Tickets": 1
         },
         "RIY/IGW-KWT/VIVA-10GE001": {
             "availability": 100,
             "capacity": null,
             "totalBpsAvail": 0,
             "totalErrorIn": 0,
-            "totalPacketDrop": 0
+            "totalPacketDrop": 0,
+			"totalS1Tickets": 5,
+			"totalS2Tickets": 3,
+			"totalS3Tickets": 1
         },
         "RIYADH/IGW-KUWAIT/QNET VC4-64CS001": {
             "availability": 100,
             "capacity": null,
             "totalBpsAvail": 0,
             "totalErrorIn": 0,
-            "totalPacketDrop": 0
+            "totalPacketDrop": 0,
+			"totalS1Tickets": 5,
+			"totalS2Tickets": 18,
+			"totalS3Tickets": 2
         },
         "SALAMAH - KARACHI VC12S108": {
             "availability": 10,
             "capacity": 1000000000,
             "totalBpsAvail": 2064384000,
             "totalErrorIn": 1,
-            "totalPacketDrop": 10
+            "totalPacketDrop": 10,
+			"totalS1Tickets": 17,
+			"totalS2Tickets": 2,
+			"totalS3Tickets": 4
         },
         "RIYADH/SD-BAHRAIN/VIVA VC4-16CS002": {
             "availability": 5,
             "capacity": 2000000000,
             "totalBpsAvail": 2064384000,
             "totalErrorIn": 1,
-            "totalPacketDrop": 20
+            "totalPacketDrop": 20,
+			"totalS1Tickets": 4,
+			"totalS2Tickets": 2,
+			"totalS3Tickets": 1
         },
         "STC/IGW-DJIBOUTI VC4-4CS001": {
             "availability": 100,
             "capacity": null,
             "totalBpsAvail": 516096000,
             "totalErrorIn": 0,
-            "totalPacketDrop": 0
+            "totalPacketDrop": 0,
+			"totalS1Tickets": 1,
+			"totalS2Tickets": 1,
+			"totalS3Tickets": 1
         },
         "STC/IGW-MENA/BAH VC4-4 001": {
             "availability": 100,
             "capacity": null,
             "totalBpsAvail": 516096000,
             "totalErrorIn": 0,
-            "totalPacketDrop": 0
+            "totalPacketDrop": 0,
+			"totalS1Tickets": 0,
+			"totalS2Tickets": 0,
+			"totalS3Tickets": 4
         },
         "STC/IGW-MENA/BAH VC4-4 002": {
             "availability": 100,
             "capacity": null,
             "totalBpsAvail": 516096000,
             "totalErrorIn": 0,
-            "totalPacketDrop": 0
+            "totalPacketDrop": 0,
+			"totalS1Tickets": 2,
+			"totalS2Tickets": 0,
+			"totalS3Tickets": 4
         },
         "STC/IGW-MENA/BAH VC4-4 003": {
             "availability": 100,
             "capacity": null,
             "totalBpsAvail": 516096000,
             "totalErrorIn": 0,
-            "totalPacketDrop": 0
+            "totalPacketDrop": 0,
+			"totalS1Tickets": 6,
+			"totalS2Tickets": 1,
+			"totalS3Tickets": 0
         },
         "STC/IGW-MENA/BAH VC4-4 004": {
             "availability": 100,
             "capacity": null,
             "totalBpsAvail": 516096000,
             "totalErrorIn": 0,
-            "totalPacketDrop": 0
+            "totalPacketDrop": 0,
+			"totalS1Tickets": 1,
+			"totalS2Tickets": 2,
+			"totalS3Tickets": 3
         },
         "STC/IGW-SAS2/SUDATEL 10GE002": {
             "availability": 100,
             "capacity": null,
             "totalBpsAvail": 5000000000,
             "totalErrorIn": 0,
-            "totalPacketDrop": 0
+            "totalPacketDrop": 0,
+			"totalS1Tickets": 0,
+			"totalS2Tickets": 2,
+			"totalS3Tickets": 7
         }
     }
 }

@@ -3,9 +3,18 @@
 	<li><a ui-sref="services({serviceCatId: serviceCatId})">{{ serviceCatId }}</a> </li>
 	<li><a ui-sref="services({serviceCatId: serviceCatId, serviceTypeId: serviceTypeId})">{{ serviceTypeId }}</a> </li>
 	<li><a ui-sref="customers({serviceCatId: serviceCatId, serviceTypeId: serviceTypeId, customerNameId: customerNameId})">{{ customerNameId }} </a> </li>
-	<li><a ui-sref="circuits({serviceCatId: serviceCatId, serviceTypeId: serviceTypeId, customerNameId: customerNameId, circuitId: circuitId})">{{ circuitId }} </a> </li>
+	<!--<li><a ui-sref="circuits({serviceCatId: serviceCatId, serviceTypeId: serviceTypeId, customerNameId: customerNameId, circuitId: circuitId})">{{ circuitId }} </a> </li>-->
+	<li>
+		<select id="affectedCktSelector" ng-model="selectedAffectedCkt" ng-dropdown required ng-change="selectAffectedCkt(selectedAffectedCkt)" >
+			<option ng-repeat="ckt in affectedCkts" ng-selected="ckt.circuitId == circuitId">{{ckt.circuitId}}</option>
+		</select>
+	</li>
 	<li>Circuit Metrics</li>
 </ol>
+
+<div align="center">
+	<font face="Calibri" color="#E8A828" size="5"><b>Customer: </b>{{ customerNameId }} - <b>Circuit: </b>{{ circuitId }}</font>
+</div>
 
 <div class="container">
 	<div ng-show="infoMessage"> {{ infoMessage }} </div>
@@ -13,13 +22,16 @@
 
 
 <div class="container">
-	<div ng-show="gaugesDataStatus.availability" id="availability_gauge" class="col-xs-6 col-sm-3"> </div>
-	<div ng-show="gaugesDataStatus.capacity" id="capacity_gauge" class="col-xs-6 col-sm-3"> </div>
-	<div ng-show="gaugesDataStatus.totalPacketDrop" id="totalPacketDrop_gauge" class="col-xs-6 col-sm-3"> </div>
-	<div ng-show="gaugesDataStatus.totalErrorIn" id="totalErrorIn_gauge" class="col-xs-6 col-sm-3"> </div>
+	<div ng-show="gaugesDataStatus.availability" id="availability_gauge" class="col-xs-6 col-md-2"> </div>
+	<div ng-show="gaugesDataStatus.capacity" id="capacity_gauge" class="col-xs-6 col-md-2"> </div>
+	<div ng-show="gaugesDataStatus.totalPacketDrop" id="totalPacketDrop_gauge" class="col-xs-6 col-md-2"> </div>
+	<div ng-show="gaugesDataStatus.totalErrorIn" id="totalErrorIn_gauge" class="col-xs-6 col-md-2"> </div>
+	<div ng-show="gaugesDataStatus.totalS1Tickets || gaugesDataStatus.totalS2Tickets || gaugesDataStatus.totalS3Tickets" display="inline-block;"  id="tickets_chart" class="col-xs-6 col-md-2"> </div>
 </div>
 
 
+<br/>
 <div style="text-align:center">
-	<IFRAME id="AEL" width="100%" height="100%" ng-src="{{iFrameURL}}" frameborder=2></IFRAME>
+	<div id='headerAEL'><h4>Active Event List (AEL)</h4></div>
+	<IFRAME id="AEL" width="100%" height="350" ng-src="{{iFrameURL}}" frameborder=2></IFRAME>
 </div>

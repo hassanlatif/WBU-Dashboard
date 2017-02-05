@@ -1,16 +1,24 @@
 
-app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state', '$interval', 'circuitMetricsData', 
+app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state', '$interval', 'circuitMetricsData',
 	function($scope, $stateParams, $state, $interval, circuitMetricsData) {
 
 		var serviceCatId = $stateParams.serviceCatId;
 		var serviceTypeId = $stateParams.serviceTypeId;		
 		var customerNameId = $stateParams.customerNameId;		
 		var circuitId = $stateParams.circuitId;
+		var affectedCkts = $stateParams.affectedCkts;
 
 		$scope.serviceCatId = serviceCatId;
 		$scope.serviceTypeId = serviceTypeId;
 		$scope.customerNameId = customerNameId;
 		$scope.circuitId = circuitId;
+		$scope.affectedCkts = affectedCkts;
+
+		console.log("Total number of affected circuits: " + affectedCkts[0].circuitId);
+
+		$scope.selectAffectedCkt = function(affectedCktParam) {
+			$state.go('circuitMetrics', {circuitId: affectedCktParam})
+		};
 
 		$scope.infoMessage = "";
 
@@ -37,7 +45,7 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			///Availability Gauge///
 			var availabilityVal = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				['Availability', gaugesData.availability]
+				['Availability (%)', gaugesData.availability]
 				]);
 
 			var availabilityOpts = {
@@ -69,7 +77,7 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 
 			var capacityVal = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				['Capacity', capacityPercent]
+				['Capacity (bps)', capacityPercent]
 				]);
 
 			var capacityOpts = {
@@ -87,7 +95,7 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			///Total Packet Drop Gauge///
 			var totalPacketDropVal = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				['Packet Drop', gaugesData.totalPacketDrop]
+				['Packet Drop (pkt/s)', gaugesData.totalPacketDrop]
 				]);
 
 			var totalPacketDropOpts = {
@@ -105,7 +113,7 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			///Total Error In Gauge///
 			var totalErrorInVal = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				['Error In', gaugesData.totalErrorIn]
+				['Error In (%)', gaugesData.totalErrorIn]
 				]);
 
 			var totalErrorInOpts = {
@@ -118,7 +126,29 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			};
 
 			var chart = new google.visualization.Gauge(document.getElementById('totalErrorIn_gauge'));
-			chart.draw(totalErrorInVal, totalErrorInOpts);		
+			chart.draw(totalErrorInVal, totalErrorInOpts);
+
+			///Trouble Tickets Chart///
+			var ticketsVal = google.visualization.arrayToDataTable([
+          		['Severity', 'Tickets', { role: 'style' }],
+          		['Outage', gaugesData.totalS1Tickets, '#DC3912'],
+          		['Degradation', gaugesData.totalS2Tickets, '#FF9900'],
+          		['Non-Affecting', gaugesData.totalS3Tickets, '#F9ED02']
+        	]);
+
+
+      		var ticketsOpts = {
+	        	title: "Number of Trouble Tickets",
+	        	width: 320,
+	        	height: 170,
+	        	bar: {groupWidth: "75%"},
+	        	legend: { position: "none" },
+				backgroundColor: 'White',
+				//colors: ['#e0440e', '#e6693e', '#ec8f6e']
+      		};
+
+			var barChart = new google.visualization.ColumnChart(document.getElementById("tickets_chart"));
+      		barChart.draw(ticketsVal, ticketsOpts);
 
 		}
 

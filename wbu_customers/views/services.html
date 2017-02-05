@@ -1,8 +1,12 @@
 <ol class="breadcrumb">
-	<li><a ui-sref="customers">{{ customerNameId }}</a></li>
+	<li><a ui-sref="customers">Customers</a></li>
+	<li>{{ customerNameId }}</li>
 	<li>Services</li>
 </ol>
 
+<div align="center">
+	<font face="Calibri" color="#E8A828" size="5"><b>{{ customerNameId }}'s Services</b> with <b>Affected Circuits</b></font>
+</div>
 
 <div class="container">
 	<div ng-show="infoMessage"> {{ infoMessage }} </div>

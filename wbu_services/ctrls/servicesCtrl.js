@@ -45,10 +45,16 @@ app.controller('servicesController', ['$scope','$stateParams', '$state', '$inter
 				'height':260,
 				colors: ['red', '#59b20a'],
 				pieHole: 0.4,
-				pieSliceTextStyle: {color: 'white', fontSize: '11'},
-				titleTextStyle: { color: '#007DB0', fontSize: '13'},
-				legend: {'position': 'none'},
-
+				pieSliceText: 'value-and-percentage',
+        		sliceVisibilityThreshold: 0.0001,
+				pieSliceTextStyle: {color: 'Black', fontSize: '12', bold: true},
+				titleTextStyle: {color: '#007DB0', fontSize: '13'},
+				legend: {'position': 'bottom'},
+				slices: { 1: {offset: 0.05}},
+				tooltip: {
+		          showColorCode: true,
+		          text: 'value-and-percentage'
+		       	},
 			};
 
 			for (i=0; i <chartsData.length; i++){
@@ -57,8 +63,8 @@ app.controller('servicesController', ['$scope','$stateParams', '$state', '$inter
 
 				var chartData = google.visualization.arrayToDataTable([
 					['Type', 'Count'],
-					['Bad circuits', chartsData[i].badCircuits],
-					['Good circuits', chartsData[i].goodCircuits]
+					['Affected', chartsData[i].badCircuits],
+					['Non-Affected', chartsData[i].goodCircuits]
 					]);
 
 				chart.draw(chartData, options);

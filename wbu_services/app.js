@@ -1,12 +1,13 @@
 google.load('visualization', '1', {packages:['corechart']});
 google.load('visualization', '1', {packages:['gauge']});
+google.load('visualization', '1', {packages:['bar']});
 
 'use strict';
 
 var app = angular.module('app', ['ui.router', 'ui.bootstrap', 'app.directive.ngRepeatFinished']);
 
 //app.constant('BasePath', "/ibm/console/webtop/WBU-Dashboard/wbu_services/");
-app.constant('BasePath', "/");
+app.constant('BasePath', "");
 
 app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
 	$urlRouterProvider.otherwise('/');
@@ -62,7 +63,8 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
 			serviceCatId: null,
 			serviceTypeId: null,
 			customerNameId: null,
-			circuitId: null
+			circuitId: null,
+			affectedCkts: null
 		},
 		templateUrl : 'views/circuit_metrics.html',
 		controller  : 'circuitMetricsController',
