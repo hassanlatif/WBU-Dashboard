@@ -2,6 +2,8 @@
 	<li><a ui-sref="customers">Customers</a></li>
 	<li>{{ customerNameId }}</li>
 	<li>Services</li>
+	<li class="pull-right"><b>Next refresh</b>:{{counter | formatTimer}}</li>	
+  	<li class="pull-right"><b>Last refresh</b>:{{refreshDate | date:"h:mm a"}}</li>		
 </ol>
 
 <div align="center">

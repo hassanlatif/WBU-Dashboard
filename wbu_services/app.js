@@ -8,6 +8,7 @@ var app = angular.module('app', ['ui.router', 'ui.bootstrap', 'app.directive.ngR
 
 //app.constant('BasePath', "/ibm/console/webtop/WBU-Dashboard/wbu_services/");
 app.constant('BasePath', "");
+app.constant('RefreshPeriod', '300');
 
 app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
 	$urlRouterProvider.otherwise('/');
@@ -123,4 +124,13 @@ var module = angular.module('app.directive.ngRepeatFinished', [])
 	}
 });
 
+app.filter('formatTimer', function() {
+  return function(input)
+    {
+        function z(n) {return (n<10? '0' : '') + n;}
+        var seconds = input % 60;
+        var minutes = Math.floor(input / 60);
+        return (z(minutes)+':'+z(seconds));
+    };
+});
 

@@ -10,6 +10,8 @@
 		</select>
 	</li>
 	<li>Circuit Metrics</li>
+	<li class="pull-right"><b>Next refresh</b>:{{counter | formatTimer}}</li>	
+  	<li class="pull-right"><b>Last refresh</b>:{{refreshDate | date:"h:mm a"}}</li>	
 </ol>
 
 <div align="center">
@@ -20,7 +22,6 @@
 	<div ng-show="infoMessage"> {{ infoMessage }} </div>
 </div>
 
-
 <div class="container">
 	<div ng-show="gaugesDataStatus.availability" id="availability_gauge" class="col-xs-6 col-md-2"> </div>
 	<div ng-show="gaugesDataStatus.capacity" id="capacity_gauge" class="col-xs-6 col-md-2"> </div>
@@ -28,7 +29,6 @@
 	<div ng-show="gaugesDataStatus.totalErrorIn" id="totalErrorIn_gauge" class="col-xs-6 col-md-2"> </div>
 	<div ng-show="gaugesDataStatus.totalS1Tickets || gaugesDataStatus.totalS2Tickets || gaugesDataStatus.totalS3Tickets" display="inline-block;"  id="tickets_chart" class="col-xs-6 col-md-2"> </div>
 </div>
-
 
 <br/>
 <div style="text-align:center">

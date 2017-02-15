@@ -1,5 +1,5 @@
-app.controller('customersController', [ '$scope', '$stateParams', '$state', '$interval', 'customersAlarmData',
-	function($scope, $stateParams, $state, $interval, customersAlarmData) {
+app.controller('customersController', [ '$scope', '$stateParams', '$state', '$interval', 'customersAlarmData', 'RefreshPeriod',
+	function($scope, $stateParams, $state, $interval, customersAlarmData, RefreshPeriod) {
 
 
 		$scope.currentPage = 1;
@@ -74,15 +74,26 @@ app.controller('customersController', [ '$scope', '$stateParams', '$state', '$in
 			$state.go('services', {customerNameId: customerNameParam});
 		}
 
-		var periodicRefresh = $interval(function () {			
-			//console.log(" Customers refresh called."); //Test below with live data
-			//$state.go('customers', {serviceTypeId: serviceTypeId, serviceCatId: serviceCatId});
-			$state.reload(); 
 
-		}, 60000);
+		//var refereshPeriod = 30; //seconds counter 
+
+		var periodicRefresh = $interval(function () {
+			$state.reload(); 
+		}, RefreshPeriod * 1000);
+
+		$scope.refreshDate = new Date();
+
+		$scope.counter = RefreshPeriod; 	
+
+		var counterInterval = $interval(function(){
+			$scope.counter--;
+		}, 1000);
+
 
 		$scope.$on('$destroy', function() {
-    		$interval.cancel(periodicRefresh);
+			$interval.cancel(periodicRefresh);
+			$interval.cancel(counterInterval);
 		});
+
 
 	}]);

@@ -1,6 +1,6 @@
 
-app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$interval', 'circuitsAlarmData',
-	function($scope, $stateParams, $state, $interval, circuitsAlarmData) {
+app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$interval', 'circuitsAlarmData', 'RefreshPeriod',
+	function($scope, $stateParams, $state, $interval, circuitsAlarmData, RefreshPeriod) {
 
 		var customerNameId = $stateParams.customerNameId;
 		var serviceTypeId = $stateParams.serviceTypeId;
@@ -90,14 +90,25 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 				affectedCkts: data});
 		}
 
+
 		var periodicRefresh = $interval(function () {
 			$state.reload(); 
-		}, 60000);
+		}, RefreshPeriod * 1000);
+
+		$scope.refreshDate = new Date();
+
+		$scope.counter = RefreshPeriod; 	
+
+		var counterInterval = $interval(function(){
+			$scope.counter--;
+		}, 1000);
 
 
 		$scope.$on('$destroy', function() {
 			$interval.cancel(periodicRefresh);
+			$interval.cancel(counterInterval);
 		});
+
 
 
 	}]);

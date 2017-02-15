@@ -1,5 +1,5 @@
-app.controller('servicesController', ['$scope','$stateParams', '$state', '$interval', 'servicesAlarmData',
-	function($scope, $stateParams, $state, $interval, servicesAlarmData) {
+app.controller('servicesController', ['$scope','$stateParams', '$state', '$interval', 'servicesAlarmData', 'RefreshPeriod',
+	function($scope, $stateParams, $state, $interval, servicesAlarmData, RefreshPeriod) {
 
 		var customerNameId = $stateParams.customerNameId;
 		$scope.customerNameId = customerNameId;
@@ -56,14 +56,25 @@ app.controller('servicesController', ['$scope','$stateParams', '$state', '$inter
 			$state.go('circuits', {customerNameId:customerNameParam, serviceTypeId: serviceTypeParam});
 		}
 
+
 		var periodicRefresh = $interval(function () {
 			$state.reload(); 
-		}, 60000);
+		}, RefreshPeriod * 1000);
+
+		$scope.refreshDate = new Date();
+
+		$scope.counter = RefreshPeriod; 	
+
+		var counterInterval = $interval(function(){
+			$scope.counter--;
+		}, 1000);
 
 
 		$scope.$on('$destroy', function() {
 			$interval.cancel(periodicRefresh);
+			$interval.cancel(counterInterval);
 		});
+
 
 
 	}]);

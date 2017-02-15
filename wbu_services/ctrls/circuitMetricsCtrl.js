@@ -1,6 +1,6 @@
 
-app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state', '$interval', 'circuitMetricsData',
-	function($scope, $stateParams, $state, $interval, circuitMetricsData) {
+app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state', '$interval', 'circuitMetricsData', 'RefreshPeriod',
+	function($scope, $stateParams, $state, $interval, circuitMetricsData, RefreshPeriod) {
 
 		var serviceCatId = $stateParams.serviceCatId;
 		var serviceTypeId = $stateParams.serviceTypeId;		
@@ -154,11 +154,20 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 
 		var periodicRefresh = $interval(function () {
 			$state.reload(); 
-		}, 60000);
+		}, RefreshPeriod * 1000);
+
+		$scope.refreshDate = new Date();
+
+		$scope.counter = RefreshPeriod; 	
+
+		var counterInterval = $interval(function(){
+			$scope.counter--;
+		}, 1000);
 
 
 		$scope.$on('$destroy', function() {
 			$interval.cancel(periodicRefresh);
+			$interval.cancel(counterInterval);
 		});
 
 

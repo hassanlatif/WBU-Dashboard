@@ -4,6 +4,8 @@
 	<li><a ui-sref="services({customerNameId: customerNameId, serviceTypeId: serviceTypeId})">{{ customerNameId }}</a></li>
 	<li>{{ serviceTypeId }}</li>
 	<li>Circuits</li>
+	<li class="pull-right"><b>Next refresh</b>:{{counter | formatTimer}}</li>	
+  	<li class="pull-right"><b>Last refresh</b>:{{refreshDate | date:"h:mm a"}}</li>		
 </ol>
 
 <div align="center">

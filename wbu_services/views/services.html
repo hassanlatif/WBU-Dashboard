@@ -8,6 +8,8 @@
 </select>
 </li>
 <li>Services</li>
+  <li class="pull-right"><b>Next refresh</b>:{{counter | formatTimer}}</li>
+  <li class="pull-right"><b>Last refresh</b>:{{refreshDate | date:"h:mm a"}}</li>
 </ol>
 
 <div align="center">
@@ -19,6 +21,6 @@
 </div>
 
 <div class="container">
-	<div ng-repeat="item in data"  id="{{item.serviceType}}" name="{{item.serviceCategory}}" class="col-xs-6 col-sm-3" ng-click="drawCustomerCharts(item.serviceType)" on-finish-render="drawServiceCharts">
+	<div ng-repeat="item in data"  id="{{item.serviceType}}" name="{{item.serviceCategory}}" class="col-xs-12 col-sm-4 col-md-3" ng-click="drawCustomerCharts(item.serviceType)" on-finish-render="drawServiceCharts">
 	</div>
 </div>	
