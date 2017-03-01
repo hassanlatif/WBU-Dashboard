@@ -8,7 +8,7 @@ var app = angular.module('app', ['ui.router', 'ui.bootstrap', 'app.directive.ngR
 
 //app.constant('BasePath', "/ibm/console/webtop/WBU-Dashboard/wbu_services/");
 app.constant('BasePath', "");
-app.constant('RefreshPeriod', '300');
+//app.constant('RefreshPeriod', 300);
 
 app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
 	$urlRouterProvider.otherwise('/');
@@ -24,7 +24,11 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
 			servicesAlarmData: ['AlarmsDataService', function (AlarmsDataService) {
 				//console.log(AlarmsDataService.getServiceLevelAlarms());
 				return AlarmsDataService.getServiceLevelAlarms();
-			}]
+			}],
+			refreshPeriod: ['AlarmsDataService', function (AlarmsDataService) {
+				//console.log(AlarmsDataService.getAlarmsRefreshTime());
+				return AlarmsDataService.getAlarmsRefreshTime();
+			}]			
 		}   
 
 	})
@@ -40,7 +44,11 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
 			customersAlarmData: ['AlarmsDataService', function (AlarmsDataService) {
 				//console.log(AlarmsDataService.getCustomerLevelAlarms());
 				return AlarmsDataService.getCustomerLevelAlarms();
-			}]
+			}],
+			refreshPeriod: ['AlarmsDataService', function (AlarmsDataService) {
+				//console.log(AlarmsDataService.getAlarmsRefreshTime());
+				return AlarmsDataService.getAlarmsRefreshTime();
+			}]				
 		}   
 	})
 	.state('circuits', {
@@ -55,7 +63,11 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
 		resolve: {
 			circuitsAlarmData: ['AlarmsDataService', function (AlarmsDataService) {
 				return AlarmsDataService.getCircuitLevelAlarms();
-			}]
+			}],
+			refreshPeriod: ['AlarmsDataService', function (AlarmsDataService) {
+				//console.log(AlarmsDataService.getAlarmsRefreshTime());
+				return AlarmsDataService.getAlarmsRefreshTime();
+			}]			
 		}    
 	})
 	.state('circuitMetrics', {
@@ -72,7 +84,11 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
 		resolve: {
 			circuitMetricsData: ['AlarmsDataService', function (AlarmsDataService) {
 				return AlarmsDataService.getCircuitMetrics();
-			}]
+			}],
+			refreshPeriod: ['AlarmsDataService', function (AlarmsDataService) {
+				//console.log(AlarmsDataService.getAlarmsRefreshTime());
+				return AlarmsDataService.getAlarmsRefreshTime();
+			}]			
 		}    
 	})
 
@@ -104,7 +120,13 @@ app.factory('AlarmsDataService', ['$http', 'BasePath', function($http, BasePath)
 			return $http.get(BasePath + 'json/circuit_metrics.json').then(function(response) {
 				return response.data;
 			}, function(){console.log("Failed to fetch circuit metrics;")});
-		}
+		},
+
+		getAlarmsRefreshTime: function() {
+			return $http.get(BasePath + 'json/refresh_time.json').then(function(response) {
+				return response.data;
+			}, function(){console.log("Failed to fetch alarms refresh time;")});
+		}		
 
 	};
 }])
@@ -130,6 +152,7 @@ app.filter('formatTimer', function() {
         function z(n) {return (n<10? '0' : '') + n;}
         var seconds = input % 60;
         var minutes = Math.floor(input / 60);
+        //var hours = Math.floor(minutes / 60);        
         return (z(minutes)+':'+z(seconds));
     };
 });

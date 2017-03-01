@@ -51,3 +51,8 @@ svg:first-child > g > text[text-anchor~=middle] {
     font-size:11px;
     /*font-weight:bold;*/
 }
+
+
+.breadcrumb>li+li:nth-last-child(1):before {
+	content: " ";
+}

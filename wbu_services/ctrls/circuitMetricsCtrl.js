@@ -1,7 +1,7 @@
 
-app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state', '$interval', 'circuitMetricsData', 'RefreshPeriod',
-	function($scope, $stateParams, $state, $interval, circuitMetricsData, RefreshPeriod) {
-
+app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state', '$interval', 'circuitMetricsData', 'refreshPeriod',
+	function($scope, $stateParams, $state, $interval, circuitMetricsData, refreshPeriod) {
+		
 		var serviceCatId = $stateParams.serviceCatId;
 		var serviceTypeId = $stateParams.serviceTypeId;		
 		var customerNameId = $stateParams.customerNameId;		
@@ -21,13 +21,13 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 		};
 
 		$scope.infoMessage = "";
-
 		$scope.iFrameURL = "/ibm/console/webtop/cgi-bin/WBUFilteredAEL.cgi?DS=NCOMS&VIEW=All&FILTER=TNSQM_ResourceName%20like%20:sq:" + circuitId + ":sq:";
 
 		console.log($scope.iFrameURL);
 
 		var gaugesData = jsonPath(circuitMetricsData, "$.metrics." + circuitId)[0];
-		//console.log(gaugesData);
+
+		console.log(gaugesData);
 
 		$scope.gaugesDataStatus =  gaugesData;
 
@@ -43,9 +43,16 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 		function drawCircuitMetrics() {
 
 			///Availability Gauge///
+			var availabilityV = NaN;
+			var availabilityF = "N/A";
+			if (gaugesData.availability)
+			{
+				availabilityV = gaugesData.availability;
+				availabilityF = availabilityV;
+			}
 			var availabilityVal = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				['Availability (%)', gaugesData.availability]
+				['Availability (%)', {v: availabilityV, f: availabilityF}]
 				]);
 
 			var availabilityOpts = {
@@ -65,19 +72,18 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			chart.draw(availabilityVal, availabilityOpts);		
 
 			///Capacity Gauge///
-			var capacityPercent;
-
+			var capacityV = NaN;
+			var capacityF = "N/A";
 			if (gaugesData.capacity && gaugesData.totalBpsAvail) {
 
-				capacityPercent = ((gaugesData.capacity/gaugesData.totalBpsAvail)*100);
+				capacityV = ((gaugesData.capacity/gaugesData.totalBpsAvail)*100);
+				capacityF = capacityV;
 			}
-
-			console.log(capacityPercent);
 
 
 			var capacityVal = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				['Capacity (bps)', capacityPercent]
+				['Capacity (bps)', {v: capacityV, f: capacityF}]
 				]);
 
 			var capacityOpts = {
@@ -93,9 +99,16 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			chart.draw(capacityVal, capacityOpts);		
 
 			///Total Packet Drop Gauge///
+			var packetDropV = NaN;
+			var packetDropF = "N/A";
+			if (gaugesData.totalPacketDrop)
+			{
+				packetDropV = gaugesData.totalPacketDrop;
+				packetDropF = packetDropV;
+			}
 			var totalPacketDropVal = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				['Packet Drop (pkt/s)', gaugesData.totalPacketDrop]
+				['Packet Drop (pkt/s)', {v: packetDropV, f: packetDropF}]
 				]);
 
 			var totalPacketDropOpts = {
@@ -111,9 +124,16 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			chart.draw(totalPacketDropVal, totalPacketDropOpts);		
 
 			///Total Error In Gauge///
+			var totalErrorINV = NaN;
+			var totalErrorINF = "N/A";
+			if (gaugesData.totalErrorIn)
+			{
+				totalErrorINV = gaugesData.totalErrorIn;
+				totalErrorINF = totalErrorINV;
+			}
 			var totalErrorInVal = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				['Error In (%)', gaugesData.totalErrorIn]
+				['Error In (%)', {v: totalErrorINV, f: totalErrorINF}]
 				]);
 
 			var totalErrorInOpts = {
@@ -144,6 +164,12 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 	        	bar: {groupWidth: "75%"},
 	        	legend: { position: "none" },
 				backgroundColor: 'White',
+                        vAxis: {
+                                minValue:0,
+                                viewWindow: {
+                                        min: 0
+                                }
+                        }				
 				//colors: ['#e0440e', '#e6693e', '#ec8f6e']
       		};
 
@@ -152,18 +178,21 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 
 		}
 
+
+		var currentRefreshTime = refreshPeriod.syncDateTime.currentDateTime;
+		var nextRefreshTime = refreshPeriod.syncDateTime.nextDateTime;
+		var nextRefreshPeriod = Math.floor((nextRefreshTime - new Date().getTime())/1000);
+
+		$scope.refreshDate = new Date(currentRefreshTime);
+		$scope.counter = nextRefreshPeriod;
+
 		var periodicRefresh = $interval(function () {
 			$state.reload(); 
-		}, RefreshPeriod * 1000);
-
-		$scope.refreshDate = new Date();
-
-		$scope.counter = RefreshPeriod; 	
+		}, nextRefreshPeriod * 1000);
 
 		var counterInterval = $interval(function(){
 			$scope.counter--;
 		}, 1000);
-
 
 		$scope.$on('$destroy', function() {
 			$interval.cancel(periodicRefresh);

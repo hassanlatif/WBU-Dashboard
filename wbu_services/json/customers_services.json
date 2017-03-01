@@ -1,85 +1,41 @@
 {
     "customers": {
-        "I-HARD_PATCH_TRANSIT": [
-            {
-                "badCircuits": 3,
-                "customerName": "Bahrain VIVA",
-                "goodCircuits": 9,
-                "serviceType": "I-HARD_PATCH_TRANSIT"
-            }
-        ],
+        "I-HARD_PATCH_TRANSIT": [],
         "I-IGNET": [
             {
-                "badCircuits": 2,
-                "customerName": "Bahrain VIVA",
-                "goodCircuits": 8,
+                "badCircuits": 1,
+                "customerName": "Sudan Telecom Com LTD",
+                "goodCircuits": 2,
                 "serviceType": "I-IGNET"
             }
         ],
-        "I-IP_NODE": [],
-        "I-IP_TRANSIT": [
+        "I-IP_NODE": [
             {
-                "badCircuits": 2,
-                "customerName": "Bahrain VIVA",
+                "badCircuits": 1,
+                "customerName": "Bahrain Internet Exchange",
                 "goodCircuits": 0,
-                "serviceType": "I-IP_TRANSIT"
+                "serviceType": "I-IP_NODE"
             }
         ],
+        "I-IP_TRANSIT": [],
         "I-OSS-SS": [],
         "I-PEERING-BB": [],
         "I-SUBMARINE_CAPACITY": [],
         "I/N-INTERCONNECT_LINK": [
             {
-                "badCircuits": 5,
-                "customerName": "Bahrain VIVA",
-                "goodCircuits": 342,
-                "serviceType": "I/N-INTERCONNECT_LINK"
-            },
-            {
                 "badCircuits": 3,
-                "customerName": "VIVA  - Kuwait",
-                "goodCircuits": 280,
-                "serviceType": "I/N-INTERCONNECT_LINK"
-            },
-            {
-                "badCircuits": 2,
-                "customerName": "Saudi Arabia - Mobily",
-                "goodCircuits": 4619,
-                "serviceType": "I/N-INTERCONNECT_LINK"
-            },
-            {
-                "badCircuits": 1,
-                "customerName": "Gateway Telecom",
-                "goodCircuits": 7,
-                "serviceType": "I/N-INTERCONNECT_LINK"
-            },
-            {
-                "badCircuits": 1,
-                "customerName": "India Idea",
-                "goodCircuits": 62,
+                "customerName": "EGYPT (ETISALAT MISR)",
+                "goodCircuits": 246,
                 "serviceType": "I/N-INTERCONNECT_LINK"
             }
         ],
         "I/N-INTERNET_CONNECTIVITY": [],
-        "I2N-L2VPN": [
-            {
-                "badCircuits": 1,
-                "customerName": "Bahrain VIVA",
-                "goodCircuits": 2,
-                "serviceType": "I2N-L2VPN"
-            }
-        ],
+        "I2N-L2VPN": [],
         "N-WDIA": [
             {
-                "badCircuits": 19,
+                "badCircuits": 2,
                 "customerName": "EATC",
-                "goodCircuits": 205,
-                "serviceType": "N-WDIA"
-            },
-            {
-                "badCircuits": 3,
-                "customerName": "Integrated Telecom Company",
-                "goodCircuits": 93,
+                "goodCircuits": 225,
                 "serviceType": "N-WDIA"
             }
         ]

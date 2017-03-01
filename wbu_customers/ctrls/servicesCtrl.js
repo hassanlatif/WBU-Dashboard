@@ -1,13 +1,15 @@
-app.controller('servicesController', ['$scope','$stateParams', '$state', '$interval', 'servicesAlarmData', 'RefreshPeriod',
-	function($scope, $stateParams, $state, $interval, servicesAlarmData, RefreshPeriod) {
+app.controller('servicesController', ['$scope','$stateParams', '$state', '$interval', 'servicesAlarmData', 'refreshPeriod',
+	function($scope, $stateParams, $state, $interval, servicesAlarmData, refreshPeriod) {
 
 		var customerNameId = $stateParams.customerNameId;
 		$scope.customerNameId = customerNameId;
 
 		$scope.infoMessage = "";
 		var chartsData = [];
+		console.log("customerNameId", customerNameId);
 
-		chartsData = jsonPath(servicesAlarmData, "$.customers.*.[?(@.customerName == '"+ customerNameId +"')]");
+
+		chartsData = jsonPath(servicesAlarmData, "$.customers.*.[?(@.customerName == \""+ customerNameId +"\")]");
 
 		if (chartsData.length > 0) {
 			$scope.data = chartsData;	
@@ -57,24 +59,26 @@ app.controller('servicesController', ['$scope','$stateParams', '$state', '$inter
 		}
 
 
+
+		var currentRefreshTime = refreshPeriod.syncDateTime.currentDateTime;
+		var nextRefreshTime = refreshPeriod.syncDateTime.nextDateTime;
+		var nextRefreshPeriod = Math.floor((nextRefreshTime - new Date().getTime())/1000);
+
+		$scope.refreshDate = new Date(currentRefreshTime);
+		$scope.counter = nextRefreshPeriod;
+
 		var periodicRefresh = $interval(function () {
 			$state.reload(); 
-		}, RefreshPeriod * 1000);
-
-		$scope.refreshDate = new Date();
-
-		$scope.counter = RefreshPeriod; 	
+		}, nextRefreshPeriod * 1000);
 
 		var counterInterval = $interval(function(){
 			$scope.counter--;
 		}, 1000);
 
-
 		$scope.$on('$destroy', function() {
 			$interval.cancel(periodicRefresh);
 			$interval.cancel(counterInterval);
 		});
-
 
 
 	}]);

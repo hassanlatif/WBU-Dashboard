@@ -1,39 +1,24 @@
 {
     "customers": [
         {
-            "badCircuits": 19,
-            "customerName": "EATC",
-            "goodCircuits": 825
-        },
-        {
-            "badCircuits": 13,
-            "customerName": "Bahrain VIVA",
-            "goodCircuits": 361
-        },
-        {
             "badCircuits": 3,
-            "customerName": "VIVA  - Kuwait",
-            "goodCircuits": 286
-        },
-        {
-            "badCircuits": 3,
-            "customerName": "Integrated Telecom Company",
-            "goodCircuits": 93
+            "customerName": "EGYPT (ETISALAT MISR)",
+            "goodCircuits": 246
         },
         {
             "badCircuits": 2,
-            "customerName": "Saudi Arabia - Mobily",
-            "goodCircuits": 4619
+            "customerName": "EATC",
+            "goodCircuits": 845
         },
         {
             "badCircuits": 1,
-            "customerName": "India Idea",
-            "goodCircuits": 62
+            "customerName": "Bahrain Internet Exchange",
+            "goodCircuits": 0
         },
         {
             "badCircuits": 1,
-            "customerName": "Gateway Telecom",
-            "goodCircuits": 7
+            "customerName": "Sudan Telecom Com LTD",
+            "goodCircuits": 274
         }
     ]
 }

@@ -1,5 +1,5 @@
-app.controller('customersController', [ '$scope', '$stateParams', '$state', '$interval', 'customersAlarmData', 'RefreshPeriod',
-	function($scope, $stateParams, $state, $interval, customersAlarmData, RefreshPeriod) {
+app.controller('customersController', [ '$scope', '$stateParams', '$state', '$interval', 'customersAlarmData', 'refreshPeriod',
+	function($scope, $stateParams, $state, $interval, customersAlarmData, refreshPeriod) {
 
 		var serviceTypeId = $stateParams.serviceTypeId;
 		var serviceCatId = $stateParams.serviceCatId;
@@ -55,6 +55,10 @@ app.controller('customersController', [ '$scope', '$stateParams', '$state', '$in
 		          showColorCode: true,
 		          text: 'value-and-percentage'
 		       	},
+				vAxis : {
+					format: 'decimal'
+				}
+		       	
 			};
 
 			for (i=0; i <chartsData.length; i++){
@@ -77,22 +81,26 @@ app.controller('customersController', [ '$scope', '$stateParams', '$state', '$in
 			$state.go('circuits', {customerNameId: customerNameParam, serviceTypeId: serviceTypeParam, serviceCatId: serviceCatId});
 		}
 
+
+		var currentRefreshTime = refreshPeriod.syncDateTime.currentDateTime;
+		var nextRefreshTime = refreshPeriod.syncDateTime.nextDateTime;
+		var nextRefreshPeriod = Math.floor((nextRefreshTime - new Date().getTime())/1000);
+
+		$scope.refreshDate = new Date(currentRefreshTime);
+		$scope.counter = nextRefreshPeriod;
+
 		var periodicRefresh = $interval(function () {
 			$state.reload(); 
-		}, RefreshPeriod * 1000);
-
-		$scope.refreshDate = new Date();
-
-		$scope.counter = RefreshPeriod; 	
+		}, nextRefreshPeriod * 1000);
 
 		var counterInterval = $interval(function(){
 			$scope.counter--;
 		}, 1000);
-
 
 		$scope.$on('$destroy', function() {
 			$interval.cancel(periodicRefresh);
 			$interval.cancel(counterInterval);
 		});
 
+		
 	}]);

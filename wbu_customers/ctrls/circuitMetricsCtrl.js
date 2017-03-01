@@ -1,6 +1,6 @@
 
-app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state', '$interval', 'circuitMetricsData', 'RefreshPeriod',
-	function($scope, $stateParams, $state, $interval, circuitMetricsData, RefreshPeriod) {
+app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state', '$interval', 'circuitMetricsData', 'refreshPeriod',
+	function($scope, $stateParams, $state, $interval, circuitMetricsData, refreshPeriod) {
 
 		var customerNameId = $stateParams.customerNameId;
 		var serviceTypeId = $stateParams.serviceTypeId;				
@@ -39,11 +39,17 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 		}
 
 		function drawCircuitMetrics() {
-
 			///Availability Gauge///
+			var availabilityV = NaN;
+			var availabilityF = "N/A";
+			if (gaugesData.availability)
+			{
+				availabilityV = gaugesData.availability;
+				availabilityF = availabilityV;
+			}
 			var availabilityVal = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				['Availability (%)', gaugesData.availability]
+				['Availability (%)', {v: availabilityV, f: availabilityF}]
 				]);
 
 			var availabilityOpts = {
@@ -63,19 +69,18 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			chart.draw(availabilityVal, availabilityOpts);		
 
 			///Capacity Gauge///
-			var capacityPercent;
-
+			var capacityV = NaN;
+			var capacityF = "N/A";
 			if (gaugesData.capacity && gaugesData.totalBpsAvail) {
 
-				capacityPercent = ((gaugesData.capacity/gaugesData.totalBpsAvail)*100);
+				capacityV = ((gaugesData.capacity/gaugesData.totalBpsAvail)*100);
+				capacityF = capacityV;
 			}
-
-			console.log(capacityPercent);
 
 
 			var capacityVal = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				['Capacity (bps)', capacityPercent]
+				['Capacity (bps)', {v: capacityV, f: capacityF}]
 				]);
 
 			var capacityOpts = {
@@ -91,9 +96,16 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			chart.draw(capacityVal, capacityOpts);		
 
 			///Total Packet Drop Gauge///
+			var packetDropV = NaN;
+			var packetDropF = "N/A";
+			if (gaugesData.totalPacketDrop)
+			{
+				packetDropV = gaugesData.totalPacketDrop;
+				packetDropF = packetDropV;
+			}
 			var totalPacketDropVal = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				['Packet Drop (pkt/s)', gaugesData.totalPacketDrop]
+				['Packet Drop (pkt/s)', {v: packetDropV, f: packetDropF}]
 				]);
 
 			var totalPacketDropOpts = {
@@ -109,9 +121,16 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			chart.draw(totalPacketDropVal, totalPacketDropOpts);		
 
 			///Total Error In Gauge///
+			var totalErrorINV = NaN;
+			var totalErrorINF = "N/A";
+			if (gaugesData.totalErrorIn)
+			{
+				totalErrorINV = gaugesData.totalErrorIn;
+				totalErrorINF = totalErrorINV;
+			}
 			var totalErrorInVal = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				['Error In (%)', gaugesData.totalErrorIn]
+				['Error In (%)', {v: totalErrorINV, f: totalErrorINF}]
 				]);
 
 			var totalErrorInOpts = {
@@ -124,7 +143,7 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			};
 
 			var chart = new google.visualization.Gauge(document.getElementById('totalErrorIn_gauge'));
-			chart.draw(totalErrorInVal, totalErrorInOpts);		
+			chart.draw(totalErrorInVal, totalErrorInOpts);
 
 			///Trouble Tickets Chart///
 			var ticketsVal = google.visualization.arrayToDataTable([
@@ -142,31 +161,42 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 	        	bar: {groupWidth: "75%"},
 	        	legend: { position: "none" },
 				backgroundColor: 'White',
+                        vAxis: {
+                                minValue:0,
+                                viewWindow: {
+                                        min: 0
+                                }
+                        }				
 				//colors: ['#e0440e', '#e6693e', '#ec8f6e']
       		};
 
 			var barChart = new google.visualization.ColumnChart(document.getElementById("tickets_chart"));
       		barChart.draw(ticketsVal, ticketsOpts);
-			
+
 		}
+
+
+		var currentRefreshTime = refreshPeriod.syncDateTime.currentDateTime;
+		var nextRefreshTime = refreshPeriod.syncDateTime.nextDateTime;
+		var nextRefreshPeriod = Math.floor((nextRefreshTime - new Date().getTime())/1000);
+
+		$scope.refreshDate = new Date(currentRefreshTime);
+		$scope.counter = nextRefreshPeriod;
 
 		var periodicRefresh = $interval(function () {
 			$state.reload(); 
-		}, RefreshPeriod * 1000);
-
-		$scope.refreshDate = new Date();
-
-		$scope.counter = RefreshPeriod; 	
+		}, nextRefreshPeriod * 1000);
 
 		var counterInterval = $interval(function(){
 			$scope.counter--;
 		}, 1000);
 
-
 		$scope.$on('$destroy', function() {
 			$interval.cancel(periodicRefresh);
 			$interval.cancel(counterInterval);
 		});
+
+
 
 
 

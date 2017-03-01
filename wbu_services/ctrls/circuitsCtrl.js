@@ -1,6 +1,6 @@
 
-app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$interval', 'circuitsAlarmData', 'RefreshPeriod',
-	function($scope, $stateParams, $state, $interval, circuitsAlarmData, RefreshPeriod) {
+app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$interval', 'circuitsAlarmData', 'refreshPeriod',
+	function($scope, $stateParams, $state, $interval, circuitsAlarmData, refreshPeriod) {
 
 		var customerNameId = $stateParams.customerNameId;
 		var serviceTypeId = $stateParams.serviceTypeId;
@@ -16,8 +16,13 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 
 		var data = [];
 
-		data =  jsonPath(circuitsAlarmData, "$.circuits." + customerNameId + "[?(@.serviceType == " + "'" + serviceTypeId + "')]");
-		
+		console.log("customerNameId", customerNameId);
+		console.log("serviceTypeId", serviceTypeId);
+
+		data =  jsonPath(circuitsAlarmData, "$.circuits." + customerNameId + ".[?(@.serviceType == \""+ serviceTypeId + "\")]");		
+		console.log("Data", data)
+
+
 		if (data.length > 0 ) {
 
 			$scope.dataWindow = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));
@@ -60,6 +65,10 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 		          showColorCode: true,
 		          text: 'value-and-percentage'
 		       	},
+				vAxis : {
+					format: 'decimal'
+				}
+		       	
 
 			};
 
@@ -92,18 +101,22 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 				affectedCkts: data});
 		}
 
+
+
+		var currentRefreshTime = refreshPeriod.syncDateTime.currentDateTime;
+		var nextRefreshTime = refreshPeriod.syncDateTime.nextDateTime;
+		var nextRefreshPeriod = Math.floor((nextRefreshTime - new Date().getTime())/1000);
+
+		$scope.refreshDate = new Date(currentRefreshTime);
+		$scope.counter = nextRefreshPeriod;
+
 		var periodicRefresh = $interval(function () {
 			$state.reload(); 
-		}, RefreshPeriod * 1000);
-
-		$scope.refreshDate = new Date();
-
-		$scope.counter = RefreshPeriod; 	
+		}, nextRefreshPeriod * 1000);
 
 		var counterInterval = $interval(function(){
 			$scope.counter--;
 		}, 1000);
-
 
 		$scope.$on('$destroy', function() {
 			$interval.cancel(periodicRefresh);
