@@ -1,1 +1,104 @@
-{ "customers": [ {"customerName": "Jordan Telecom Group Orange)", "badCircuits": 28, "goodCircuits": 46 },{"customerName": "India - NYK (Reliance)", "badCircuits": 18, "goodCircuits": 155 },{"customerName": "United States - MCI (Verizon)", "badCircuits": 17, "goodCircuits": 73 },{"customerName": "EGYPT (ETISALAT MISR)", "badCircuits": 17, "goodCircuits": 232 },{"customerName": "TATA COMMUNICATIONS CANADA LTD", "badCircuits": 15, "goodCircuits": 115 },{"customerName": "PTGI International", "badCircuits": 15, "goodCircuits": 111 },{"customerName": "VIVA  - Kuwait", "badCircuits": 13, "goodCircuits": 276 },{"customerName": "INDIA (VODAFON)", "badCircuits": 12, "goodCircuits": 15 },{"customerName": "Pella Telecommunication Ltd", "badCircuits": 12, "goodCircuits": 71 },{"customerName": "Philip.Long Distance Tele-PLDT", "badCircuits": 12, "goodCircuits": 167 },{"customerName": "EATC", "badCircuits": 12, "goodCircuits": 835 },{"customerName": "Teleyemen", "badCircuits": 11, "goodCircuits": 1012 },{"customerName": "Sudanese Mobile Tele.Co.-Zain", "badCircuits": 10, "goodCircuits": 15 },{"customerName": "GOOGLE", "badCircuits": 9, "goodCircuits": 2 },{"customerName": "IBASIS NETHERLANDS B.V.", "badCircuits": 8, "goodCircuits": 118 },{"customerName": "TELECOM EGYPT", "badCircuits": 8, "goodCircuits": 843 },{"customerName": "Bahrain VIVA", "badCircuits": 6, "goodCircuits": 366 },{"customerName": "BANGLADESH (MIRTEL)", "badCircuits": 6, "goodCircuits": 57 },{"customerName": "Djibouti telecom", "badCircuits": 5, "goodCircuits": 6 },{"customerName": "Mena Telecom - Bahrain", "badCircuits": 5, "goodCircuits": 0 },{"customerName": "BICS-Belgacom Intl Carrier", "badCircuits": 5, "goodCircuits": 130 },{"customerName": "Integrated Telecom Company", "badCircuits": 4, "goodCircuits": 102 },{"customerName": "Telecom Italia Sparkle Spa", "badCircuits": 3, "goodCircuits": 100 },{"customerName": "Turk Telekom International", "badCircuits": 3, "goodCircuits": 9 },{"customerName": "Gulf Bridge International Inc.", "badCircuits": 2, "goodCircuits": 0 },{"customerName": "Etisalat-Emirates Telecom.Cor.", "badCircuits": 2, "goodCircuits": 395 },{"customerName": "Sudan Telecom Com. LTD", "badCircuits": 2, "goodCircuits": 273 },{"customerName": "CITIC Telecom Hong kong", "badCircuits": 2, "goodCircuits": 4 },{"customerName": "SomTel", "badCircuits": 1, "goodCircuits": 1 },{"customerName": "Batelco", "badCircuits": 1, "goodCircuits": 35 },{"customerName": "Saudi Data", "badCircuits": 1, "goodCircuits": 0 },{"customerName": "PAKISTAN (TELENOR)", "badCircuits": 1, "goodCircuits": 10 },{"customerName": "Qualitynet Company", "badCircuits": 1, "goodCircuits": 9 },{"customerName": "ooredoo", "badCircuits": 1, "goodCircuits": 103 },{"customerName": "MADA COMMUNICATION S.P.C", "badCircuits": 1, "goodCircuits": 0 },{"customerName": "Gulf Allied Digital Media GADM", "badCircuits": 1, "goodCircuits": 0 } ] }
+{
+    "customers": [
+        {
+            "badCircuits": 22,
+            "customerName": "VIVA  - Kuwait",
+            "goodCircuits": 267
+        },
+        {
+            "badCircuits": 15,
+            "customerName": "Pella Telecommunication Ltd",
+            "goodCircuits": 68
+        },
+        {
+            "badCircuits": 13,
+            "customerName": "Jordan Telecom Group Orange)",
+            "goodCircuits": 61
+        },
+        {
+            "badCircuits": 8,
+            "customerName": "TATA COMMUNICATIONS CANADA LTD",
+            "goodCircuits": 122
+        },
+        {
+            "badCircuits": 7,
+            "customerName": "BANGLADESH (TRAC)",
+            "goodCircuits": 156
+        },
+        {
+            "badCircuits": 5,
+            "customerName": "TELECOM EGYPT",
+            "goodCircuits": 846
+        },
+        {
+            "badCircuits": 4,
+            "customerName": "India Idea",
+            "goodCircuits": 59
+        },
+        {
+            "badCircuits": 4,
+            "customerName": "Bangladesh Telecom Co Ltd BTCL",
+            "goodCircuits": 150
+        },
+        {
+            "badCircuits": 4,
+            "customerName": "Teleyemen",
+            "goodCircuits": 1019
+        },
+        {
+            "badCircuits": 3,
+            "customerName": "SFR",
+            "goodCircuits": 7
+        },
+        {
+            "badCircuits": 2,
+            "customerName": "Gateway Telecom",
+            "goodCircuits": 6
+        },
+        {
+            "badCircuits": 2,
+            "customerName": "Rostelecom",
+            "goodCircuits": 5
+        },
+        {
+            "badCircuits": 1,
+            "customerName": "Australia Reach",
+            "goodCircuits": 9
+        },
+        {
+            "badCircuits": 1,
+            "customerName": "Zajil Telecom",
+            "goodCircuits": 2
+        },
+        {
+            "badCircuits": 1,
+            "customerName": "SomTel",
+            "goodCircuits": 1
+        },
+        {
+            "badCircuits": 1,
+            "customerName": "BICS-Belgacom Intl Carrier",
+            "goodCircuits": 134
+        },
+        {
+            "badCircuits": 1,
+            "customerName": "TELSTRA INTL limited-HONGKONG",
+            "goodCircuits": 63
+        },
+        {
+            "badCircuits": 1,
+            "customerName": "EATC",
+            "goodCircuits": 847
+        },
+        {
+            "badCircuits": 1,
+            "customerName": "Turk Telekom International",
+            "goodCircuits": 0
+        },
+        {
+            "badCircuits": 1,
+            "customerName": "Sudan Telecom Com LTD",
+            "goodCircuits": 274
+        }
+    ]
+}

@@ -32,6 +32,10 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 		if (gaugesData) {
 
 			drawCircuitMetrics();
+
+			$scope.port = gaugesData.port;
+			$scope.slot = gaugesData.slot;
+			$scope.ni = gaugesData.ni;
 		}
 		else {
 
@@ -39,10 +43,11 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 		}
 
 		function drawCircuitMetrics() {
+
 			///Availability Gauge///
 			var availabilityV = NaN;
 			var availabilityF = "N/A";
-			if (gaugesData.availability)
+			if (gaugesData.availability != null )
 			{
 				availabilityV = gaugesData.availability;
 				availabilityF = availabilityV;
@@ -71,7 +76,7 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			///Capacity Gauge///
 			var capacityV = NaN;
 			var capacityF = "N/A";
-			if (gaugesData.capacity && gaugesData.totalBpsAvail) {
+			if (gaugesData.capacity != null && gaugesData.totalBpsAvail != null) {
 
 				capacityV = ((gaugesData.capacity/gaugesData.totalBpsAvail)*100);
 				capacityF = capacityV;
@@ -98,7 +103,7 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			///Total Packet Drop Gauge///
 			var packetDropV = NaN;
 			var packetDropF = "N/A";
-			if (gaugesData.totalPacketDrop)
+			if (gaugesData.totalPacketDrop != null)
 			{
 				packetDropV = gaugesData.totalPacketDrop;
 				packetDropF = packetDropV;
@@ -123,7 +128,7 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			///Total Error In Gauge///
 			var totalErrorINV = NaN;
 			var totalErrorINF = "N/A";
-			if (gaugesData.totalErrorIn)
+			if (gaugesData.totalErrorIn != null)
 			{
 				totalErrorINV = gaugesData.totalErrorIn;
 				totalErrorINF = totalErrorINV;
@@ -156,7 +161,7 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 
       		var ticketsOpts = {
 	        	title: "Number of Trouble Tickets",
-	        	width: 320,
+	        	width: 270,
 	        	height: 170,
 	        	bar: {groupWidth: "75%"},
 	        	legend: { position: "none" },
@@ -178,7 +183,7 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 
 		var currentRefreshTime = refreshPeriod.syncDateTime.currentDateTime;
 		var nextRefreshTime = refreshPeriod.syncDateTime.nextDateTime;
-		var nextRefreshPeriod = Math.floor((nextRefreshTime - new Date().getTime())/1000);
+		var nextRefreshPeriod = 60; //Math.floor((nextRefreshTime - new Date().getTime())/1000);
 
 		$scope.refreshDate = new Date(currentRefreshTime);
 		$scope.counter = nextRefreshPeriod;
@@ -195,9 +200,5 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			$interval.cancel(periodicRefresh);
 			$interval.cancel(counterInterval);
 		});
-
-
-
-
 
 }]);

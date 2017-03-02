@@ -62,7 +62,7 @@ app.controller('servicesController', ['$scope','$stateParams', '$state', '$inter
 
 		var currentRefreshTime = refreshPeriod.syncDateTime.currentDateTime;
 		var nextRefreshTime = refreshPeriod.syncDateTime.nextDateTime;
-		var nextRefreshPeriod = Math.floor((nextRefreshTime - new Date().getTime())/1000);
+		var nextRefreshPeriod = 60; //Math.floor((nextRefreshTime - new Date().getTime())/1000);
 
 		$scope.refreshDate = new Date(currentRefreshTime);
 		$scope.counter = nextRefreshPeriod;

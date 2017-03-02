@@ -9,7 +9,7 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 		$scope.customerNameId = customerNameId;
 
 		$scope.currentPage = 1;
-		$scope.itemsPerPage = 12;
+		$scope.itemsPerPage = 8;
 		$scope.infoMessage = "";
 
 		var data = [];
@@ -93,7 +93,7 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 
 		var currentRefreshTime = refreshPeriod.syncDateTime.currentDateTime;
 		var nextRefreshTime = refreshPeriod.syncDateTime.nextDateTime;
-		var nextRefreshPeriod = Math.floor((nextRefreshTime - new Date().getTime())/1000);
+		var nextRefreshPeriod = 60; //Math.floor((nextRefreshTime - new Date().getTime())/1000);
 
 		$scope.refreshDate = new Date(currentRefreshTime);
 		$scope.counter = nextRefreshPeriod;

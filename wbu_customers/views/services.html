@@ -1,8 +1,8 @@
 <ol class="breadcrumb">
 	<li><a ui-sref="customers">Customers</a></li>
-	<li>{{ customerNameId }}</li>
+	<li><a ui-sref="customers">{{ customerNameId }}</a></li>
 	<li>Services</li>
-	<li class="pull-right"><b>Next refresh</b>:{{counter | formatTimer}}</li>	
+	<!--li class="pull-right"><b>Next refresh</b>:{{counter | formatTimer}}</li-->	
   	<li class="pull-right"><b>Last refresh</b>:{{refreshDate | date:"h:mm a"}}</li>		
 </ol>
 

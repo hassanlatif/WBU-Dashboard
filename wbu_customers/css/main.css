@@ -56,3 +56,10 @@ svg:first-child > g > text[text-anchor~=middle] {
 .breadcrumb>li+li:nth-last-child(1):before {
 	content: " ";
 }
+
+
+.vcenter {
+    /*display: inline-block;*/
+    vertical-align: middle;
+    /*float: none; */
+}

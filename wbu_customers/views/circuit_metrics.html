@@ -1,4 +1,3 @@
-
 <ol class="breadcrumb">
 	<li><a ui-sref="customers">Customers</a></li>
 	<li><a ui-sref="services({customerNameId: customerNameId, serviceTypeId: serviceTypeId})">{{ customerNameId }}</a></li>
@@ -10,8 +9,8 @@
 		</select>
 	</li>
 	<li>Circuit Metrics</li>
-	<li class="pull-right"><b>Next refresh</b>:{{counter | formatTimer}}</li>	
-  	<li class="pull-right"><b>Last refresh</b>:{{refreshDate | date:"h:mm a"}}</li>		
+	<!--li class="pull-right"><b>Next refresh</b>:{{counter | formatTimer}}</li-->	
+	<li class="pull-right"><b>Last refresh</b>:{{refreshDate | date:"h:mm a"}}</li>		
 </ol>
 
 <div align="center">
@@ -24,11 +23,29 @@
 
 
 <div class="container">
+
+	<div id="circuitDetails" class="col-xs-6 col-md-2">
+		<table class="table table-bordered">
+			<tr>
+				<th>Port</th>
+				<td>{{port}}</td>
+			</tr>
+			<tr>
+				<th>Slot</th>
+				<td>{{slot}}</td>
+			</tr>
+			<tr>
+				<th>NI</th>
+				<td>{{ni}}</td>
+			</tr>			 
+		</table>
+	</div>
+
 	<div id="availability_gauge" class="col-xs-6 col-md-2"> </div>
 	<div id="capacity_gauge" class="col-xs-6 col-md-2"> </div>
 	<div id="totalPacketDrop_gauge" class="col-xs-6 col-md-2"> </div>
-	<div id="totalErrorIn_gauge" class="col-xs-6 col-md-2"> </div>
-	<div display="inline-block;"  id="tickets_chart" class="col-xs-6 col-md-2"> </div>
+	<div id="totalErrorIn_gauge" class="col-xs-6 col-md-2"> </div>	
+	<div display="inline-block;"  id="tickets_chart" class="col-xs-6 col-md-2"> </div>	
 </div>
 
 

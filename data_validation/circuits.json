@@ -1,1 +1,1111 @@
-{ "circuits": { "BANGLADESH (MIRTEL)": [ { "circuitId": "JED/STC-PALR/MIRTEL VC12S007", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 3, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-PALR/MIRTEL VC12S020", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-PALR/MIRTEL VC12S018", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-PALR/MIRTEL VC12S008", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 2, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-PALR/MIRTEL VC12S006", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-PALR/MIRTEL VC12S014", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 2, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "BICS-Belgacom Intl Carrier": [ { "circuitId": "JEDDAH-PENMARCH VC12S051", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIYADH-BRUSSELS VC2S002", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JEDDAH-PENMARCH VC12S063", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 2, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JEDDAH-PENMARCH VC12S055", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 2, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JEDDAH-PENMARCH VC12S056", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 2, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "Bahrain VIVA": [ { "circuitId": "JEDDAH/SD-BAHRAIN/VIVA VC4-16CS002", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "JEDDAH/SD-BAHRAIN/VIVA VC4-16CS001", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 },{ "circuitId": "BAHRAIN/STC/BHR-BALDKH00 I-E2E-W 958535", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 5, "alarmsIndeterminate": 0 },{ "circuitId": "RIYADH/SD-BAHRAIN/VIVA VC4-16CS001", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "RIYADH/SD-BAHRAIN/VIVA VC4-16CS002", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 },{ "circuitId": "BAHRAIN/STC/BHR-MRSTRDAS I-E2E-W 186616", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 }], "Batelco": [ { "circuitId": "BAH/BTC-JOR/UMNIAH 30NC01", "serviceCategory": "Capacity", "serviceType": "I-HARD_PATCH_TRANSIT", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "CITIC Telecom Hong kong": [ { "circuitId": "JEDDAH/STC-CITIC/UK 30N002", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JEDDAH/STC-CITIC/UK 30N001", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "Djibouti telecom": [ { "circuitId": "STC/IGW-DJIBOUTI VC4-4CS001", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "STC/IGW-DJIBOUTI/SMW3 10GE001", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "JEDDAH-JEDDAH DIA271", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "JEDDAH-JEDDAH DIA272", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "JEDDAH-DJIBOUTI 1G CS004", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 }], "EATC": [ { "circuitId": "ABHA-JEDDAH W_DIA104", "serviceCategory": "Data", "serviceType": "N-WDIA", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 },{ "circuitId": "RIYADH-RIYADH W_DIA138", "serviceCategory": "Data", "serviceType": "N-WDIA", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 },{ "circuitId": "QASSIM-RIYADH W_DIA106", "serviceCategory": "Data", "serviceType": "N-WDIA", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 },{ "circuitId": "JUBAIL-DAMMAM W_DIA103", "serviceCategory": "Data", "serviceType": "N-WDIA", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 },{ "circuitId": "ABHA-JEDDAH W_DIA103", "serviceCategory": "Data", "serviceType": "N-WDIA", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 },{ "circuitId": "MAKKAH-JEDDAH W_DIA100", "serviceCategory": "Data", "serviceType": "N-WDIA", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 },{ "circuitId": "DAMMAM-RIYADH W_DIA102", "serviceCategory": "Data", "serviceType": "N-WDIA", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 },{ "circuitId": "ABHA-JEDDAH W_DIA102", "serviceCategory": "Data", "serviceType": "N-WDIA", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 },{ "circuitId": "RIYADH-RIYADH W_DIA136", "serviceCategory": "Data", "serviceType": "N-WDIA", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 },{ "circuitId": "JEDDAH-JEDDAH W_DIA101", "serviceCategory": "Data", "serviceType": "N-WDIA", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 },{ "circuitId": "JUBAIL-DAMMAM W_DIA102", "serviceCategory": "Data", "serviceType": "N-WDIA", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 },{ "circuitId": "TABUK-RIYADH W_DIA102", "serviceCategory": "Data", "serviceType": "N-WDIA", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 }], "EGYPT (ETISALAT MISR)": [ { "circuitId": "HUAWEI2/EMSR-JED/JIN2_SMW4 30N006", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 3, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/JIN2-HUAWEI2/ETISALAT 30N007", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 3, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "CAI/EMSR-RIY/RIN_SMW4 30N022", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "CAI/EMSR-RIY/RIN_SMW4 30N020", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "ALEX/EMSR-RIY/RIN_SMW4 30N005", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "ALEX/EMSR-RIY/RIN_SMW4 30N015", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "ALEX/EMSR-RIY/RIN_SMW4 30N008", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "CAI/EMSR-DMA/DIN1_SMW4 30N015", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "CAI/EMSR-DMA/DIN1_SMW4 30N007", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "CAI/EMSR-RIY/RIN_SMW4 30N011", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/JIN2-HUAWEI2/ETISALAT 30N002", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 3, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "ALEX/EMSR-RIY/RIN_SMW4 30N018", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "CAI/EMSR-RIY/RIN_SMW4 30N021", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "CAI/EMSR-DMA/DIN1_SMW4 30N008", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "ALEX/EMSR-DMA/DIN1_SMW4 30N013", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "ALEX/EMSR-RIY/RIN_SMW4 30N019", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "CAI/EMSR-RIY/RIN_SMW4 30N012", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "Etisalat-Emirates Telecom.Cor.": [ { "circuitId": "AMM/STC/ORG-FUJ/SKM/GPE VC4S002", "serviceCategory": "Capacity", "serviceType": "I-HARD_PATCH_TRANSIT", "alarmsCritical": 1, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DXB/EMIX-RUH/IMW 10GDWA 01", "serviceCategory": "Data", "serviceType": "I-PEERING-BB", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 }], "GOOGLE": [ { "circuitId": "STC/SD/EIG-MAR/GOOGLE 100GE001", "serviceCategory": "Data", "serviceType": "I-PEERING-BB", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-MRM/GOOGLE 10GE003", "serviceCategory": "Data", "serviceType": "I-PEERING-BB", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-MRM/GOOGLE 10GE002", "serviceCategory": "Data", "serviceType": "I-PEERING-BB", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "RIY/STC-MRM/GOOGLE 10GE004", "serviceCategory": "Data", "serviceType": "I-PEERING-BB", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "RIY/STC-FUJ/ETISALAT_GOOGLE 10GE 001", "serviceCategory": "Data", "serviceType": "I-PEERING-BB", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 },{ "circuitId": "RIY/STC-MRM/GOOGLE 10GE001", "serviceCategory": "Data", "serviceType": "I-PEERING-BB", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "JEDDAH-MARSEILLES/C&W_GOOGLE 10G004", "serviceCategory": "Data", "serviceType": "I-PEERING-BB", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "STC/SD/EIG-MAR/GOOGLE 100GE002", "serviceCategory": "Data", "serviceType": "I-PEERING-BB", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-MRM/GOOGLE 10GE001", "serviceCategory": "Data", "serviceType": "I-PEERING-BB", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 }], "Gulf Allied Digital Media GADM": [ { "circuitId": "JED/IPTV-DXB/GADM VC4-16CS002", "serviceCategory": "Capacity", "serviceType": "I-HARD_PATCH_TRANSIT", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 }], "Gulf Bridge International Inc.": [ { "circuitId": "STC/SD/IGNET-KHO/GBI 10GE002", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "STC/SD/IGNET-KHO/GBI 10GE001", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 }], "IBASIS NETHERLANDS B.V.": [ { "circuitId": "ASD2H-RIYADH-RIN1/30N16", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "ASD2H-RIYADH-RIN1/30N17", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "ASD2H-RIYADH-RIN1/30N18", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIYADH/RIN1-RT2D/30N19", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIYADH/RIN1-RT2D/30N20", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIYADH/RIN1-RT2D/30N21", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIYADH-RIN1-RT2E/30N68", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "ASD2K-RIAD/RIN1/30N63", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "INDIA (VODAFON)": [ { "circuitId": "SAL/STC-QATAR/VODAFONE 30N003", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 3, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "SAL/STC-QATAR/VODAFONE 30N001", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 3, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAM/STC-QATAR/VODAFONE 30N003", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 3, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAM/STC-QATAR/VODAFONE 30N002", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAM/STC-QATAR/VODAFONE 30N001", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 2, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIYADH-MMB/VC12S007", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIYADH-MMB/VC12S005", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIYADH-MMB/VC12S003", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "SAL/STC-QATAR/VODAFONE 30N002", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 3, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIYADH-MMB/VC12S008", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIYADH-MMB/VC12S004", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIYADH-MMB/VC12S006", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "India - NYK (Reliance)": [ { "circuitId": "JED/JIN3-MUM/RELIANCE 30N028", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "SAL/JIN2-MUM/RELIANCE 30N002", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "SAL/JIN2-MUM/RELIANCE 30N008", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/JIN3-MUM/RELIANCE 30N033", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "SAL/JIN2-MUM/RELIANCE 30N014", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED-CNI/STP 30N002", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAM/DIN1-MUM/RELIANCE 30N009", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAMMAM-CHENNAI/STP VC12S006", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "SALAMAH-CHENNAI/STP VC12S006", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAMMAM-CHENNAI/STP VC12S004", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "SALAMAH-CHENNAI/STP VC12S001", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "SAL/JIN2-MUM/RELIANCE 30N006", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 2, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/JIN3-MUM/RELIANCE 30N031", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/JIN3-MUM/RELIANCE 30N029", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/JIN3-MUM/RELIANCE 30N034", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "SAL/JIN2-MUM/RELIANCE 30N007", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 2, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "SALAMAH-CHENNAI/STP VC12S002", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/JIN3-MUM/RELIANCE 30N032", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "Integrated Telecom Company": [ { "circuitId": "DAMMAM-RIYADH W_DIA103", "serviceCategory": "Data", "serviceType": "N-WDIA", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 },{ "circuitId": "RIYADH-RIYADH W_DIA197", "serviceCategory": "Data", "serviceType": "N-WDIA", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 },{ "circuitId": "JEDDAH-RIYADH W_DIA333", "serviceCategory": "Data", "serviceType": "N-WDIA", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 },{ "circuitId": "RIYADH-RIYADH W_DIA200", "serviceCategory": "Data", "serviceType": "N-WDIA", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 }], "Jordan Telecom Group Orange)": [ { "circuitId": "NISC2/ORA-DIN1/STC 30N002", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 3, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "AMMAN-DAN 30N008", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 3, "alarmsMinor": 0, "alarmsWarning": 2, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "AMMAN/ISC3-SALAMAH 30N010", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "AMMAN-DAN 30N007", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAM-AMN 30N003", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 2, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "NISC2/ORA-DIN1/STC 30N004", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 1, "alarmsWarning": 3, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "AMN/NISC2-Salamah 30N015", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAM-AMN 30N004", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 1, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "NISC2/ORA-DIN1/STC 30N001", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 6, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIY-AMN/NISC2 30N016", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIY-AMN 30N003", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAM-AMN 30N005", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 5, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "NISC2/ORA-DIN1/STC 30N005", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 2, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIY-AMN 30N006", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIY-AMN 30N012", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "NISC2/ORA-DIN1/STC 30N003", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 1, "alarmsWarning": 3, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED-AMN 30N001", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "AMMAN/ISC3-SALAMAH 30N007", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JORDON/STC/JOR-IRAQ/IRQ I-E2E-W 628116", "serviceCategory": "Capacity", "serviceType": "I-HARD_PATCH_TRANSIT", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 },{ "circuitId": "AMMAN/NISC2-JADDAH/FLAG 30N001", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIY-AMN/NISC2 30N017", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "AMMAN/ISC3-SALAMAH 30N006", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 2, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIY-AMN 30N009", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIY-AMN 30N004", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIY-AMN 30N001", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "AMN/NISC2-Salamah 30N018", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 2, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "RIY-AMN/NISC1 30N015", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "AMN/NISC2-Salamah 30N017", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 2, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "MADA COMMUNICATION S.P.C": [ { "circuitId": "RIY/IGW-BAGHDAD/ZAIN VC4-16CS001", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 6, "alarmsIndeterminate": 0 }], "Mena Telecom - Bahrain": [ { "circuitId": "BAHRAIN/STC/BHR-BALDKH00 I-E2E-W 023152347", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "STC/IGW-MENA/BAH VC4-4 001", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "STC/IGW-MENA/BAH VC4-4 004", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "STC/IGW-MENA/BAH VC4-4 002", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "STC/IGW-MENA/BAH VC4-4 003", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 }], "PAKISTAN (TELENOR)": [ { "circuitId": "JEDDAH/STC-OSLO/G 30N001", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "PTGI International": [ { "circuitId": "JED/STC-MARS/ARBINET VC12S022", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 5, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-MARS/ARBINET VC12S032", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 4, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-MARS/ARBINET VC12S033", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 4, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-MARS/ARBINET VC12S025", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 3, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-MARS/ARBINET VC12S023", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-MARS/ARBINET VC12S030", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 0, "alarmsWarning": 3, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-MARS/ARBINET VC12S028", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 1, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-MARS/ARBINET VC12S031", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 2, "alarmsWarning": 2, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-MARS/ARBINET VC12S027", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-MARS/ARBINET VC12S010", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-MARS/ARBINET VC12S024", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 4, "alarmsWarning": 2, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-MARS/ARBINET VC12S026", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 2, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-MARS/ARBINET VC12S013", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-MARS/ARBINET VC12S012", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-MARS/ARBINET VC12S001", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "Pella Telecommunication Ltd": [ { "circuitId": "AMMAN/PELLA2-DAMMAM/DIN1_FOT 30N021", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 4, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "AMMAN/PELLA2-DAMMAM/DIN1_FOT 30N017", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 3, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "AMMAN /PELLA1-DAMMAM/DIN1 _FOT 30N008", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 3, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "AMMAN/PELLA2-DAMMAM/DIN1_FOT 30N016", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 3, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "MUJAMMAH-PELLA 30N005", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "MUJAMMAH-PELLA 30N017", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "MUJAMMAH-PELLA 30N026", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "AMMAN /PELLA1-DAMMAM/DIN1 _FOT 30N011", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 3, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "MUJAMMAH-PELLA 30N006", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "MUJAMMAH-PELLA 30N009", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "AMMAN/PELLA2-DAMMAM/DIN1_FOT 30N019", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "AMMAN /PELLA1-DAMMAM/DIN1 _FOT 30N012", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 3, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "Philip.Long Distance Tele-PLDT": [ { "circuitId": "MNL-JED/SM4 VC12S008", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "MNL-JED/SM4 VC12S009", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-BATANGAS/PLDT 30N61", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "MNL-JED/SM4 VC12S003", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "MNL-JED/SM4 VC12S004", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-BATANGAS/PLDT 30N56", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-BATANGAS/PLDT 30N55", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-BATANGAS/PLDT 30N58", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-BATANGAS/PLDT 30N59", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "MNL-JED/SM4 VC12S011", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "MNL-JED/SM4 VC12S005", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-BATANGAS/PLDT 30N62", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "Qualitynet Company": [ { "circuitId": "RIYADH/IGW-KUWAIT/QNET VC4-64CS001", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 5, "alarmsIndeterminate": 0 }], "Saudi Data": [ { "circuitId": "JEDDAH-TUAS/FT_VC4-64CS005", "serviceCategory": "Data", "serviceType": "I/N-INTERNET_CONNECTIVITY", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 }], "SomTel": [ { "circuitId": "JIN2/STC-SOMTEL/HRG 30N001", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "Sudan Telecom Com. LTD": [ { "circuitId": "STC/IGW-SAS2/SUDATEL 10GE002", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 1, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 1, "alarmsIndeterminate": 0 },{ "circuitId": "JEDDAH/IGW-SAS1 /SUDATEL VC4-64CS001", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 }], "Sudanese Mobile Tele.Co.-Zain": [ { "circuitId": "JED/STC-SUDAN/ZAIN VC12S029", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 4, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-SUDAN/ZAIN VC12S025", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 3, "alarmsMinor": 1, "alarmsWarning": 2, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-SUDAN/ZAIN VC12S023", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 3, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-SUDAN/ZAIN VC12S024", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-SUDAN/ZAIN VC12S026", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-SUDAN/ZAIN VC12S030", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-SUDAN/ZAIN VC12S027", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 2, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-SUDAN/ZAIN VC12S022", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 2, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-SUDAN/ZAIN VC12S028", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 4, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC-SUDAN/ZAIN VC12S031", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 4, "alarmsWarning": 2, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "TATA COMMUNICATIONS CANADA LTD": [ { "circuitId": "JDH-LHX 30N015", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 3, "alarmsMinor": 2, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JDS-LHX 30N002", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 1, "alarmsWarning": 2, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JDH-LHX 30N018", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 2, "alarmsWarning": 2, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JDS-LHX 30N003", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JDH-LHX 30N017", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 1, "alarmsWarning": 3, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JDS-LHX 30N007", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 2, "alarmsWarning": 3, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JDH-LHX 30N012", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 2, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JDH-LHX 30N014", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 2, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JDH-LHX 30N013", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 3, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JDS-LHX 30N008", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 2, "alarmsWarning": 2, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JDS-LHX 30N010", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JDS-LHX 30N001", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 5, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JDS-LHX 30N005", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 2, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JDS-LHX 30N006", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JDS-LHX 30N004", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 2, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "TELECOM EGYPT": [ { "circuitId": "JED/JIN3-ALEX/TE 30N014", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 21, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JRD/JIN3-ALEX/TE 30N033", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 18, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/JIN3-ALEX/TE 30N017", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 3, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAM/DIN1-ALEX/TE 30N011", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAM/DIN1-ALEX/TE 30N010", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAM/DIN1-ALEX/TE 30N012", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAM/DIN1-ALEX/TE 30N003", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAM/DIN1-ALEX/TE 30N005", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "Telecom Italia Sparkle Spa": [ { "circuitId": "JEDDAH/JIN2-MILANO/N51 30N 006", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 14, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAMMAM/DIN1-ROMA/N4I 30N014", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 10, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JEDDAH/JIN2-MILANO/N51 30N 0012", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 4, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "Teleyemen": [ { "circuitId": "JEDDAH/JIN3-YEMEN/IGW5 30N049", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JEDDAH/JIN3-YEMEN/IGW5 30N024", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JEDDAH/JIN3-YEMEN/IGW5 30N035", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAMAMM/DIN1-YEMEN/IGW5 30N014", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JEDDAH/JIN3-YEMEN/IGW5 30N016", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAMAMM/DIN1-YEMEN/IGW5 30N011", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAMAMM/DIN1-YEMEN/IGW5 30N055", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JEDDAH/JIN3-YEMEN/IGW5 30N023", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAMAMM/DIN1-YEMEN/IGW5 30N016", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JEDDAH/JIN3-YEMEN/IGW5 30N006", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JEDDAH/JIN3-YEMEN/IGW5 30N008", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "Turk Telekom International": [ { "circuitId": "JIN2/STC-FRANKFURT/TTI 30N03", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JIN3/STC-FRANKFURT/TTI 30N02", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JIN3/STC-FRANKFURT/TTI 30N03", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "United States - MCI (Verizon)": [ { "circuitId": "DIN1/STC-POBA/VZ 30N002", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 2, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JIN2/STC-POBA/VZ 30N002", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DIN1/STC-POBA/VZ 30N006", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DIN1/STC-POBA/VZ 30N004", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JIN2/STC-POBA/VZ 30N007", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JIN2/STC-POBA/VZ 30N009", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JIN2/STC-POBA/VZ 30N008", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DIN1/STC-POBA/VZ 30N001", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JIN2/STC-POBA/VZ 30N005", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JIN2/STC-POBA/VZ 30N001", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DIN1/STC-POBA/VZ 30N008", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JIN2/STC-POBA/VZ 30N004", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DIN1/STC-POBA/VZ 30N007", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JIN2/STC-POBA/VZ 30N010", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 3, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DIN1/STC-POBA/VZ 30N003", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JIN2/STC-POBA/VZ 30N003", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DIN1/STC-POBA/VZ 30N005", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "VIVA  - Kuwait": [ { "circuitId": "DAM/STC - KWTI/VIVA VC12S015", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 1, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAM/STC - KWTI/VIVA VC12S012", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/STC - KWTI/VIVA VC12S046", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAM/STC - KWTI/VIVA VC12S020", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 1, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "JED/IGW-KWT/VIVA-10GE001", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "JED/IGW-KWT/VIVA-10GE002", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "RIY/IGW-KWT/VIVA-10GE001", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 5, "alarmsIndeterminate": 0 },{ "circuitId": "DAM/STC - KWTI/VIVA VC12S019", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 2, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAM/STC - KWTI/VIVA VC12S013", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 2, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAM/STC - KWTI/VIVA VC12S016", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "DAM/STC - KWTI/VIVA VC12S011", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 },{ "circuitId": "Kuwait/STC-MRSTRDAS I-E2E-W 178337", "serviceCategory": "Data", "serviceType": "I-IGNET", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 },{ "circuitId": "DAM/STC - KWTI/VIVA VC12S018", "serviceCategory": "Voice", "serviceType": "I/N-INTERCONNECT_LINK", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 1, "alarmsWarning": 0, "alarmsClear": 0, "alarmsIndeterminate": 0 }], "ooredoo": [ { "circuitId": "DOH-RUH/STC-IP VC4 S001", "serviceCategory": "Data", "serviceType": "I-PEERING-BB", "alarmsCritical": 0, "alarmsMajor": 0, "alarmsMinor": 0, "alarmsWarning": 0, "alarmsClear": 4, "alarmsIndeterminate": 0 } ] } }
+{
+    "circuits": {
+        "Australia Reach": [
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 2,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "HKG/HKTH/REACH/HKG-JED/JIN2/STC/KSA 30N5",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "BANGLADESH (TRAC)": [
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 2,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC-TUAS/BANGLATRAC VC12S018",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC-TUAS/BANGLATRAC VC12S003",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC-MARS/BANGLATRAC VC12S017",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC-TUAS/BANGLATRAC VC12S016",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC-TUAS/BANGLATRAC VC12S023",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC-MARS/BANGLATRAC VC12S018",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC-TUAS/BANGLATRAC VC12S013",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "BICS-Belgacom Intl Carrier": [
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "RIYADH-BRUSSELS VC2S002",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "Bangladesh Telecom Co Ltd BTCL": [
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "RIYADH - DHKA VC12S050",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "RIYADH - DHKA VC12S047",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "RIYADH - DHKA VC12S053",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "RIYADH - DHKA VC12S044",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "EATC": [
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 1,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "RIYADH-RIYADH W_DIA143",
+                "serviceCategory": "Data",
+                "serviceType": "N-WDIA"
+            }
+        ],
+        "Gateway Telecom": [
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "RIYADH/STC-GATEWAY/UK 30N001",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "RIYADH/STC-GATEWAY/UK 30N002",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "India Idea": [
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "JEDDAH/JIN2-MUMBAI/IDEA 30N004",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "JEDDAH/JIN2-MUMBAI/IDEA 30N013",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "JEDDAH/JIN2-MUMBAI/IDEA 30N009",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "JEDDAH/JIN2-MUMBAI/IDEA 30N008",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "Jordan Telecom Group Orange)": [
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "AMMAN-DAN 30N007",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "RIY-AMN 30N002",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "RIY-AMN 30N007",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "NISC2/ORA-DIN1/STC 30N005",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "RIY-AMN 30N009",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "RIY-AMN 30N003",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "RIY-AMN 30N004",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "RIY-AMN 30N006",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "DAM-AMN 30N005",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "NISC2/ORA-DIN1/STC 30N003",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "DAM-AMN 30N004",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "RIY-AMN/NISC1 30N014",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "NISC2/ORA-DIN1/STC 30N002",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "Pella Telecommunication Ltd": [
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "MUJAMMAH-PELLA 30N026",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "AMMAN/PELLA2-DAMMAM/DIN1_FOT 30N021",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "AMMAN /PELLA1-DAMMAM/DIN1 _FOT 30N011",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "MUJAMMAH-PELLA 30N009",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "AMMAN/PELLA2-DAMMAM/DIN1_FOT 30N017",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "MUJAMMAH-PELLA 30N005",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "MUJAMMAH-PELLA 30N006",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "MUJAMMAH-PELLA 30N017",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "AMMAN /PELLA1-DAMMAM/DIN1 _FOT 30N008",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "AMMAN/PELLA2-DAMMAM/DIN1_FOT 30N019",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "AMMAN/PELLA2-DAMMAM/DIN1_FOT 30N016",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "AMMAN /PELLA1-DAMMAM/DIN1 _FOT 30N012",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "AMMAN /PELLA1-DAMMAM/DIN1 _FOT 30N014",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "AMMAN/PELLA2-DAMMAM/DIN1_FOT 30N020",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "AMMAN/PELLA2-DAMMAM/DIN1_FOT 30N015",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "Rostelecom": [
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 5,
+                "alarmsWarning": 0,
+                "circuitId": "S.PETERBURG/33-DAMMAM 30N002",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 5,
+                "alarmsWarning": 0,
+                "circuitId": "S.PETERBURG/33-DAMMAM 30N001",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "SFR": [
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "JEDDAH/STC-FRANCE/SFR 30N002",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "JEDDAH/STC-FRANCE/SFR 30N001",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "JEDDAH/STC-FRANCE/SFR 30N003",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "SomTel": [
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "JIN2/STC-SOMTEL/HRG 30N001",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "Sudan Telecom Com LTD": [
+            {
+                "alarmsClear": 1,
+                "alarmsCritical": 1,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "STC/IGW-SAS2/SUDATEL 10GE002",
+                "serviceCategory": "Data",
+                "serviceType": "I-IGNET"
+            }
+        ],
+        "TATA COMMUNICATIONS CANADA LTD": [
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM-LHX 30N005",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM-LHX 30N009",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM-LHX 30N006",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM-LHX 30N003",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM-LHX 30N011",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM-LHX 30N010",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM-LHX 30N008",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM-LHX 30N004",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "TELECOM EGYPT": [
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM/DIN1-ALEX/TE 30N012",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM/DIN1-ALEX/TE 30N005",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM/DIN1-ALEX/TE 30N010",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM/DIN1-ALEX/TE 30N011",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM/DIN1-ALEX/TE 30N003",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "TELSTRA INTL limited-HONGKONG": [
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 2,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "HKG/HKTH/REACH/HKG-JED/JIN2/STC/KSA 30N6",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "Teleyemen": [
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAMAMM/DIN1-YEMEN/IGW5 30N011",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAMAMM/DIN1-YEMEN/IGW5 30N014",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAMAMM/DIN1-YEMEN/IGW5 30N055",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAMAMM/DIN1-YEMEN/IGW5 30N016",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "Turk Telekom International": [
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "JIN2/STC-FRANKFURT/TTI 30N03",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "VIVA  - Kuwait": [
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 2,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM/STC - KWTI/VIVA VC12S012",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM/STC - KWTI/VIVA VC12S011",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM/STC - KWTI/VIVA VC12S019",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM/STC - KWTI/VIVA VC12S020",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 4,
+                "alarmsCritical": 1,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "RIY/IGW-KWT/VIVA-10GE001",
+                "serviceCategory": "Data",
+                "serviceType": "I-IGNET"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM/STC - KWTI/VIVA VC12S013",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM/STC - KWTI/VIVA VC12S016",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 1,
+                "alarmsMinor": 0,
+                "alarmsWarning": 0,
+                "circuitId": "DAM/STC - KWTI/VIVA VC12S015",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC - KWTI/VIVA VC12S018",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC - KWTI/VIVA VC12S021",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 2,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC - KWTI/VIVA VC12S033",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC - KWTI/VIVA VC12S004",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC - KWTI/VIVA VC12S012",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 2,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC - KWTI/VIVA VC12S006",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC - KWTI/VIVA VC12S010",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC - KWTI/VIVA VC12S032",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 2,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC - KWTI/VIVA VC12S030",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 2,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC - KWTI/VIVA VC12S046",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC - KWTI/VIVA VC12S020",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC - KWTI/VIVA VC12S039",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC - KWTI/VIVA VC12S016",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "JED/STC - KWTI/VIVA VC12S023",
+                "serviceCategory": "Voice",
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ],
+        "Zajil Telecom": [
+            {
+                "alarmsClear": 0,
+                "alarmsCritical": 0,
+                "alarmsIndeterminate": 0,
+                "alarmsMajor": 0,
+                "alarmsMinor": 1,
+                "alarmsWarning": 0,
+                "circuitId": "DUBAI/DU/STC-NYMNKHAB I-E2E-W 490545",
+                "serviceCategory": "Capacity",
+                "serviceType": "I-HARD_PATCH_TRANSIT"
+            }
+        ]
+    }
+}

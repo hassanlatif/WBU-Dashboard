@@ -1,1 +1,52 @@
-{ "services": { "Data": [ { "serviceType": "I-IGNET","badCircuits": 26,"goodCircuits": 8},{ "serviceType": "N-WDIA","badCircuits": 16,"goodCircuits": 317},{ "serviceType": "I-PEERING-BB","badCircuits": 11,"goodCircuits": 3},{ "serviceType": "I/N-INTERNET_CONNECTIVITY","badCircuits": 1,"goodCircuits": 8} ], "Voice": [ { "serviceType": "I/N-INTERCONNECT_LINK","badCircuits": 212,"goodCircuits": 16502} ], "Capacity": [ { "serviceType": "I-HARD_PATCH_TRANSIT","badCircuits": 4,"goodCircuits": 48} ], "All": [ { "serviceType": "I/N-INTERCONNECT_LINK","badCircuits": 212,"goodCircuits": 16502},{ "serviceType": "I-IGNET","badCircuits": 26,"goodCircuits": 8},{ "serviceType": "N-WDIA","badCircuits": 16,"goodCircuits": 317},{ "serviceType": "I-PEERING-BB","badCircuits": 11,"goodCircuits": 3},{ "serviceType": "I-HARD_PATCH_TRANSIT","badCircuits": 4,"goodCircuits": 48},{ "serviceType": "I/N-INTERNET_CONNECTIVITY","badCircuits": 1,"goodCircuits": 8} ]  } }
+{
+    "services": {
+        "All": [
+            {
+                "badCircuits": 93,
+                "goodCircuits": 16621,
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            },
+            {
+                "badCircuits": 2,
+                "goodCircuits": 32,
+                "serviceType": "I-IGNET"
+            },
+            {
+                "badCircuits": 1,
+                "goodCircuits": 51,
+                "serviceType": "I-HARD_PATCH_TRANSIT"
+            },
+            {
+                "badCircuits": 1,
+                "goodCircuits": 344,
+                "serviceType": "N-WDIA"
+            }
+        ],
+        "Capacity": [
+            {
+                "badCircuits": 1,
+                "goodCircuits": 51,
+                "serviceType": "I-HARD_PATCH_TRANSIT"
+            }
+        ],
+        "Data": [
+            {
+                "badCircuits": 2,
+                "goodCircuits": 32,
+                "serviceType": "I-IGNET"
+            },
+            {
+                "badCircuits": 1,
+                "goodCircuits": 344,
+                "serviceType": "N-WDIA"
+            }
+        ],
+        "Voice": [
+            {
+                "badCircuits": 93,
+                "goodCircuits": 16621,
+                "serviceType": "I/N-INTERCONNECT_LINK"
+            }
+        ]
+    }
+}
