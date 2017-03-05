@@ -9,7 +9,11 @@
 </ol>
 
 <div align="center">
-	<font face="Calibri" color="#E8A828" size="5"><b>{{ customerNameId }}'s {{ serviceTypeId }} - Affected Circuits</b></font>
+	<font face="Calibri" color="black" size="5"><b>{{ customerNameId }}'s </b></font>
+	<font face="Calibri" color="#D3D3D3" size="5"><b> {{ serviceTypeId }}</b></font>
+</div>
+<div align="center">
+	<font face="Calibri" color="#E8A828" size="4"><b> Affected Circuits</b></font>
 </div>
 
 <div class="container">
@@ -21,6 +25,29 @@
 	</div>
 </div>
 
-<div ng-show="totalItems > itemsPerPage" class="text-center">
-	<ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" items-per-page="itemsPerPage" boundary-links="totalItems > 40"></ul>
+
+<div align="center">
+	<font face="Calibri" color="#59b20a" size="5"><b>&#9632;</b></font>
+	<font face="Calibri" color="black" size="4">Clear</font>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<font face="Calibri" color="red" size="5"><b>&#9632;</b></font>
+	<font face="Calibri" color="black" size="4">Critical</font>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<font face="Calibri" color="orange" size="5"><b>&#9632;</b></font>
+	<font face="Calibri" color="black" size="4">Major</font>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<font face="Calibri" color="yellow" size="5"><b>&#9632;</b></font>
+	<font face="Calibri" color="black" size="4">Minor</font>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<font face="Calibri" color="blue" size="5"><b>&#9632;</b></font>
+	<font face="Calibri" color="black" size="4">Warning</font>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<font face="Calibri" color="grey" size="5"><b>&#9632;</b></font>
+	<font face="Calibri" color="black" size="4">Indeterminate</font>
 </div>
+
+<div ng-show="totalItems > itemsPerPage" class="text-center">
+	<ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" items-per-page="itemsPerPage" boundary-links="true"></ul>
+</div>
+
+

@@ -48,7 +48,7 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 				//colors: ['#59b20a', 'red', 'orange'],
 				colors: ['#59b20a', 'red', 'orange', 'yellow', 'blue', 'grey'],
 				pieHole: 0.4,
-				pieSliceText: 'value-and-percentage',
+				pieSliceText: 'percentage',
         		sliceVisibilityThreshold: 0.0001,
 				pieSliceTextStyle: {color: 'Black', fontSize: '12', bold: true},
 				titleTextStyle: { color: '#007DB0', fontSize: '13'},
@@ -56,7 +56,7 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 				slices: { 1: {offset: 0.05}},
 				tooltip: {
 		          showColorCode: true,
-		          text: 'value-and-percentage'
+		          text: 'percentage'
 		       	},
 
 			};
@@ -67,12 +67,12 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 
 				var chartData = google.visualization.arrayToDataTable([
 					['Type', 'Count'],
-					['Clear', chartsData[i].alarmsClear],
-					['Critical', chartsData[i].alarmsCritical],
-					['Major', chartsData[i].alarmsMajor],
-					['Minor', chartsData[i].alarmsMinor],
-					['Warning', chartsData[i].alarmsWarning],
-					['Indeterminate', chartsData[i].alarmsIndeterminate]
+					[chartsData[i].alarmsClear.toString(), chartsData[i].alarmsClear],
+					[chartsData[i].alarmsCritical.toString(), chartsData[i].alarmsCritical],
+					[chartsData[i].alarmsMajor.toString(), chartsData[i].alarmsMajor],
+					[chartsData[i].alarmsMinor.toString(), chartsData[i].alarmsMinor],
+					[chartsData[i].alarmsWarning.toString(), chartsData[i].alarmsWarning],
+					[chartsData[i].alarmsIndeterminate.toString(), chartsData[i].alarmsIndeterminate]
 					]);
 
 				chart.draw(chartData, options);

@@ -7,7 +7,7 @@
                 "serviceType": "I/N-INTERCONNECT_LINK"
             },
             {
-                "badCircuits": 2,
+                "badCircuits": 10,
                 "goodCircuits": 32,
                 "serviceType": "I-IGNET"
             },

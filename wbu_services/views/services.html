@@ -16,6 +16,7 @@
 	<font face="Calibri" color="#E8A828" size="5"><b>Services</b> with <b>Affected Circuits</b></font>
 </div>
 
+
 <div class="container">
 	<div ng-show="infoMessage"> {{ infoMessage }} </div>
 </div>
@@ -24,3 +25,12 @@
 	<div ng-repeat="item in data"  id="{{item.serviceType}}" name="{{item.serviceCategory}}" class="col-xs-12 col-sm-4 col-md-3" ng-click="drawCustomerCharts(item.serviceType)" on-finish-render="drawServiceCharts">
 	</div>
 </div>	
+
+<br>
+<div align="center">
+	<font face="Calibri" color="red" size="5"><b>&#9632;</b></font>
+	<font face="Calibri" color="black" size="4">Affected</font>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<font face="Calibri" color="#59b20a" size="5"><b>&#9632;</b></font>
+	<font face="Calibri" color="black" size="4">Non-affected</font>
+</div>

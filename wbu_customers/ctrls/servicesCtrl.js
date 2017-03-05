@@ -26,7 +26,7 @@ app.controller('servicesController', ['$scope','$stateParams', '$state', '$inter
 				'height':260,
 				colors: ['red', '#59b20a'],
 				pieHole: 0.4,
-				pieSliceText: 'value-and-percentage',
+				pieSliceText: 'percentage',
         		sliceVisibilityThreshold: 0.0001,
 				pieSliceTextStyle: {color: 'Black', fontSize: '12', bold: true},
 				titleTextStyle: { color: '#007DB0', fontSize: '13'},
@@ -34,7 +34,7 @@ app.controller('servicesController', ['$scope','$stateParams', '$state', '$inter
 				slices: { 1: {offset: 0.05}},
 				tooltip: {
 		          showColorCode: true,
-		          text: 'value-and-percentage'
+		          text: 'percentage'
 		       	},
 
 			};
@@ -45,8 +45,8 @@ app.controller('servicesController', ['$scope','$stateParams', '$state', '$inter
 
 				var chartData = google.visualization.arrayToDataTable([
 					['Type', 'Count'],
-					['Affected', chartsData[i].badCircuits],
-					['Non-Affected', chartsData[i].goodCircuits]
+					[chartsData[i].badCircuits.toString(), chartsData[i].badCircuits],
+					[chartsData[i].goodCircuits.toString(), chartsData[i].goodCircuits]
 					]);
 
 				chart.draw(chartData, options);

@@ -7,7 +7,10 @@
 </ol>
 
 <div align="center">
-	<font face="Calibri" color="#E8A828" size="5"><b>{{ customerNameId }}'s Services</b> with <b>Affected Circuits</b></font>
+	<font face="Calibri" color="black" size="5"><b>{{ customerNameId }}'s Services</b></font>
+</div>
+<div align="center">
+	<font face="Calibri" color="#E8A828" size="4"><b>Affected Circuits</b></font>	
 </div>
 
 <div class="container">
@@ -18,3 +21,13 @@
 	<div ng-repeat="item in data"  id="{{item.serviceType}}" name="{{item.customerName}}" class="col-xs-6 col-sm-3" ng-click="drawCircuitsCharts(item.customerName, item.serviceType)" on-finish-render="drawServiceCharts">
 	</div>
 </div>	
+
+
+<br>
+<div align="center">
+	<font face="Calibri" color="red" size="5"><b>&#9632;</b></font>
+	<font face="Calibri" color="black" size="4">Affected</font>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<font face="Calibri" color="#59b20a" size="5"><b>&#9632;</b></font>
+	<font face="Calibri" color="black" size="4">Non-affected</font>
+</div>

@@ -18,6 +18,14 @@
 	</div>
 </div>
 
+<div align="center">
+	<font face="Calibri" color="red" size="5"><b>&#9632;</b></font>
+	<font face="Calibri" color="black" size="4">Affected</font>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<font face="Calibri" color="#59b20a" size="5"><b>&#9632;</b></font>
+	<font face="Calibri" color="black" size="4">Non-affected</font>
+</div>
+
 <div ng-show="totalItems > itemsPerPage" class="text-center">
-	<ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" items-per-page="itemsPerPage"></ul>
+	<ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" items-per-page="itemsPerPage" boundary-links="true"></ul>
 </div>
