@@ -162,7 +162,7 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 
       		var ticketsOpts = {
 	        	title: "Number of Trouble Tickets",
-	        	width: 320,
+	        	width: 270,
 	        	height: 170,
 	        	bar: {groupWidth: "75%"},
 	        	legend: { position: "none" },

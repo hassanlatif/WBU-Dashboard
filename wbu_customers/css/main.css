@@ -37,6 +37,8 @@ html, body {
 
 .footer, .push {
     height: 60px; /* .push must be the same height as .footer */
+	z-index: -5000;
+	position: relative
 }
 
 div.google-visualization-tooltip { 

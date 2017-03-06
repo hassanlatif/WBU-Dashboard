@@ -15,7 +15,10 @@
 </ol>
 
 <div align="center">
-	<font face="Calibri" color="#E8A828" size="5"><b>Customer: </b>{{ customerNameId }} - <b>Circuit: </b>{{ circuitId }}</font>
+	<font face="Calibri" color="#E8A828" size="5"><b>Customer: </b></font>
+	<font face="Calibri" color="black" size="5">{{ customerNameId }}</font>
+	<font face="Calibri" color="#E8A828" size="5"><b> - Circuit: </b></font>
+	<font face="Calibri" color="black" size="5">{{ circuitId }}</font>
 </div>
 
 <div class="container">
@@ -23,10 +26,6 @@
 </div>
 
 <div class="container">
-	<div id="availability_gauge" class="col-xs-6 col-md-2"> </div>
-	<div id="capacity_gauge" class="col-xs-6 col-md-2"> </div>
-	<div id="totalPacketDrop_gauge" class="col-xs-6 col-md-2"> </div>
-	<div id="totalErrorIn_gauge" class="col-xs-6 col-md-2"> </div>
 
 	<div id="circuitDetails" class="col-xs-6 col-md-2">
 		<table class="table table-bordered">
@@ -44,6 +43,11 @@
 			</tr>			 
 		</table>
 	</div>
+
+	<div id="availability_gauge" class="col-xs-6 col-md-2"> </div>
+	<div id="capacity_gauge" class="col-xs-6 col-md-2"> </div>
+	<div id="totalPacketDrop_gauge" class="col-xs-6 col-md-2"> </div>
+	<div id="totalErrorIn_gauge" class="col-xs-6 col-md-2"> </div>
 
 	<div display="inline-block;"  id="tickets_chart" class="col-xs-6 col-md-2"> </div>
 </div>
