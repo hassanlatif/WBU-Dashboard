@@ -85,7 +85,7 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 
 			var capacityVal = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				['Capacity (bps)', {v: capacityV, f: capacityF}]
+				['Utilization (bps)', {v: capacityV, f: capacityF}]
 				]);
 
 			var capacityOpts = {
@@ -160,7 +160,13 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 
 
       		var ticketsOpts = {
-	        	title: "Number of Trouble Tickets",
+	        	title: "Number of Tickets:",
+				titleTextStyle: {
+					color: '#501F6E',
+					fontName: 'Calibri',
+					fontSize: 17,
+					bold: true
+				},
 	        	width: 270,
 	        	height: 170,
 	        	bar: {groupWidth: "75%"},
