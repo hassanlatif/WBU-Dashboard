@@ -20,7 +20,7 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 		
 		$scope.infoMessage = "";
 
-		$scope.iFrameURL = "/ibm/console/webtop/eventviewer/eventViewer.jsp?sql=%22TNSQM_ResourceName%20like%20%27" + circuitId + "%27%22&transientname=All&viewname=All&viewtype=global&datasource=NCOMS";
+		$scope.iFrameURL = "https://172.21.24.173:16311/ibm/console/webtop/eventviewer/eventViewer.jsp?sql=%22TNSQM_ResourceName%20like%20%27" + circuitId + "%27%22&transientname=All&viewname=All&viewtype=global&datasource=NCOMS";
 
 		console.log($scope.iFrameURL);
 
