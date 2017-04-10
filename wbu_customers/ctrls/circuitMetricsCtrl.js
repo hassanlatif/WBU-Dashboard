@@ -90,12 +90,13 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 
 			var capacityOpts = {
 				width: 170, height: 170,				
-				greenFrom:97, greenTo: 98,		
-				yellowFrom:98, yellowTo: 99,	
-  		        redFrom: 99, redTo: 100,
+				greenFrom:0, greenTo: 33.33,		
+				yellowFrom:33.33, yellowTo: 66.66,	
+  		        redFrom: 66.66, redTo: 100,
 				minorTicks: 10,
-				max: 100, min: 97
+				max: 100, min: 0
 			};
+
 
 			var chart = new google.visualization.Gauge(document.getElementById('capacity_gauge'));
 			chart.draw(capacityVal, capacityOpts);		
