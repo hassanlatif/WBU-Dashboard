@@ -79,21 +79,21 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			var capacityF = "N/A";
 			if (gaugesData.capacity != null && gaugesData.totalBpsAvail != null) {
 
-				capacityV = ((gaugesData.capacity/gaugesData.totalBpsAvail)*100);
+				capacityV = +(((gaugesData.trafficIn/gaugesData.capacity)*100).toFixed(2));
 				capacityF = capacityV;
 			}
 
 
 			var capacityVal = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				['Utilization (bps)', {v: capacityV, f: capacityF}]
+				['Utilization (%)', {v: capacityV, f: capacityF}]
 				]);
 
 			var capacityOpts = {
 				width: 170, height: 170,				
-				redFrom:97, redTo: 98,		
+				greenFrom:97, greenTo: 98,		
 				yellowFrom:98, yellowTo: 99,	
-  		        greenFrom: 99, greenTo: 100,
+  		        redFrom: 99, redTo: 100,
 				minorTicks: 10,
 				max: 100, min: 97
 			};
