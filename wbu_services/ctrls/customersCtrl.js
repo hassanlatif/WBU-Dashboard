@@ -7,40 +7,33 @@ app.controller('customersController', [ '$scope', '$stateParams', '$state', '$in
 		$scope.serviceTypeId = serviceTypeId;
 		$scope.serviceCatId = serviceCatId;
 
-		$scope.currentPage = 1;
+		$scope.page = 1;
 		$scope.itemsPerPage = 8;
 		$scope.infoMessage = "";
 
 		var data = [];		
 
 		data = jsonPath(customersAlarmData, "$.customers." + serviceTypeId + ".*");
-		$scope.allData = data;
+		$scope.totalItems = data;
+		console.log($scope.totalItems);
 
-		if (data.length > 0 ) {
 
-			$scope.dataWindow = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));
-			console.log($scope.dataWindow);
-		}
-		else {
-			
-			$scope.infoMessage = "All " + serviceTypeId + " alarms cleared for " + serviceCatId + " service";			
-		}
-
-		$scope.totalItems = data.length;
 
 		$scope.pageChanged = function() {
-			console.log('Page changed to: ' + $scope.currentPage);
-			$scope.dataWindow = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));
+			console.log('Page changed to: ' + $scope.page);
+			// $scope.dataWindow = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));
+
 		};
 
 		$scope.$on('drawCustomerCharts', function(ngRepeatFinishedEvent) {
 
 			var chartsData = []; 
 
-			if (data.length > 0 ){
+			console.log("filterText", $scope.filterText)
+			console.log("filterData", $scope.filterData)
 
-				chartsData = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));			
-			}
+			chartsData = $scope.filterData; //data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));			
+			console.log("chartsData", chartsData.length);
 
 			var options = {
 				'width':290,
@@ -63,8 +56,9 @@ app.controller('customersController', [ '$scope', '$stateParams', '$state', '$in
 		       	
 			};
 
-			for (i=0; i <chartsData.length; i++){
+			for (i=0; i <8; i++){
 				options.title = chartsData[i].customerName;
+				console.log("Customer Name", chartsData[i].customerName)
 				var chart = new google.visualization.PieChart(document.getElementById(chartsData[i].customerName));
 
 				var chartData = google.visualization.arrayToDataTable([
