@@ -4,7 +4,11 @@
 	<li><a ui-sref="services({serviceCatId: serviceCatId, serviceTypeId: serviceTypeId})">{{ serviceTypeId }}</a> </li> 
 	<li>Customers</li>
   <!--li class="pull-right"><b>Next refresh</b>:{{counter | formatTimer}}</li-->	
-  <li class="pull-right"><b>Last Refreshed</b>:{{refreshDate | date:"h:mm a"}}</li>
+
+    <li class="pull-right"><b>Last Refreshed</b>:{{refreshDate | date:"h:mm a"}}</li>
+    <li class="pull-right"><b>Search</b>
+          <input type="text" ng-model="search.customerName" class="input-medium search-query" style="padding:0; border:0px; width:150px;">
+     </li>
 </ol>
 
 <div align="center">
@@ -20,7 +24,7 @@
 </div>
 
 <div class="container">
-	<div ng-repeat="item in dataWindow" on-finish-render="drawCustomerCharts" id="{{item.customerName}}" class="col-xs-6 col-sm-3" ng-click="drawCircuitCharts(item.customerName, item.serviceType)">
+	<div ng-repeat="item in allData | filter:search:strict" on-finish-render="drawCustomerCharts" id="{{item.customerName}}" class="col-xs-6 col-sm-3" ng-click="drawCircuitCharts(item.customerName, item.serviceType)">
 	</div>
 </div>
 
@@ -32,6 +36,6 @@
 	<font face="Calibri" color="black" size="4">Non-affected</font>
 </div>
 <div ng-show="totalItems > itemsPerPage" class="text-center">
-	<ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" items-per-page="itemsPerPage" boundary-links="true"></ul>
+	<ul uib-pagination total-items="allData.length" ng-model="currentPage" ng-change="pageChanged()" items-per-page="itemsPerPage" boundary-links="true"></ul>
 </div>
 

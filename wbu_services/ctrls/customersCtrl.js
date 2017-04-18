@@ -14,10 +14,12 @@ app.controller('customersController', [ '$scope', '$stateParams', '$state', '$in
 		var data = [];		
 
 		data = jsonPath(customersAlarmData, "$.customers." + serviceTypeId + ".*");
+		$scope.allData = data;
 
 		if (data.length > 0 ) {
 
 			$scope.dataWindow = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));
+			console.log($scope.dataWindow);
 		}
 		else {
 			

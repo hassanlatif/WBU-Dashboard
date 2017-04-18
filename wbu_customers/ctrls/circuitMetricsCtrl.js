@@ -36,6 +36,7 @@ app.controller('circuitMetricsController', [ '$scope', '$stateParams', '$state',
 			$scope.port = gaugesData.port;
 			$scope.slot = gaugesData.slot;
 			$scope.ni = gaugesData.ni;
+			$scope.capacity = gaugesData.capacity;				
 		}
 		else {
 
