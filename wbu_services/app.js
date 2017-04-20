@@ -4,7 +4,7 @@ google.load('visualization', '1', {packages:['bar']});
 
 'use strict';
 
-var app = angular.module('app', ['ui.router', 'ui.bootstrap', 'app.directive.ngRepeatFinished']);
+var app = angular.module('app', ['ui.router', 'ui.bootstrap', 'google-chart']);
 
 //app.constant('BasePath', "/ibm/console/webtop/WBU-Dashboard/wbu_services/");
 app.constant('BasePath', "");
@@ -132,28 +132,96 @@ app.factory('AlarmsDataService', ['$http', 'BasePath', function($http, BasePath)
 }])
 
 
-var module = angular.module('app.directive.ngRepeatFinished', [])
-.directive('onFinishRender', function ($timeout) {
-	return {
-		restrict: 'A',
-		link: function (scope, element, attr) {
-			if (scope.$last === true) {
-				$timeout(function () {
-					scope.$emit(attr.onFinishRender);
-				});
-			}
-		}
-	}
+
+var googleChart = angular.module("google-chart",[])
+.directive("googleChart",function(){  
+	return{
+		restrict : "A",
+		link: function(scope, elem, attr){
+
+            // console.log("scope[attr.ngModel]", scope[attr.ngModel]);
+			// console.log("scope.itemsType", scope.itemsType);
+			// console.log("attr.googleChart", attr.googleChart);
+            
+            var data = scope[attr.ngModel];
+            var dataArray = [];
+
+            var options = {
+            	pieHole: 0.4,
+            	pieSliceText: 'percentage',
+            	sliceVisibilityThreshold: 0.0001,
+            	pieSliceTextStyle: {color: 'Black', fontSize: '12', bold: true},
+            	titleTextStyle: { color: '#007DB0', fontSize: '13'},
+            	legend: {'position': 'bottom'},
+            	slices: { 1: {offset: 0.05}},
+            	tooltip: {
+            		showColorCode: true,
+            		text: 'percentage'
+            	},
+            	vAxis : {
+            		format: 'decimal'
+            	}
+
+            };
+
+            if (attr.itemsType==='services'){
+            	dataArray = [
+            	['Type', 'Count'],
+            	[data.badCircuits.toString(), data.badCircuits],
+            	[data.goodCircuits.toString(), data.goodCircuits]
+            	];
+
+            	options.title = data.serviceType;
+            	options.width = 320;
+            	options.height = 260;
+            	options.colors = ['red', '#59b20a'];
+
+            }
+            else if (attr.itemsType==='customers') {
+            	dataArray = [
+            	['Type', 'Count'],
+            	[data.badCircuits.toString(), data.badCircuits],
+            	[data.goodCircuits.toString(), data.goodCircuits]
+            	];
+
+            	options.title = data.customerName;
+            	options.width = 290;
+            	options.height = 209;
+            	options.colors = ['red', '#59b20a'];
+            }
+            else if (attr.itemsType==='circuits') {
+            	dataArray = [
+            	['Type', 'Count'],
+            	[data.alarmsClear.toString(), data.alarmsClear],
+            	[data.alarmsCritical.toString(), data.alarmsCritical],
+            	[data.alarmsMajor.toString(), data.alarmsMajor],
+            	[data.alarmsMinor.toString(), data.alarmsMinor],
+            	[data.alarmsWarning.toString(), data.alarmsWarning],
+            	[data.alarmsIndeterminate.toString(), data.alarmsIndeterminate]
+            	];
+
+            	options.title = data.circuitId;
+            	options.width = 290;
+            	options.height = 206;
+            	options.colors = ['#59b20a', 'red', 'orange', 'yellow', 'blue', 'grey'];
+            }
+
+            var dataTable = google.visualization.arrayToDataTable(dataArray);
+            var googleChart = new google.visualization[attr.googleChart](elem[0]);
+            googleChart.draw(dataTable,options)
+        }
+    }
 });
 
 app.filter('formatTimer', function() {
-  return function(input)
-    {
-        function z(n) {return (n<10? '0' : '') + n;}
-        var seconds = input % 60;
-        var minutes = Math.floor(input / 60);
-        //var hours = Math.floor(minutes / 60);        
+	return function(input)
+	{
+		function z(n) {return (n<10? '0' : '') + n;}
+		var seconds = input % 60;
+		var minutes = Math.floor(input / 60);
+        var hours = Math.floor(minutes / 60);        
         return (z(minutes)+':'+z(seconds));
     };
 });
+
 

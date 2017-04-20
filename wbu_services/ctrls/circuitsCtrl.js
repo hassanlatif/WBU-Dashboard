@@ -1,4 +1,4 @@
-
+	
 app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$interval', 'circuitsAlarmData', 'refreshPeriod',
 	function($scope, $stateParams, $state, $interval, circuitsAlarmData, refreshPeriod) {
 
@@ -10,87 +10,30 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 		$scope.serviceTypeId = serviceTypeId;
 		$scope.customerNameId = customerNameId;
 
-		$scope.currentPage = 1;
+		$scope.page = 1;
 		$scope.itemsPerPage = 8;
 		$scope.infoMessage = "";
 
 		var data = [];
 
-		console.log("customerNameId", customerNameId);
-		console.log("serviceTypeId", serviceTypeId);
-
 		data =  jsonPath(circuitsAlarmData, "$.circuits." + customerNameId + ".[?(@.serviceType == \""+ serviceTypeId + "\")]");		
 
 		if (data.length > 0 ) {
 
-			$scope.dataWindow = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));
+			$scope.chartsData = data;
+			$scope.infoMessage = ""
 		}
 		else {
 
 			$scope.infoMessage = "All " + serviceTypeId + " alarms cleared for " + customerNameId;			
 		}
 
-		$scope.totalItems = data.length;
-
 		$scope.pageChanged = function() {
-			console.log('Page changed to: ' + $scope.currentPage);
-			$scope.dataWindow = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));
+			// console.log('Circuits Page changed to: ' + $scope.page);
 		};
 
 
-		$scope.$on('drawCircuitMetrics', function(ngRepeatFinishedEvent) {
-
-			var chartsData = []; 
-
-			if (data.length > 0 ){
-
-				chartsData = data.slice((($scope.currentPage-1)*$scope.itemsPerPage), (($scope.currentPage)*$scope.itemsPerPage));			
-			}
-
-			var options = {
-				'width':290,
-				'height':206,
-				//colors: ['#59b20a', 'red', 'orange'],
-				colors: ['#59b20a', 'red', 'orange', 'yellow', 'blue', 'grey'],
-				pieHole: 0.4,
-				pieSliceText: 'percentage',
-        		sliceVisibilityThreshold: 0.0001,
-				pieSliceTextStyle: {color: 'Black', fontSize: '12', bold: true},
-				titleTextStyle: { color: '#007DB0', fontSize: '13'},
-				legend: {'position': 'right'},
-				slices: { 1: {offset: 0.05}},
-				tooltip: {
-		          showColorCode: true,
-		          text: 'percentage'
-		       	},
-				vAxis : {
-					format: 'decimal'
-				}
-		       	
-
-			};
-
-			for (i=0; i <chartsData.length; i++){
-				options.title = chartsData[i].circuitId;
-				var chart = new google.visualization.PieChart(document.getElementById(chartsData[i].circuitId));
-
-				var chartData = google.visualization.arrayToDataTable([
-					['Type', 'Count'],
-					[chartsData[i].alarmsClear.toString(), chartsData[i].alarmsClear],
-					[chartsData[i].alarmsCritical.toString(), chartsData[i].alarmsCritical],
-					[chartsData[i].alarmsMajor.toString(), chartsData[i].alarmsMajor],
-					[chartsData[i].alarmsMinor.toString(), chartsData[i].alarmsMinor],
-					[chartsData[i].alarmsWarning.toString(), chartsData[i].alarmsWarning],
-					[chartsData[i].alarmsIndeterminate.toString(), chartsData[i].alarmsIndeterminate]
-					]);
-
-				chart.draw(chartData, options);
-			};
-
-		});
-
 		$scope.drawCircuitMetrics = function(circuitIdParam){
-
 			//console.log(circuitIdParam);
 			$state.go('circuitMetrics', {serviceCatId: serviceCatId, 
 				serviceTypeId: serviceTypeId, 		
@@ -98,8 +41,6 @@ app.controller('circuitsController', [ '$scope', '$stateParams', '$state', '$int
 				circuitId: circuitIdParam,
 				affectedCkts: data});
 		}
-
-
 
 		var currentRefreshTime = refreshPeriod.syncDateTime.currentDateTime;
 		var nextRefreshTime = refreshPeriod.syncDateTime.nextDateTime;

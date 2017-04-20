@@ -5,60 +5,26 @@ app.controller('servicesController', ['$scope','$stateParams', '$state', '$inter
 		$scope.customerNameId = customerNameId;
 
 		$scope.infoMessage = "";
-		var chartsData = [];
 		console.log("customerNameId", customerNameId);
 
+		var data = [];
+		data = jsonPath(servicesAlarmData, "$.customers.*.[?(@.customerName == \""+ customerNameId +"\")]");
 
-		chartsData = jsonPath(servicesAlarmData, "$.customers.*.[?(@.customerName == \""+ customerNameId +"\")]");
-
-		if (chartsData.length > 0) {
-			$scope.data = chartsData;	
+		if (data.length > 0) {
+			$scope.chartsData = data;
 			$scope.infoMessage = ""
 		}
 		else {
-			$scope.infoMessage = "All alarms clear for " + customerNameId;
+			$scope.infoMessage = "All alarms clear for " + serviceCat + " service.";
 		}
 
-		$scope.$on('drawServiceCharts', function(ngRepeatFinishedEvent) {
-
-			var options = {
-				'width':320,
-				'height':260,
-				colors: ['red', '#59b20a'],
-				pieHole: 0.4,
-				pieSliceText: 'percentage',
-        		sliceVisibilityThreshold: 0.0001,
-				pieSliceTextStyle: {color: 'Black', fontSize: '12', bold: true},
-				titleTextStyle: { color: '#007DB0', fontSize: '13'},
-				legend: {'position': 'bottom'},
-				slices: { 1: {offset: 0.05}},
-				tooltip: {
-		          showColorCode: true,
-		          text: 'percentage'
-		       	},
-
-			};
-
-			for (i=0; i <chartsData.length; i++){
-				options.title = chartsData[i].serviceType;
-				var chart = new google.visualization.PieChart(document.getElementById(chartsData[i].serviceType));
-
-				var chartData = google.visualization.arrayToDataTable([
-					['Type', 'Count'],
-					[chartsData[i].badCircuits.toString(), chartsData[i].badCircuits],
-					[chartsData[i].goodCircuits.toString(), chartsData[i].goodCircuits]
-					]);
-
-				chart.draw(chartData, options);
-			};
-		});
+		$scope.pageChanged = function() {
+			// console.log('Services Page changed to: ' + $scope.page);
+		};
 
 		$scope.drawCircuitsCharts = function(customerNameParam, serviceTypeParam){
-
 			$state.go('circuits', {customerNameId:customerNameParam, serviceTypeId: serviceTypeParam});
 		}
-
-
 
 		var currentRefreshTime = refreshPeriod.syncDateTime.currentDateTime;
 		var nextRefreshTime = refreshPeriod.syncDateTime.nextDateTime;

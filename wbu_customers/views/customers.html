@@ -2,7 +2,10 @@
 <ol class="breadcrumb">
 	<li>Customers</li>
 	<!--li class="pull-right"><b>Next refresh</b>:{{counter | formatTimer}}</li-->	
-  	<li class="pull-right"><b>Last Refreshed</b>:{{refreshDate | date:"h:mm a"}}</li>		
+  	<li class="pull-right"><b>Last Refreshed</b>:{{refreshDate | date:"h:mm a"}}</li>	
+    <li class="pull-right"><b>Search</b>
+          <input type="text"  ng-model="search" class="input-medium search-query" style="padding:0; border:0px; width:150px;">
+     </li>
 </ol>
 
 <div align="center">
@@ -14,8 +17,8 @@
 </div>
 
 <div class="container">
-	<div ng-repeat="item in dataWindow" on-finish-render="drawCustomerCharts" id="{{item.customerName}}" class="col-xs-6 col-sm-3" ng-click="drawCircuitCharts(item.customerName)">
-	</div>
+      <div ng-repeat="data in filterData = (chartsData | filter : {customerName: search}) | limitTo:itemsPerPage:itemsPerPage*(page-1)" google-chart="PieChart" ng-model="data" class="col-xs-6 col-sm-3" ng-click="drawServicesCharts(data.customerName)" items-type="customers">
+    </div>
 </div>
 
 <div align="center">
@@ -26,6 +29,6 @@
 	<font face="Calibri" color="black" size="4">Non-affected</font>
 </div>
 
-<div ng-show="totalItems > itemsPerPage" class="text-center">
-	<ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" items-per-page="itemsPerPage" boundary-links="true"></ul>
+<div class="text-center">
+	<ul uib-pagination total-items="filterData.length" ng-model="page" ng-change="pageChanged()" items-per-page="itemsPerPage" boundary-links="true"></ul>
 </div>
