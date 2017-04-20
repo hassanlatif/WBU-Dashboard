@@ -30,8 +30,7 @@
       </div>
     </div>
     <div class="row-fluid" >
-      <div ng-repeat="data in filterData = (chartsData | filter : {customerName: search}) | limitTo:itemsPerPage:itemsPerPage*(page-1)" >
-       <div google-chart="PieChart" ng-model="data" class="col-md-6 well" ></div>
+      <div ng-repeat="data in filterData = (chartsData | filter : {customerName: search}) | limitTo:itemsPerPage:itemsPerPage*(page-1)" google-chart="PieChart" ng-model="data" class="col-md-6 well">
     </div>
   </div>
   <div ng-show="filterData.length > itemsPerPage" style="text-align: center;">

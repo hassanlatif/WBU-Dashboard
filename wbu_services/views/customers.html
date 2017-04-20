@@ -3,11 +3,10 @@
 	<li><a ui-sref="services({serviceCatId: serviceCatId})">{{ serviceCatId }}</a></li>
 	<li><a ui-sref="services({serviceCatId: serviceCatId, serviceTypeId: serviceTypeId})">{{ serviceTypeId }}</a> </li> 
 	<li>Customers</li>
-  <!--li class="pull-right"><b>Next refresh</b>:{{counter | formatTimer}}</li-->	
-
+    <!--li class="pull-right"><b>Next refresh</b>:{{counter | formatTimer}}</li-->	
     <li class="pull-right"><b>Last Refreshed</b>:{{refreshDate | date:"h:mm a"}}</li>
     <li class="pull-right"><b>Search</b>
-          <input type="text"  ng-model="filterText" class="input-medium search-query" style="padding:0; border:0px; width:150px;">
+          <input type="text"  ng-model="search" class="input-medium search-query" style="padding:0; border:0px; width:150px;">
      </li>
 </ol>
 
@@ -18,14 +17,13 @@
 	<font face="Calibri" color="#E8A828" size="4"><b>Affected Circuits</b></font>
 </div>
 
-
 <div class="container">
 	<div ng-hide="totalItems"> {{ infoMessage }} </div>
 </div>
 
 <div class="container">
-	<div ng-repeat="item in filterData = (totalItems | filter : {customerName: filterText}) | limitTo:8:8*(page-1)" on-finish-render="drawCustomerCharts" id="{{item.customerName}}" class="col-xs-6 col-sm-3" ng-click="drawCircuitCharts(item.customerName, item.serviceType)">
-	</div>
+      <div ng-repeat="data in filterData = (chartsData | filter : {customerName: search}) | limitTo:itemsPerPage:itemsPerPage*(page-1)" google-chart="PieChart" ng-model="data" class="col-xs-6 col-sm-3" ng-click="drawCircuitCharts(data.customerName, data.serviceType)" items-type="customers">
+    </div>
 </div>
 
 <div align="center">
