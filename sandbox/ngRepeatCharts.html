@@ -24,17 +24,17 @@
 </head>
 <body ng-controller="IndexCtrl">
   <div class="container">
-    <div class="row-fluid">
+    <div>
       <div class="col-sm-12 well" style="text-align: center;">
       <b>Search</b> <input type="text"  ng-model="search" class="input-medium search-query" >
       </div>
     </div>
-    <div class="row-fluid">
-      <div ng-repeat="table in filterData = (chartsData | filter : {title: search}) | limitTo:itemsPerPage:itemsPerPage*(page-1)" class="col-md-6" >
-       <div google-chart="PieChart" ng-model="table" class="smallGraph"></div>
+    <div class="row-fluid" >
+      <div ng-repeat="data in filterData = (chartsData | filter : {customerName: search}) | limitTo:itemsPerPage:itemsPerPage*(page-1)" >
+       <div google-chart="PieChart" ng-model="data" class="col-md-6 well" ></div>
     </div>
   </div>
-  <div ng-show="filterData.length > itemsPerPage">
+  <div ng-show="filterData.length > itemsPerPage" style="text-align: center;">
     <ul uib-pagination total-items="filterData.length" ng-model="page" ng-change="pageChanged()" items-per-page="itemsPerPage" boundary-links="true"></ul>
   </div>
 </div>
